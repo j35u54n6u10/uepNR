@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- =====================================================================
+       UEP NUEVA REPÚBLICA — MAQUETA HTML PRELIMINAR
+       Proyecto: Sitio Web Institucional
+       Páginas incluidas en este archivo:
+         1. Inicio (Home)
+         2. Institución (Nosotros)
+         3. Oferta Académica (+ subpáginas Primaria y Media General)
+         4. Admisiones e Inscripciones
+         5. Cartelera Informativa
+         6. Contacto
+       Nota: En producción WordPress, cada sección será una URL separada.
+             Este archivo es exclusivamente para revisión visual del cliente.
+       ===================================================================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Unidad Educativa Privada Nueva República — Formando ciudadanos con excelencia académica y valores.">
+  <title>UEP Nueva República — Maqueta Preliminar</title>
+
+  <!-- Tipografías Google Fonts: Lora (serif formal) + Lato (cuerpo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos principal -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- Aviso para el cliente sobre la estructura de este archivo -->
+  <style>
+    /* Aviso de maqueta solo visible en la parte superior durante revisión */
+    .aviso-maqueta {
+      background-color: #1a1a2e;
+      color: #e0e0e0;
+      text-align: center;
+      padding: 0.5rem 1rem;
+      font-size: 0.78rem;
+      font-family: 'Lato', sans-serif;
+      letter-spacing: 0.03em;
+    }
+    .aviso-maqueta strong { color: #F0CF85; }
+    .aviso-maqueta span { color: #A8DF65; }
+  </style>
+</head>
+<body>
+
+  <!-- ======================================================================
+       AVISO DE MAQUETA (solo para revisión del cliente — se elimina en producción)
+       ====================================================================== -->
+  <div class="aviso-maqueta">
+    📐 <strong>MAQUETA PRELIMINAR</strong> — UEP Nueva República |
+    Usa los botones de navegación para revisar las 6 páginas del sitio. |
+    <span>Versión: Junio 2026</span>
+  </div>
+
+  <!-- ======================================================================
+       HEADER / MENÚ PRINCIPAL STICKY
+       - Presente en todas las páginas
+       - Sticky: se mantiene fijo al hacer scroll (position: sticky)
+       - En móvil colapsa a menú hamburguesa
+       ====================================================================== -->
+  <header class="header" role="banner">
+    <div class="header__inner">
+
+      <!-- Logo institucional (izquierda) -->
+      <a href="#" class="header__logo" data-ir-a="pagina-inicio" aria-label="UEP Nueva República — Ir al inicio">
+        <!-- Escudo/iniciales (reemplazar con imagen PNG real del escudo en producción) -->
+        <div class="header__logo-escudo" aria-hidden="true">NR</div>
+        <div class="header__logo-texto">
+          <span class="header__logo-nombre">UEP Nueva República</span>
+          <span class="header__logo-sub">Unidad Educativa Privada</span>
+        </div>
+      </a>
+
+      <!-- Botón hamburguesa (visible solo en móvil) -->
+      <button class="hamburguesa" id="hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-principal">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Navegación principal (colapsa en móvil) -->
+      <nav class="nav" id="nav-principal" role="navigation" aria-label="Menú principal">
+        <ul class="nav__lista" role="list">
+          <li><a class="nav__enlace activo" data-pagina="pagina-inicio" href="#inicio">Inicio</a></li>
+          <li><a class="nav__enlace" data-pagina="pagina-institucion" href="#institucion">Institución</a></li>
+          <li><a class="nav__enlace" data-pagina="pagina-oferta" href="#oferta">Oferta Académica</a></li>
+          <li><a class="nav__enlace" data-pagina="pagina-admisiones" href="#admisiones">Admisiones</a></li>
+          <li><a class="nav__enlace" data-pagina="pagina-cartelera" href="#cartelera">Cartelera Informativa</a></li>
+          <li><a class="nav__enlace" data-pagina="pagina-contacto" href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header><!-- /header -->
+
+  <!-- ======================================================================
+       BARRA DE TABS DE NAVEGACIÓN ENTRE PÁGINAS (solo para la maqueta demo)
+       En WordPress esto no existirá — cada URL tendrá su propia página.
+       ====================================================================== -->
+  <div class="tabs-pagina" role="tablist" aria-label="Navegar entre páginas">
+    <button class="tab-pagina activo" data-pagina="pagina-inicio" role="tab" aria-selected="true">🏠 Inicio</button>
+    <button class="tab-pagina" data-pagina="pagina-institucion" role="tab" aria-selected="false">🏛 Institución</button>
+    <button class="tab-pagina" data-pagina="pagina-oferta" role="tab" aria-selected="false">📚 Oferta Académica</button>
+    <button class="tab-pagina" data-pagina="pagina-admisiones" role="tab" aria-selected="false">📋 Admisiones</button>
+    <button class="tab-pagina" data-pagina="pagina-cartelera" role="tab" aria-selected="false">📌 Cartelera</button>
+    <button class="tab-pagina" data-pagina="pagina-contacto" role="tab" aria-selected="false">📞 Contacto</button>
+  </div>
+
+  <!-- ======================================================================
+       CONTENIDO PRINCIPAL — 6 PÁGINAS
+       Cada <main> tiene id="pagina-xxx" y se muestra/oculta con JavaScript
+       según la tab o enlace seleccionado.
+       ====================================================================== -->
+  <div id="contenido-principal">
+
+    <!-- ==================================================================
+         PÁGINA 1: INICIO (HOME)
+         ================================================================== -->
+    <main id="pagina-inicio" class="pagina visible" role="main" aria-label="Página de inicio">
+
+      <!-- ----------------------------------------------------------------
+           SECCIÓN 1.1: HERO / BIENVENIDA
+           Fondo: gradiente verde oscuro → verde medio
+           ---------------------------------------------------------------- -->
+      <section class="hero" aria-labelledby="hero-titulo">
+        <div class="contenedor">
+          <div class="hero__contenido">
+            <!-- Etiqueta pequeña de presentación -->
+            <span class="hero__etiqueta">Institución Educativa Privada — Venezuela</span>
+
+            <!-- Título principal -->
+            <h1 class="hero__titulo" id="hero-titulo">
+              Unidad Educativa Privada<br>
+              <span>Nueva República</span>
+            </h1>
+
+            <!-- Subtítulo / slogan institucional -->
+            <p class="hero__subtitulo">
+              Formando ciudadanos con excelencia académica y valores,
+              comprometidos con el desarrollo integral de cada estudiante
+              desde la Educación Primaria hasta el Bachillerato.
+            </p>
+
+            <!-- Botones de acción -->
+            <div class="hero__acciones">
+              <!-- CTA principal: WhatsApp (dorado) -->
+              <a href="https://wa.me/584120000000" target="_blank" rel="noopener noreferrer"
+                 class="btn-dorado" aria-label="Contáctanos por WhatsApp">
+                💬 Contáctanos por WhatsApp
+              </a>
+              <!-- CTA secundario: Admisiones -->
+              <button class="btn-secundario" data-ir-a="pagina-admisiones"
+                      style="color:#fff; border-color:#fff;">
+                📋 Solicitar Cupo
+              </button>
+            </div>
+          </div>
+        </div>
+      </section><!-- /hero -->
+
+      <!-- ----------------------------------------------------------------
+           SECCIÓN 1.2: BARRA DE ACCESO RÁPIDO
+           Tres tarjetas con accesos directos a las áreas más consultadas
+           ---------------------------------------------------------------- -->
+      <section class="acceso-rapido" aria-labelledby="acceso-titulo">
+        <div class="contenedor">
+          <h2 class="titulo-seccion texto-centro" id="acceso-titulo" style="font-size:1.3rem; color:#555; font-family:'Lato',sans-serif; font-weight:400; letter-spacing:0.04em; text-transform:uppercase;">
+            Acceso Rápido
+          </h2>
+
+          <!-- Grid de 3 tarjetas (responsive: 1 columna en móvil) -->
+          <div class="acceso-rapido__grid" role="list">
+
+            <!-- Tarjeta 1: Solicitud de Cupo -->
+            <a class="tarjeta-acceso" data-ir-a="pagina-admisiones" href="#admisiones" role="listitem"
+               aria-label="Ir a Solicitud de Cupo">
+              <div class="tarjeta-acceso__icono" aria-hidden="true">📋</div>
+              <h3 class="tarjeta-acceso__titulo">Solicitud de Cupo</h3>
+              <p class="tarjeta-acceso__descripcion">
+                Inicia el proceso de inscripción para el año escolar. Consulta requisitos y disponibilidad.
+              </p>
+            </a>
+
+            <!-- Tarjeta 2: Calendario Escolar -->
+            <a class="tarjeta-acceso" data-ir-a="pagina-cartelera" href="#cartelera" role="listitem"
+               aria-label="Ver Calendario Escolar en la Cartelera">
+              <div class="tarjeta-acceso__icono" aria-hidden="true">📅</div>
+              <h3 class="tarjeta-acceso__titulo">Calendario Escolar</h3>
+              <p class="tarjeta-acceso__descripcion">
+                Fechas de inicio, recesos, efemérides y actividades institucionales del año escolar.
+              </p>
+            </a>
+
+            <!-- Tarjeta 3: Contacto Directo -->
+            <a class="tarjeta-acceso" href="https://wa.me/584120000000" target="_blank"
+               rel="noopener noreferrer" role="listitem" aria-label="Contactar por WhatsApp">
+              <div class="tarjeta-acceso__icono" aria-hidden="true">💬</div>
+              <h3 class="tarjeta-acceso__titulo">Contacto Directo</h3>
+              <p class="tarjeta-acceso__descripcion">
+                Comunícate directamente con la institución vía WhatsApp para atención personalizada.
+              </p>
+            </a>
+
+          </div>
+        </div>
+      </section><!-- /acceso-rapido -->
+
+      <!-- ----------------------------------------------------------------
+           SECCIÓN 1.3: ÚLTIMOS AVISOS DE LA DIRECCIÓN
+           Fondo: dorado claro (#F0CF85)
+           Listado de 4 circulares recientes con extracto y enlace
+           ---------------------------------------------------------------- -->
+      <section class="avisos" aria-labelledby="avisos-titulo">
+        <div class="contenedor">
+          <h2 class="titulo-seccion" id="avisos-titulo">📢 Avisos de la Dirección</h2>
+          <div class="divisor-verde"></div>
+          <p class="subtitulo-seccion">Comunicaciones y circulares institucionales recientes.</p>
+
+          <!-- Grid de tarjetas de aviso (auto-fit responsive) -->
+          <div class="avisos__grid" role="list">
+
+            <!-- Aviso 1 -->
+            <article class="aviso-tarjeta" role="listitem">
+              <p class="aviso-tarjeta__fecha">15 de mayo, 2026</p>
+              <h3 class="aviso-tarjeta__titulo">Inicio del período de inscripciones 2026–2027</h3>
+              <p class="aviso-tarjeta__extracto">
+                Se informa a la comunidad que el período de inscripciones para el año escolar
+                2026–2027 comenzará el 2 de junio. Los representantes deben consignar la documentación completa.
+              </p>
+              <a href="#" class="enlace-leer-mas" aria-label="Leer más sobre inscripciones 2026-2027">
+                Leer más →
+              </a>
+            </article>
+
+            <!-- Aviso 2 -->
+            <article class="aviso-tarjeta" role="listitem">
+              <p class="aviso-tarjeta__fecha">8 de mayo, 2026</p>
+              <h3 class="aviso-tarjeta__titulo">Circular N° 14: Uniforme obligatorio para actos cívicos</h3>
+              <p class="aviso-tarjeta__extracto">
+                Se recuerda a los representantes que el uniforme de gala es obligatorio para todos los
+                actos cívicos del mes de mayo y junio, incluyendo el acto de clausura.
+              </p>
+              <a href="#" class="enlace-leer-mas" aria-label="Leer más sobre circular de uniforme">
+                Leer más →
+              </a>
+            </article>
+
+            <!-- Aviso 3 -->
+            <article class="aviso-tarjeta" role="listitem">
+              <p class="aviso-tarjeta__fecha">30 de abril, 2026</p>
+              <h3 class="aviso-tarjeta__titulo">Resultados de evaluaciones del tercer lapso</h3>
+              <p class="aviso-tarjeta__extracto">
+                Los representantes pueden retirar los boletines del tercer lapso a partir del
+                20 de mayo en la Coordinación del nivel correspondiente.
+              </p>
+              <a href="#" class="enlace-leer-mas" aria-label="Leer más sobre boletines">
+                Leer más →
+              </a>
+            </article>
+
+            <!-- Aviso 4 -->
+            <article class="aviso-tarjeta" role="listitem">
+              <p class="aviso-tarjeta__fecha">20 de abril, 2026</p>
+              <h3 class="aviso-tarjeta__titulo">Actividad Día de la Familia — Sábado 10 de mayo</h3>
+              <p class="aviso-tarjeta__extracto">
+                Invitamos a toda la comunidad educativa a la jornada del Día de la Familia,
+                con actividades culturales, deportivas y gastronómicas en las instalaciones del plantel.
+              </p>
+              <a href="#" class="enlace-leer-mas" aria-label="Leer más sobre Día de la Familia">
+                Leer más →
+              </a>
+            </article>
+
+          </div>
+        </div>
+      </section><!-- /avisos -->
+
+      <!-- ----------------------------------------------------------------
+           SECCIÓN 1.4: RESUMEN DE OFERTA ACADÉMICA
+           Fondo: blanco. Dos tarjetas de nivel educativo.
+           ---------------------------------------------------------------- -->
+      <section class="oferta-resumen seccion" aria-labelledby="oferta-resumen-titulo">
+        <div class="contenedor">
+          <h2 class="titulo-seccion" id="oferta-resumen-titulo">📚 Nuestra Oferta Académica</h2>
+          <div class="divisor-verde"></div>
+          <p class="subtitulo-seccion">
+            Ofrecemos formación integral en dos niveles educativos, con metodologías actualizadas
+            y un equipo docente comprometido con la excelencia.
+          </p>
+
+          <div class="oferta-resumen__grid">
+
+            <!-- Tarjeta: Educación Primaria -->
+            <article class="tarjeta-nivel">
+              <div class="tarjeta-nivel__cabecera">
+                <span class="tarjeta-nivel__icono" aria-hidden="true">🎒</span>
+                <h3 class="tarjeta-nivel__nombre">Educación Primaria</h3>
+              </div>
+              <div class="tarjeta-nivel__cuerpo">
+                <p class="tarjeta-nivel__descripcion">
+                  Desde 1° hasta 6° grado, con enfoque en el desarrollo cognitivo, emocional y social
+                  del niño. Trabajamos por proyectos y con metodologías participativas para despertar
+                  la curiosidad y el pensamiento crítico desde temprana edad.
+                </p>
+                <button class="btn-secundario" data-ir-a="pagina-oferta">
+                  Ver más información →
+                </button>
+              </div>
+            </article>
+
+            <!-- Tarjeta: Media General (Bachillerato) -->
+            <article class="tarjeta-nivel">
+              <div class="tarjeta-nivel__cabecera">
+                <span class="tarjeta-nivel__icono" aria-hidden="true">🎓</span>
+                <h3 class="tarjeta-nivel__nombre">Media General (Bachillerato)</h3>
+              </div>
+              <div class="tarjeta-nivel__cuerpo">
+                <p class="tarjeta-nivel__descripcion">
+                  Bachillerato completo con formación científica, humanística y técnica.
+                  Preparamos a nuestros estudiantes para la educación superior y para asumir
+                  con responsabilidad su rol como ciudadanos activos de la sociedad venezolana.
+                </p>
+                <button class="btn-secundario" data-ir-a="pagina-oferta">
+                  Ver más información →
+                </button>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section><!-- /oferta-resumen -->
+
+      <!-- ----------------------------------------------------------------
+           SECCIÓN 1.5: BANNER DE IMÁGENES INSTITUCIONALES
+           Placeholder visual (sin fotos reales todavía)
+           En producción: slider con imágenes reales del plantel
+           ---------------------------------------------------------------- -->
+      <section class="galeria-banner" aria-label="Galería institucional">
+        <!-- Franjas de color placeholder (reemplazar con imágenes reales) -->
+        <div class="galeria-placeholder" aria-hidden="true">
+          <div class="galeria-placeholder__item"></div>
+          <div class="galeria-placeholder__item"></div>
+          <div class="galeria-placeholder__item"></div>
+          <div class="galeria-placeholder__item"></div>
+        </div>
+        <!-- Texto superpuesto -->
+        <div class="galeria-banner__texto">
+          <h2 class="galeria-banner__titulo">Nuestra Institución</h2>
+          <p class="galeria-banner__subtitulo">
+            📷 [Aquí irán fotos reales del plantel: fachada, aulas, áreas recreativas y actos cívicos]
+          </p>
+        </div>
+      </section><!-- /galeria-banner -->
+
+      <!-- Footer dentro de la página de inicio (componente compartido) -->
+      <!-- Se incluye el footer completo al final del body, fuera de las páginas -->
+
+    </main><!-- /pagina-inicio -->
+
+
+    <!-- ==================================================================
+         PÁGINA 2: INSTITUCIÓN (NOSOTROS)
+         ================================================================== -->
+    <main id="pagina-institucion" class="pagina" role="main" aria-label="Página Institución">
+
+      <!-- Encabezado interior -->
+      <div class="encabezado-interior">
+        <h1 class="encabezado-interior__titulo">Nuestra Institución</h1>
+        <p class="encabezado-interior__subtitulo">Conoce nuestra historia, misión y equipo</p>
+        <nav class="migas" aria-label="Ruta de navegación">
+          <a data-ir-a="pagina-inicio" href="#">Inicio</a>
+          <span aria-hidden="true">›</span>
+          <span aria-current="page">Institución</span>
+        </nav>
+      </div>
+
+      <!-- ----------------------------------------------------------------
+           SECCIÓN 2.1: MISIÓN, VISIÓN Y VALORES
+           Tres tarjetas con íconos representativos
+           ---------------------------------------------------------------- -->
+      <section class="seccion" aria-labelledby="mvv-titulo">
+        <div class="contenedor">
+          <h2 class="titulo-seccion texto-centro" id="mvv-titulo">Pilares Institucionales</h2>
+          <div class="divisor-verde" style="margin: 0.5rem auto 1.5rem;"></div>
+
+          <div class="mvv__grid">
+
+            <!-- Misión -->
+            <article class="mvv-tarjeta">
+              <div class="mvv-tarjeta__icono" aria-hidden="true">🎯</div>
+              <h3 class="mvv-tarjeta__titulo">Misión</h3>
+              <p>
+                Brindar una educación de calidad fundamentada en valores humanos, científicos
+                y ciudadanos, formando individuos críticos, creativos y comprometidos con el
+                desarrollo de Venezuela y la sociedad global.
+              </p>
+            </article>
+
+            <!-- Visión -->
+            <article class="mvv-tarjeta">
+              <div class="mvv-tarjeta__icono" aria-hidden="true">🔭</div>
+              <h3 class="mvv-tarjeta__titulo">Visión</h3>
+              <p>
+                Ser una institución educativa líder en la región, reconocida por la excelencia
+                académica, la innovación pedagógica y la formación integral de ciudadanos que
+                aporten positivamente a su comunidad y al país.
+              </p>
+            </article>
+
+            <!-- Valores -->
+            <article class="mvv-tarjeta">
+              <div class="mvv-tarjeta__icono" aria-hidden="true">⭐</div>
+              <h3 class="mvv-tarjeta__titulo">Valores</h3>
+              <p>
+                <strong>Respeto · Responsabilidad · Honestidad</strong><br>
+                <strong>Solidaridad · Patriotismo · Excelencia</strong><br><br>
+                Principios que guían cada aspecto de la vida institucional
+                y el desarrollo personal de nuestros estudiantes.
+              </p>
+            </article>
+
+          </div>
+        </div>
+      </section><!-- /mvv -->
+
+      <!-- ----------------------------------------------------------------
+           SECCIÓN 2.2: RESEÑA HISTÓRICA
+           Párrafos narrativos + imagen placeholder
+           ---------------------------------------------------------------- -->
+      <section class="seccion historia" aria-labelledby="historia-titulo">
+        <div class="contenedor">
+          <h2 class="titulo-seccion" id="historia-titulo">Nuestra Historia</h2>
+          <div class="divisor-verde"></div>
+
+          <div class="historia__contenido">
+            <div class="historia__texto">
+              <p>
+                La Unidad Educativa Privada Nueva República fue fundada con la firme convicción
+                de que toda familia venezolana merece acceso a una educación de calidad, integral
+                y fundamentada en valores. Desde sus primeros años, la institución se consolidó
+                como un referente académico en la comunidad.
+              </p>
+              <p>
+                A lo largo de su trayectoria, Nueva República ha graduado a cientos de bachilleres
+                que hoy contribuyen en distintos ámbitos profesionales, académicos y sociales del país.
+                Cada generación ha llevado consigo el sello de excelencia y compromiso que
+                caracteriza a nuestra institución.
+              </p>
+              <p>
+                Hoy, con la misma dedicación de sus fundadores y un equipo docente renovado,
+                seguimos ofreciendo una educación de vanguardia que responde a los retos del siglo XXI,
+                sin perder de vista los valores que nos definen como comunidad.
+              </p>
+            </div>
+
+            <!-- Placeholder de imagen histórica -->
+            <div class="historia__imagen-placeholder" role="img" aria-label="Imagen histórica institucional (próximamente)">
+              🏫
+            </div>
+          </div>
+        </div>
+      </section><!-- /historia -->
+
+      <!-- ----------------------------------------------------------------
+           SECCIÓN 2.3: EQUIPO DIRECTIVO Y DOCENTE
+           Tarjetas con avatar, nombre y cargo
+           ---------------------------------------------------------------- -->
+      <section class="seccion" aria-labelledby="directivos-titulo">
+        <div class="contenedor">
+          <h2 class="titulo-seccion" id="directivos-titulo">Equipo Directivo</h2>
+          <div class="divisor-verde"></div>
+          <p class="subtitulo-seccion">Las personas comprometidas con el liderazgo de nuestra institución.</p>
+
+          <div class="directivo__grid">
+
+            <!-- Director -->
+            <article class="directivo-tarjeta">
+              <div class="directivo-tarjeta__avatar" aria-hidden="true">JT</div>
+              <!-- Reemplazar "JT" con foto real en producción -->
+              <h3 class="directivo-tarjeta__nombre">Prof. Julio Téllez</h3>
+              <p class="directivo-tarjeta__cargo">Director</p>
+            </article>
+
+            <!-- Coordinadora 1 -->
+            <article class="directivo-tarjeta">
+              <div class="directivo-tarjeta__avatar" aria-hidden="true">ND</div>
+              <h3 class="directivo-tarjeta__nombre">Prof. Ninoska Díaz</h3>
+              <p class="directivo-tarjeta__cargo">Coordinadora Académica</p>
+            </article>
+
+            <!-- Coordinadora 2 -->
+            <article class="directivo-tarjeta">
+              <div class="directivo-tarjeta__avatar" aria-hidden="true">MG</div>
+              <h3 class="directivo-tarjeta__nombre">Prof. Mirtha Goncalves</h3>
+              <p class="directivo-tarjeta__cargo">Coordinadora de Evaluación</p>
+            </article>
+
+          </div>
+        </div>
+      </section><!-- /directivos -->
+
+      <!-- ----------------------------------------------------------------
+           SECCIÓN 2.4: NORMATIVA Y MARCO LEGAL
+           LOPNNA y lineamientos MPPE
+           ---------------------------------------------------------------- -->
+      <section class="seccion seccion-gris" aria-labelledby="legal-titulo">
+        <div class="contenedor">
+          <h2 class="titulo-seccion" id="legal-titulo">Normativa y Marco Legal</h2>
+          <div class="divisor-verde"></div>
+          <p class="subtitulo-seccion">
+            Nuestra institución opera bajo el marco legal venezolano vigente en materia educativa.
+          </p>
+
+          <div class="legal__lista">
+
+            <div class="legal__item">
+              <span class="legal__item-icono" aria-hidden="true">⚖️</span>
+              <div>
+                <p class="legal__item-titulo">Ley Orgánica para la Protección del Niño, Niña y Adolescente (LOPNNA)</p>
+                <p class="legal__item-texto">
+                  Marco legal que regula todos los derechos y garantías de los menores en Venezuela.
+                  Nuestra institución garantiza su cumplimiento en todos los ámbitos de la vida escolar.
+                </p>
+              </div>
+            </div>
+
+            <div class="legal__item">
+              <span class="legal__item-icono" aria-hidden="true">📜</span>
+              <div>
+                <p class="legal__item-titulo">Lineamientos del Ministerio del Poder Popular para la Educación (MPPE)</p>
+                <p class="legal__item-texto">
+                  Seguimos el currículo nacional bolivariano y todas las disposiciones curriculares,
+                  administrativas y pedagógicas del MPPE para educación privada.
+                </p>
+              </div>
+            </div>
+
+            <div class="legal__item">
+              <span class="legal__item-icono" aria-hidden="true">📋</span>
+              <div>
+                <p class="legal__item-titulo">Reglamento Interno Institucional</p>
+                <p class="legal__item-texto">
+                  Normativa interna que regula la convivencia, los derechos y deberes de estudiantes,
+                  docentes y representantes dentro de nuestra comunidad educativa.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section><!-- /legal -->
+
+    </main><!-- /pagina-institucion -->
+
+
+    <!-- ==================================================================
+         PÁGINA 3: OFERTA ACADÉMICA (Contenedora + Subpáginas)
+         ================================================================== -->
+    <main id="pagina-oferta" class="pagina" role="main" aria-label="Oferta Académica">
+
+      <!-- Encabezado interior -->
+      <div class="encabezado-interior">
+        <h1 class="encabezado-interior__titulo">Oferta Académica</h1>
+        <p class="encabezado-interior__subtitulo">Excelencia educativa en dos niveles de formación</p>
+        <nav class="migas" aria-label="Ruta de navegación">
+          <a data-ir-a="pagina-inicio" href="#">Inicio</a>
+          <span aria-hidden="true">›</span>
+          <span aria-current="page">Oferta Académica</span>
+        </nav>
+      </div>
+
+      <!-- ----------------------------------------------------------------
+           SECCIÓN 3.1: INTRODUCCIÓN Y TARJETAS DE NAVEGACIÓN LOCAL
+           ---------------------------------------------------------------- -->
+      <section class="seccion" aria-labelledby="oferta-intro-titulo">
+        <div class="contenedor">
+          <h2 class="titulo-seccion" id="oferta-intro-titulo">Nuestro Proyecto Educativo</h2>
+          <div class="divisor-verde"></div>
+          <p style="color:var(--texto-medio); max-width:720px; margin-bottom:2.5rem; font-size:var(--texto-md);">
+            En UEP Nueva República desarrollamos un proyecto educativo centrado en el ser humano,
+            que integra conocimiento académico riguroso con formación en valores, preparando a nuestros
+            estudiantes para los desafíos del presente y del futuro.
+          </p>
+
+          <!-- Tarjetas de navegación local a las subpáginas -->
+          <div class="oferta-resumen__grid">
+            <article class="tarjeta-nivel">
+              <div class="tarjeta-nivel__cabecera">
+                <span class="tarjeta-nivel__icono" aria-hidden="true">🎒</span>
+                <h3 class="tarjeta-nivel__nombre">Educación Primaria<br><small style="font-size:0.75rem; font-weight:400;">1° a 6° Grado</small></h3>
+              </div>
+              <div class="tarjeta-nivel__cuerpo">
+                <p class="tarjeta-nivel__descripcion">
+                  Formación integral en los primeros años escolares. Desarrollo cognitivo,
+                  emocional y social del niño mediante metodologías participativas y proyectos pedagógicos.
+                </p>
+                <a href="#oferta-primaria" class="btn-primario" style="align-self:flex-start;"
+                   onclick="document.getElementById('oferta-primaria').scrollIntoView({behavior:'smooth'}); return false;">
+                  Ver plan de estudios ↓
+                </a>
+              </div>
+            </article>
+
+            <article class="tarjeta-nivel">
+              <div class="tarjeta-nivel__cabecera">
+                <span class="tarjeta-nivel__icono" aria-hidden="true">🎓</span>
+                <h3 class="tarjeta-nivel__nombre">Media General<br><small style="font-size:0.75rem; font-weight:400;">Bachillerato</small></h3>
+              </div>
+              <div class="tarjeta-nivel__cuerpo">
+                <p class="tarjeta-nivel__descripcion">
+                  Bachillerato con formación científica, humanística y ciudadana.
+                  Preparación para la educación superior y el ejercicio responsable de la ciudadanía.
+                </p>
+                <a href="#oferta-media" class="btn-primario" style="align-self:flex-start;"
+                   onclick="document.getElementById('oferta-media').scrollIntoView({behavior:'smooth'}); return false;">
+                  Ver plan de estudios ↓
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ----------------------------------------------------------------
+           SECCIÓN 3.2: SUBPÁGINA — EDUCACIÓN PRIMARIA
+           (En WordPress: URL /oferta-academica/primaria)
+           ---------------------------------------------------------------- -->
+      <section id="oferta-primaria" class="seccion seccion-gris" aria-labelledby="primaria-titulo">
+        <div class="contenedor">
+          <span style="display:inline-block; background:var(--verde-claro); color:var(--verde-oscuro); font-size:0.75rem; font-weight:700; padding:0.25rem 0.75rem; border-radius:50px; margin-bottom:0.75rem; text-transform:uppercase; letter-spacing:0.08em;">
+            Nivel Primaria
+          </span>
+          <h2 class="titulo-seccion" id="primaria-titulo">🎒 Educación Primaria (1° a 6° Grado)</h2>
+          <div class="divisor-verde"></div>
+
+          <p style="color:var(--texto-medio); max-width:720px; margin-bottom:2rem; font-size:var(--texto-md);">
+            El nivel primario de UEP Nueva República centra su enfoque pedagógico en el aprendizaje
+            significativo, el trabajo por proyectos y la educación emocional. Nuestros docentes acompañan
+            cada etapa del desarrollo del niño, promoviendo la curiosidad, la autonomía y el respeto.
+          </p>
+
+          <!-- Plan de estudios resumido -->
+          <h3 style="font-family:var(--fuente-serif); color:var(--verde-oscuro); margin-bottom:1rem;">
+            Plan de Estudios — Áreas y Asignaturas
+          </h3>
+          <div class="plan-estudios__grid">
+            <div class="materia-chip">📖 Lengua y Literatura</div>
+            <div class="materia-chip">🔢 Matemática</div>
+            <div class="materia-chip">🌍 Ciencias Naturales</div>
+            <div class="materia-chip">🗺️ Ciencias Sociales</div>
+            <div class="materia-chip">🎨 Educación Artística</div>
+            <div class="materia-chip">⚽ Educación Física</div>
+            <div class="materia-chip">🕌 Educación Religiosa</div>
+            <div class="materia-chip">💻 Tecnología e Informática</div>
+            <div class="materia-chip">🌐 Inglés</div>
+            <div class="materia-chip">🌿 Educación Ambiental</div>
+            <div class="materia-chip">🏛️ Valores y Ciudadanía</div>
+            <div class="materia-chip">🧪 Laboratorio de Ciencias</div>
+          </div>
+
+          <!-- CTA contextual -->
+          <div style="margin-top:var(--espacio-lg);">
+            <button class="btn-dorado" data-ir-a="pagina-admisiones">
+              📋 Iniciar Solicitud de Cupo
+            </button>
+          </div>
+        </div>
+      </section><!-- /oferta-primaria -->
+
+      <!-- ----------------------------------------------------------------
+           SECCIÓN 3.3: SUBPÁGINA — MEDIA GENERAL (BACHILLERATO)
+           (En WordPress: URL /oferta-academica/media-general)
+           ---------------------------------------------------------------- -->
+      <section id="oferta-media" class="seccion" aria-labelledby="media-titulo">
+        <div class="contenedor">
+          <span style="display:inline-block; background:var(--dorado-claro); color:var(--verde-oscuro); font-size:0.75rem; font-weight:700; padding:0.25rem 0.75rem; border-radius:50px; margin-bottom:0.75rem; text-transform:uppercase; letter-spacing:0.08em;">
+            Nivel Media General
+          </span>
+          <h2 class="titulo-seccion" id="media-titulo">🎓 Media General (Bachillerato)</h2>
+          <div class="divisor-verde"></div>
+
+          <p style="color:var(--texto-medio); max-width:720px; margin-bottom:2rem; font-size:var(--texto-md);">
+            Nuestro bachillerato forma egresados con sólida base científica y humanística,
+            capacitados para el ingreso a la educación superior venezolana e internacional,
+            y comprometidos con el progreso de su comunidad y su nación.
+          </p>
+
+          <!-- Plan de estudios -->
+          <h3 style="font-family:var(--fuente-serif); color:var(--verde-oscuro); margin-bottom:1rem;">
+            Plan de Estudios — Asignaturas por Año
+          </h3>
+          <div class="plan-estudios__grid">
+            <div class="materia-chip">📚 Castellano y Literatura</div>
+            <div class="materia-chip">🔢 Matemática</div>
+            <div class="materia-chip">⚗️ Química</div>
+            <div class="materia-chip">🔬 Biología</div>
+            <div class="materia-chip">⚙️ Física</div>
+            <div class="materia-chip">🌍 Geografía de Venezuela</div>
+            <div class="materia-chip">🏛️ Historia de Venezuela</div>
+            <div class="materia-chip">🌐 Historia Universal</div>
+            <div class="materia-chip">🇬🇧 Inglés</div>
+            <div class="materia-chip">💻 Informática</div>
+            <div class="materia-chip">🎨 Educación Artística</div>
+            <div class="materia-chip">⚽ Educación Física</div>
+            <div class="materia-chip">🤝 Desarrollo Endógeno</div>
+            <div class="materia-chip">🏛️ Educación Ciudadana</div>
+          </div>
+
+          <!-- CTA contextual -->
+          <div style="margin-top:var(--espacio-lg);">
+            <button class="btn-dorado" data-ir-a="pagina-admisiones">
+              📋 Iniciar Solicitud de Cupo
+            </button>
+          </div>
+        </div>
+      </section><!-- /oferta-media -->
+
+    </main><!-- /pagina-oferta -->
+
+
+    <!-- ==================================================================
+         PÁGINA 4: ADMISIONES E INSCRIPCIONES
+         ================================================================== -->
+    <main id="pagina-admisiones" class="pagina" role="main" aria-label="Admisiones e Inscripciones">
+
+      <!-- Encabezado interior -->
+      <div class="encabezado-interior">
+        <h1 class="encabezado-interior__titulo">Admisiones e Inscripciones</h1>
+        <p class="encabezado-interior__subtitulo">Proceso de solicitud de cupo para el año escolar 2026–2027</p>
+        <nav class="migas" aria-label="Ruta de navegación">
+          <a data-ir-a="pagina-inicio" href="#">Inicio</a>
+          <span aria-hidden="true">›</span>
+          <span aria-current="page">Admisiones</span>
+        </nav>
+      </div>
+
+      <section class="seccion" aria-labelledby="admisiones-titulo">
+        <div class="contenedor">
+
+          <!-- Grid: Proceso (izquierda) + Formulario (derecha) -->
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:var(--espacio-xl);">
+
+            <!-- -------------------------------------------------------
+                 COLUMNA IZQUIERDA: Proceso paso a paso + Requisitos
+                 ------------------------------------------------------- -->
+            <div>
+              <h2 class="titulo-seccion" id="admisiones-titulo">Proceso de Inscripción</h2>
+              <div class="divisor-verde"></div>
+
+              <!-- Pasos -->
+              <div class="proceso-pasos">
+                <div class="paso">
+                  <div class="paso__numero" aria-hidden="true">1</div>
+                  <div>
+                    <p class="paso__contenido-titulo">Consultar disponibilidad de cupos</p>
+                    <p class="paso__contenido-texto">
+                      Contactarnos por WhatsApp o vía telefónica para verificar disponibilidad
+                      en el grado de interés antes de iniciar el proceso.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="paso">
+                  <div class="paso__numero" aria-hidden="true">2</div>
+                  <div>
+                    <p class="paso__contenido-titulo">Consignar documentación requerida</p>
+                    <p class="paso__contenido-texto">
+                      Presentar los documentos en la Secretaría del plantel en horario de 8:00 AM a 12:00 M
+                      de lunes a viernes durante el período de inscripciones.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="paso">
+                  <div class="paso__numero" aria-hidden="true">3</div>
+                  <div>
+                    <p class="paso__contenido-titulo">Evaluación de documentos y entrevista</p>
+                    <p class="paso__contenido-texto">
+                      El equipo directivo revisará los documentos y, de ser necesario,
+                      se pautará una entrevista con el representante y el aspirante.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="paso">
+                  <div class="paso__numero" aria-hidden="true">4</div>
+                  <div>
+                    <p class="paso__contenido-titulo">Confirmación y pago de aranceles</p>
+                    <p class="paso__contenido-texto">
+                      Una vez aprobada la solicitud, se informarán los aranceles correspondientes
+                      y se confirma la inscripción formal del estudiante.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Requisitos -->
+              <div style="margin-top:var(--espacio-lg); padding:var(--espacio-md); background:var(--gris-suave); border-radius:var(--radio-md); border-left:4px solid var(--verde-medio);">
+                <h3 style="font-family:var(--fuente-serif); color:var(--verde-oscuro); margin-bottom:0.75rem;">
+                  📎 Documentos Requeridos
+                </h3>
+                <ol style="list-style:decimal; padding-left:1.25rem; color:var(--texto-medio); font-size:var(--texto-sm);">
+                  <li style="margin-bottom:0.4rem;">Copia de la cédula de identidad del representante</li>
+                  <li style="margin-bottom:0.4rem;">Partida de nacimiento del aspirante (original y copia)</li>
+                  <li style="margin-bottom:0.4rem;">Certificado de conducta del plantel anterior</li>
+                  <li style="margin-bottom:0.4rem;">Boletín del último año cursado</li>
+                  <li style="margin-bottom:0.4rem;">Constancia de residencia</li>
+                  <li style="margin-bottom:0.4rem;">2 fotos carnet recientes</li>
+                  <li>Tarjeta de vacunas (nivel primaria)</li>
+                </ol>
+              </div>
+            </div><!-- /columna izquierda -->
+
+            <!-- -------------------------------------------------------
+                 COLUMNA DERECHA: Formulario de Solicitud de Cupo
+                 ------------------------------------------------------- -->
+            <div>
+              <div class="formulario-admision">
+                <h2 class="formulario-admision__titulo">📝 Solicitud de Cupo en Línea</h2>
+                <p style="color:var(--texto-medio); font-size:var(--texto-sm); margin-bottom:var(--espacio-md);">
+                  Complete el formulario y nos comunicaremos con usted a la brevedad posible.
+                  Los campos marcados con <strong>*</strong> son obligatorios.
+                </p>
+
+                <!-- Formulario (sin backend aún — validación con JS básico) -->
+                <form id="formulario-cupo" novalidate>
+
+                  <!-- Nombre del representante -->
+                  <div class="campo">
+                    <label for="nombre-representante">Nombre del Representante *</label>
+                    <input type="text" id="nombre-representante" name="nombre-representante"
+                           placeholder="Ej: María González de Pérez"
+                           required aria-required="true">
+                  </div>
+
+                  <!-- Teléfono y correo en fila -->
+                  <div class="campo-grupo">
+                    <div class="campo">
+                      <label for="telefono">Teléfono / WhatsApp *</label>
+                      <input type="tel" id="telefono" name="telefono"
+                             placeholder="Ej: 0412-0000000"
+                             required aria-required="true">
+                    </div>
+                    <div class="campo">
+                      <label for="correo">Correo Electrónico</label>
+                      <input type="email" id="correo" name="correo"
+                             placeholder="Ej: correo@ejemplo.com">
+                    </div>
+                  </div>
+
+                  <!-- Nombre del aspirante -->
+                  <div class="campo">
+                    <label for="nombre-aspirante">Nombre del Aspirante *</label>
+                    <input type="text" id="nombre-aspirante" name="nombre-aspirante"
+                           placeholder="Ej: Andrés Pérez González"
+                           required aria-required="true">
+                  </div>
+
+                  <!-- Grado al que aspira -->
+                  <div class="campo">
+                    <label for="grado">Grado al que Aspira *</label>
+                    <select id="grado" name="grado" required aria-required="true">
+                      <option value="" disabled selected>— Seleccione el grado —</option>
+                      <optgroup label="Educación Primaria">
+                        <option value="1ro-primaria">1° Grado</option>
+                        <option value="2do-primaria">2° Grado</option>
+                        <option value="3ro-primaria">3° Grado</option>
+                        <option value="4to-primaria">4° Grado</option>
+                        <option value="5to-primaria">5° Grado</option>
+                        <option value="6to-primaria">6° Grado</option>
+                      </optgroup>
+                      <optgroup label="Media General (Bachillerato)">
+                        <option value="1ro-media">1° Año</option>
+                        <option value="2do-media">2° Año</option>
+                        <option value="3ro-media">3° Año</option>
+                        <option value="4to-media">4° Año</option>
+                        <option value="5to-media">5° Año</option>
+                      </optgroup>
+                    </select>
+                  </div>
+
+                  <!-- Mensaje opcional -->
+                  <div class="campo">
+                    <label for="mensaje">Mensaje Adicional (opcional)</label>
+                    <textarea id="mensaje" name="mensaje"
+                              placeholder="Información adicional, dudas o consultas sobre el proceso de admisión..."></textarea>
+                  </div>
+
+                  <!-- Botón de envío -->
+                  <button type="submit" class="btn-primario" style="width:100%; justify-content:center;">
+                    📤 Enviar Solicitud
+                  </button>
+
+                  <!-- Mensaje de éxito (se muestra al enviar correctamente) -->
+                  <div id="mensaje-exito" style="display:none; margin-top:var(--espacio-sm);
+                       padding:var(--espacio-sm); background-color:#d4edda; color:#155724;
+                       border-radius:var(--radio-sm); border-left:4px solid #28a745; font-size:var(--texto-sm);">
+                    ✅ <strong>¡Solicitud enviada!</strong> Nos comunicaremos con usted a la brevedad
+                    al número de teléfono indicado.
+                  </div>
+
+                  <!-- Aviso de protección de datos -->
+                  <p class="aviso-proteccion">
+                    🔒 <strong>Protección de datos:</strong> Los datos suministrados en este formulario
+                    serán utilizados exclusivamente para el proceso de admisión de UEP Nueva República,
+                    en cumplimiento con la normativa venezolana vigente sobre protección de datos personales.
+                  </p>
+
+                </form>
+
+              </div>
+            </div><!-- /columna derecha -->
+
+          </div><!-- /grid admisiones -->
+
+        </div>
+      </section>
+
+    </main><!-- /pagina-admisiones -->
+
+
+    <!-- ==================================================================
+         PÁGINA 5: CARTELERA INFORMATIVA
+         ================================================================== -->
+    <main id="pagina-cartelera" class="pagina" role="main" aria-label="Cartelera Informativa">
+
+      <!-- Encabezado interior -->
+      <div class="encabezado-interior">
+        <h1 class="encabezado-interior__titulo">Cartelera Informativa</h1>
+        <p class="encabezado-interior__subtitulo">Circulares, eventos, efemérides y comunicados institucionales</p>
+        <nav class="migas" aria-label="Ruta de navegación">
+          <a data-ir-a="pagina-inicio" href="#">Inicio</a>
+          <span aria-hidden="true">›</span>
+          <span aria-current="page">Cartelera</span>
+        </nav>
+      </div>
+
+      <section class="seccion" aria-labelledby="cartelera-titulo">
+        <div class="contenedor">
+          <h2 class="titulo-seccion" id="cartelera-titulo">Publicaciones Recientes</h2>
+          <div class="divisor-verde"></div>
+
+          <!-- Filtros por categoría -->
+          <div class="cartelera__filtros" role="group" aria-label="Filtrar publicaciones por categoría">
+            <button class="filtro-btn activo" data-categoria="todas">📋 Todas</button>
+            <button class="filtro-btn" data-categoria="circulares">📄 Circulares</button>
+            <button class="filtro-btn" data-categoria="eventos">🎉 Eventos</button>
+            <button class="filtro-btn" data-categoria="efemerides">🏛️ Efemérides</button>
+          </div>
+
+          <!-- Grid de entradas (blog style, orden cronológico inverso) -->
+          <div class="cartelera__grid">
+
+            <!-- Entrada 1 -->
+            <article class="entrada-tarjeta" data-categoria="circulares">
+              <div class="entrada-tarjeta__imagen" aria-hidden="true">📄</div>
+              <div class="entrada-tarjeta__cuerpo">
+                <span class="entrada-tarjeta__categoria">Circular</span>
+                <h3 class="entrada-tarjeta__titulo">Circular N° 18: Inicio de inscripciones 2026–2027</h3>
+                <p class="entrada-tarjeta__fecha">📅 15 de mayo, 2026</p>
+                <p class="entrada-tarjeta__extracto">
+                  Se informa a la comunidad que el período de inscripciones para el próximo año escolar
+                  comenzará el 2 de junio. Los representantes deben consignar documentación completa en Secretaría.
+                </p>
+                <a href="#" class="enlace-leer-mas">Leer más →</a>
+              </div>
+            </article>
+
+            <!-- Entrada 2 -->
+            <article class="entrada-tarjeta" data-categoria="eventos">
+              <div class="entrada-tarjeta__imagen" aria-hidden="true">🎉</div>
+              <div class="entrada-tarjeta__cuerpo">
+                <span class="entrada-tarjeta__categoria">Evento</span>
+                <h3 class="entrada-tarjeta__titulo">Día de la Familia — 10 de mayo</h3>
+                <p class="entrada-tarjeta__fecha">📅 3 de mayo, 2026</p>
+                <p class="entrada-tarjeta__extracto">
+                  Invitamos a toda la comunidad educativa a compartir en familia con actividades
+                  culturales, deportivas, gastronómicas y artísticas en nuestras instalaciones.
+                </p>
+                <a href="#" class="enlace-leer-mas">Leer más →</a>
+              </div>
+            </article>
+
+            <!-- Entrada 3 -->
+            <article class="entrada-tarjeta" data-categoria="efemerides">
+              <div class="entrada-tarjeta__imagen" aria-hidden="true">🏛️</div>
+              <div class="entrada-tarjeta__cuerpo">
+                <span class="entrada-tarjeta__categoria">Efeméride</span>
+                <h3 class="entrada-tarjeta__titulo">19 de Abril — Día de la Firma del Acta de Independencia</h3>
+                <p class="entrada-tarjeta__fecha">📅 18 de abril, 2026</p>
+                <p class="entrada-tarjeta__extracto">
+                  Nuestra institución conmemoró el 216° aniversario del 19 de Abril con actos cívicos,
+                  declamaciones de poesía y una jornada de reflexión sobre nuestra historia patria.
+                </p>
+                <a href="#" class="enlace-leer-mas">Leer más →</a>
+              </div>
+            </article>
+
+            <!-- Entrada 4 -->
+            <article class="entrada-tarjeta" data-categoria="circulares">
+              <div class="entrada-tarjeta__imagen" aria-hidden="true">📄</div>
+              <div class="entrada-tarjeta__cuerpo">
+                <span class="entrada-tarjeta__categoria">Circular</span>
+                <h3 class="entrada-tarjeta__titulo">Circular N° 14: Uso obligatorio del uniforme de gala</h3>
+                <p class="entrada-tarjeta__fecha">📅 8 de abril, 2026</p>
+                <p class="entrada-tarjeta__extracto">
+                  Se recuerda que el uniforme de gala es obligatorio para todos los actos cívicos
+                  del tercer lapso, incluyendo el acto de clausura del año escolar.
+                </p>
+                <a href="#" class="enlace-leer-mas">Leer más →</a>
+              </div>
+            </article>
+
+            <!-- Entrada 5 -->
+            <article class="entrada-tarjeta" data-categoria="eventos">
+              <div class="entrada-tarjeta__imagen" aria-hidden="true">🏆</div>
+              <div class="entrada-tarjeta__cuerpo">
+                <span class="entrada-tarjeta__categoria">Evento</span>
+                <h3 class="entrada-tarjeta__titulo">Olimpiadas Académicas Intercolegiales 2026</h3>
+                <p class="entrada-tarjeta__fecha">📅 25 de marzo, 2026</p>
+                <p class="entrada-tarjeta__extracto">
+                  Nuestros estudiantes participarán en las Olimpiadas Académicas intercolegiales
+                  en las áreas de Matemática, Biología y Lengua. Selección interna abierta.
+                </p>
+                <a href="#" class="enlace-leer-mas">Leer más →</a>
+              </div>
+            </article>
+
+            <!-- Entrada 6 -->
+            <article class="entrada-tarjeta" data-categoria="efemerides">
+              <div class="entrada-tarjeta__imagen" aria-hidden="true">🌸</div>
+              <div class="entrada-tarjeta__cuerpo">
+                <span class="entrada-tarjeta__categoria">Efeméride</span>
+                <h3 class="entrada-tarjeta__titulo">Día Internacional de la Mujer — 8 de marzo</h3>
+                <p class="entrada-tarjeta__fecha">📅 7 de marzo, 2026</p>
+                <p class="entrada-tarjeta__extracto">
+                  Jornada institucional de reconocimiento a las mujeres de nuestra comunidad educativa:
+                  docentes, personal administrativo, representantes y estudiantes.
+                </p>
+                <a href="#" class="enlace-leer-mas">Leer más →</a>
+              </div>
+            </article>
+
+          </div><!-- /cartelera__grid -->
+
+          <!-- Paginación -->
+          <nav class="paginacion" aria-label="Paginación de publicaciones">
+            <button class="pagina-btn activo" aria-current="page" aria-label="Página 1">1</button>
+            <button class="pagina-btn" aria-label="Página 2">2</button>
+            <button class="pagina-btn" aria-label="Página 3">3</button>
+            <button class="pagina-btn" aria-label="Siguiente página">›</button>
+          </nav>
+
+        </div>
+      </section>
+
+    </main><!-- /pagina-cartelera -->
+
+
+    <!-- ==================================================================
+         PÁGINA 6: CONTACTO
+         ================================================================== -->
+    <main id="pagina-contacto" class="pagina" role="main" aria-label="Página de Contacto">
+
+      <!-- Encabezado interior -->
+      <div class="encabezado-interior">
+        <h1 class="encabezado-interior__titulo">Contacto</h1>
+        <p class="encabezado-interior__subtitulo">Estamos aquí para atenderte</p>
+        <nav class="migas" aria-label="Ruta de navegación">
+          <a data-ir-a="pagina-inicio" href="#">Inicio</a>
+          <span aria-hidden="true">›</span>
+          <span aria-current="page">Contacto</span>
+        </nav>
+      </div>
+
+      <section class="seccion" aria-labelledby="contacto-titulo">
+        <div class="contenedor">
+          <h2 class="titulo-seccion" id="contacto-titulo">Comunícate con Nosotros</h2>
+          <div class="divisor-verde"></div>
+          <p class="subtitulo-seccion">
+            Nuestro equipo está disponible para atender cualquier consulta de lunes a viernes, de 8:00 AM a 3:00 PM.
+          </p>
+
+          <div class="contacto__grid">
+
+            <!-- -------------------------------------------------------
+                 COLUMNA IZQUIERDA: Información de contacto
+                 ------------------------------------------------------- -->
+            <div>
+              <!-- Teléfono / WhatsApp (CTA principal de esta página) -->
+              <div class="contacto__info-item">
+                <span class="contacto__icono" aria-hidden="true">📞</span>
+                <div>
+                  <p class="contacto__dato-titulo">Teléfono Institucional</p>
+                  <p class="contacto__dato-valor" style="font-size:1.3rem; font-weight:700; color:var(--verde-oscuro);">
+                    0412-000 0000
+                  </p>
+                  <!-- Botón de acción principal en Contacto: WhatsApp directo -->
+                  <a href="https://wa.me/584120000000" target="_blank" rel="noopener noreferrer"
+                     class="contacto__whatsapp-btn" aria-label="Abrir WhatsApp con UEP Nueva República">
+                    💬 Escribir por WhatsApp
+                  </a>
+                </div>
+              </div>
+
+              <!-- Dirección -->
+              <div class="contacto__info-item">
+                <span class="contacto__icono" aria-hidden="true">📍</span>
+                <div>
+                  <p class="contacto__dato-titulo">Dirección</p>
+                  <p class="contacto__dato-valor">
+                    [Dirección completa del plantel]<br>
+                    [Municipio, Estado], Venezuela
+                  </p>
+                </div>
+              </div>
+
+              <!-- Correo electrónico -->
+              <div class="contacto__info-item">
+                <span class="contacto__icono" aria-hidden="true">✉️</span>
+                <div>
+                  <p class="contacto__dato-titulo">Correo Electrónico</p>
+                  <p class="contacto__dato-valor">
+                    <a href="mailto:info@nuevarepublica.edu.ve" style="color:var(--verde-oscuro); font-weight:600;">
+                      info@nuevarepublica.edu.ve
+                    </a>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Horario -->
+              <div class="contacto__info-item">
+                <span class="contacto__icono" aria-hidden="true">🕐</span>
+                <div>
+                  <p class="contacto__dato-titulo">Horario de Atención</p>
+                  <p class="contacto__dato-valor">
+                    Lunes a Viernes: 7:00 AM – 3:00 PM<br>
+                    Secretaría: 8:00 AM – 12:00 M
+                  </p>
+                </div>
+              </div>
+
+              <!-- Instagram -->
+              <div class="contacto__info-item">
+                <span class="contacto__icono" aria-hidden="true">📸</span>
+                <div>
+                  <p class="contacto__dato-titulo">Instagram</p>
+                  <p class="contacto__dato-valor">
+                    <a href="https://instagram.com/uepnuevarepublica" target="_blank"
+                       rel="noopener noreferrer" style="color:var(--verde-oscuro); font-weight:600;">
+                      @uepnuevarepublica
+                    </a>
+                  </p>
+                </div>
+              </div>
+
+            </div><!-- /columna izquierda -->
+
+            <!-- -------------------------------------------------------
+                 COLUMNA DERECHA: Mapa interactivo (Google Maps)
+                 ------------------------------------------------------- -->
+            <div>
+              <div class="mapa-contenedor">
+                <!-- 
+                  NOTA PARA PRODUCCIÓN: 
+                  Reemplazar el div .mapa-placeholder con el iframe de Google Maps.
+                  Ejemplo:
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=..."
+                    width="100%" height="380" style="border:0;"
+                    allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Ubicación de UEP Nueva República">
+                  </iframe>
+                -->
+                <div class="mapa-placeholder" role="img" aria-label="Mapa de ubicación — Por configurar">
+                  <span class="mapa-placeholder__icono" aria-hidden="true">🗺️</span>
+                  <p class="mapa-placeholder__texto">Mapa de Ubicación</p>
+                  <p class="mapa-placeholder__sub">
+                    [Google Maps se integrará aquí en la versión WordPress]
+                  </p>
+                </div>
+              </div>
+
+              <!-- Dirección textual bajo el mapa -->
+              <div style="margin-top:var(--espacio-sm); padding:var(--espacio-sm);
+                          background:var(--gris-suave); border-radius:var(--radio-sm);
+                          font-size:var(--texto-sm); color:var(--texto-medio);">
+                📍 <strong>[Dirección completa]</strong> — [Municipio, Estado], Venezuela.
+              </div>
+
+            </div><!-- /columna derecha -->
+
+          </div><!-- /contacto__grid -->
+
+        </div>
+      </section>
+
+    </main><!-- /pagina-contacto -->
+
+  </div><!-- /contenido-principal -->
+
+
+  <!-- ======================================================================
+       FOOTER — COMÚN A TODAS LAS PÁGINAS
+       Fondo: #346739 (verde oscuro) | Texto: blanco
+       ====================================================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="contenedor">
+      <div class="footer__grid">
+
+        <!-- Columna 1: Marca y datos de contacto rápido -->
+        <div class="footer__marca">
+          <h2 class="footer__marca-nombre">UEP Nueva República</h2>
+          <p class="footer__marca-slogan">Formando ciudadanos con excelencia académica y valores.</p>
+          <div class="footer__datos">
+            <p>📍 [Dirección del plantel], Venezuela</p>
+            <p>📞 0412-000 0000</p>
+            <p>✉️ info@nuevarepublica.edu.ve</p>
+            <p>🕐 Lunes a Viernes: 7:00 AM – 3:00 PM</p>
+          </div>
+          <!-- Redes sociales -->
+          <div class="footer__social">
+            <a href="https://instagram.com/uepnuevarepublica" target="_blank"
+               rel="noopener noreferrer" class="footer__social-btn"
+               aria-label="Seguirnos en Instagram">📸</a>
+            <a href="https://wa.me/584120000000" target="_blank"
+               rel="noopener noreferrer" class="footer__social-btn"
+               aria-label="WhatsApp institucional">💬</a>
+          </div>
+        </div>
+
+        <!-- Columna 2: Navegación rápida -->
+        <nav aria-label="Navegación del footer">
+          <h3 class="footer__col-titulo">Navegación</h3>
+          <ul class="footer__enlaces">
+            <li><a class="footer__enlace" data-ir-a="pagina-inicio" href="#">Inicio</a></li>
+            <li><a class="footer__enlace" data-ir-a="pagina-institucion" href="#">Institución</a></li>
+            <li><a class="footer__enlace" data-ir-a="pagina-oferta" href="#">Oferta Académica</a></li>
+            <li><a class="footer__enlace" data-ir-a="pagina-admisiones" href="#">Admisiones</a></li>
+            <li><a class="footer__enlace" data-ir-a="pagina-cartelera" href="#">Cartelera Informativa</a></li>
+            <li><a class="footer__enlace" data-ir-a="pagina-contacto" href="#">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <!-- Columna 3: Información adicional -->
+        <div>
+          <h3 class="footer__col-titulo">Niveles Educativos</h3>
+          <ul class="footer__enlaces">
+            <li><a class="footer__enlace" data-ir-a="pagina-oferta" href="#">Educación Primaria (1° a 6°)</a></li>
+            <li><a class="footer__enlace" data-ir-a="pagina-oferta" href="#">Media General (Bachillerato)</a></li>
+            <li><a class="footer__enlace" data-ir-a="pagina-admisiones" href="#">Proceso de Admisión</a></li>
+            <li><a class="footer__enlace" data-ir-a="pagina-admisiones" href="#">Requisitos de Inscripción</a></li>
+            <li><a class="footer__enlace" data-ir-a="pagina-cartelera" href="#">Circulares y Avisos</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Barra de copyright -->
+    <div class="footer__barra-inferior">
+      <div class="contenedor">
+        © 2026 UEP Nueva República. Todos los derechos reservados.
+        — Diseño web: [Nombre del desarrollador / agencia]
+      </div>
+    </div>
+
+  </footer><!-- /footer -->
+
+
+  <!-- ======================================================================
+       BOTÓN FLOTANTE DE WHATSAPP
+       Posición: fija en esquina inferior derecha (todas las páginas)
+       Color: dorado (#CA955C) con pulso animado
+       ====================================================================== -->
+  <a href="https://wa.me/584120000000"
+     class="whatsapp-flotante"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Contactar a UEP Nueva República por WhatsApp">
+    <!-- Ícono de WhatsApp (emoji — reemplazar con SVG real en producción) -->
+    <span class="whatsapp-flotante__icono" aria-hidden="true">💬</span>
+    <!-- Tooltip al hacer hover -->
+    <span class="whatsapp-flotante__tooltip">¡Escríbenos!</span>
+  </a>
+
+
+  <!-- Script principal (menú, tabs, filtros, formulario) -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Estilo adicional responsivo para la página de admisiones en móvil -->
+  <style>
+    @media (max-width: 768px) {
+      #pagina-admisiones .contenedor > div[style*="grid"] {
+        display: flex !important;
+        flex-direction: column !important;
+      }
+    }
+  </style>
+
+</body>
+</html>
