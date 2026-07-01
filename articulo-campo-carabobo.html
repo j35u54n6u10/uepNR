@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Visita educativa al Campo de Carabobo | UEP Nueva República</title>
+  <meta name="description" content="Estudiantes de UEP Nueva República vivieron una experiencia histórica en el Campo de Carabobo.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --verde-oscuro:#346739; --verde-medio:#6FAF4F; --verde-claro:#A8DF65;
+      --dorado:#CA955C; --dorado-claro:#F0CF85; --blanco:#FFFFFF;
+      --texto-oscuro:#333333; --texto-medio:#555555; --gris-suave:#F5F5F2;
+      --radio-sm:6px; --radio-md:12px; --radio-lg:20px; --radio-pill:50px;
+      --sombra-tarjeta:0 4px 20px rgba(52,103,57,0.12);
+      --fuente-serif:'Lora',Georgia,serif;
+      --fuente-cuerpo:'Lato',Arial,sans-serif;
+      --transicion:all 0.3s ease;
+    }
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { font-family:var(--fuente-cuerpo); font-size:1rem; color:var(--texto-oscuro);
+           background:var(--blanco); line-height:1.7; -webkit-font-smoothing:antialiased; }
+    img { max-width:100%; height:auto; display:block; }
+    a { color:inherit; text-decoration:none; transition:var(--transicion); }
+
+    /* Header */
+    .header { background:var(--verde-oscuro); position:sticky; top:0; z-index:100;
+               box-shadow:0 2px 16px rgba(0,0,0,0.18); }
+    .header__inner { display:flex; align-items:center; justify-content:space-between;
+                     padding:0.9rem 1.5rem; max-width:1180px; margin:0 auto; }
+    .header__logo { display:flex; align-items:center; gap:0.75rem; }
+    .header__logo img { height:48px; width:auto; object-fit:contain; }
+    .header__logo-texto { display:flex; flex-direction:column; }
+    .header__logo-nombre { font-family:var(--fuente-serif); font-size:1.125rem; font-weight:700;
+                            color:var(--blanco); line-height:1.2; }
+    .header__logo-sub { font-size:0.75rem; color:var(--verde-claro); text-transform:uppercase;
+                         letter-spacing:0.08em; }
+    .nav__lista { display:flex; gap:0.25rem; list-style:none; }
+    .nav__enlace { font-family:var(--fuente-serif); font-size:0.9rem; font-weight:600;
+                   color:var(--blanco); padding:0.5rem 0.8rem; border-radius:var(--radio-sm);
+                   transition:var(--transicion); }
+    .nav__enlace:hover { background:var(--verde-medio); }
+
+    /* Encabezado interior */
+    .encabezado-interior {
+      background:linear-gradient(135deg,var(--verde-oscuro),#2a5630);
+      padding:3rem 0; text-align:center;
+    }
+    .encabezado-interior__titulo { font-family:var(--fuente-serif); font-size:2.25rem;
+                                    font-weight:700; color:var(--blanco); }
+    .encabezado-interior__sub { color:var(--verde-claro); font-size:1.125rem; margin-top:0.5rem; }
+    .migas { display:flex; justify-content:center; gap:0.5rem; margin-top:0.75rem;
+              font-size:0.875rem; color:rgba(255,255,255,0.7); }
+    .migas a { color:var(--dorado-claro); }
+    .migas a:hover { text-decoration:underline; }
+
+    /* Contenedor y artículo */
+    .contenedor { max-width:900px; margin:0 auto; padding:0 1.5rem; }
+    .articulo { padding:3rem 0 4rem; }
+    .articulo__imagen-destacada { width:100%; height:400px; object-fit:cover;
+                                   border-radius:var(--radio-md); margin-bottom:2rem;
+                                   box-shadow:var(--sombra-tarjeta);
+                                   border:3px solid var(--dorado); }
+    .articulo__meta { display:flex; gap:1rem; flex-wrap:wrap; align-items:center;
+                       margin-bottom:1.5rem; }
+    .articulo__categoria { font-size:0.75rem; font-weight:700; text-transform:uppercase;
+                            letter-spacing:0.12em; color:var(--blanco);
+                            background:var(--dorado); padding:0.25rem 0.8rem;
+                            border-radius:var(--radio-pill); }
+    .articulo__fecha { font-size:0.875rem; color:var(--texto-medio); }
+    .articulo__titulo { font-family:var(--fuente-serif); font-size:2rem; font-weight:700;
+                         color:var(--verde-oscuro); margin-bottom:1.25rem; line-height:1.25; }
+    .articulo__cuerpo p { color:var(--texto-medio); font-size:1rem; line-height:1.85;
+                            margin-bottom:1.25rem; }
+    .articulo__cuerpo h3 { font-family:var(--fuente-serif); color:var(--verde-oscuro);
+                             font-size:1.375rem; margin:2rem 0 0.75rem; }
+    .articulo__cuerpo figure { margin:2rem 0; }
+    .articulo__cuerpo figure img { width:100%; height:280px; object-fit:cover;
+                                    border-radius:var(--radio-md); border:2px solid var(--dorado); }
+    .articulo__cuerpo figcaption { font-size:0.8rem; color:var(--texto-medio);
+                                    text-align:center; margin-top:0.4rem; font-style:italic; }
+    .divisor { width:60px; height:4px; background:linear-gradient(to right,var(--verde-oscuro),var(--verde-medio));
+                border-radius:2px; margin:1rem 0 1.75rem; }
+    .etiquetas { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:2rem;
+                  padding-top:1.5rem; border-top:1px solid rgba(52,103,57,0.15); }
+    .etiqueta { font-size:0.75rem; font-weight:700; color:var(--verde-oscuro);
+                 background:var(--verde-claro); padding:0.25rem 0.7rem; border-radius:var(--radio-pill); }
+    .btn-volver { display:inline-flex; align-items:center; gap:0.4rem;
+                   color:var(--verde-oscuro); font-weight:700; font-size:0.875rem;
+                   margin-bottom:1.5rem; transition:var(--transicion); }
+    .btn-volver:hover { color:var(--verde-medio); }
+
+    /* Footer */
+    .footer { background:var(--verde-oscuro); color:var(--blanco); padding:2.5rem 0 0; }
+    .footer__grid { display:grid; grid-template-columns:2fr 1fr 1fr; gap:3rem;
+                     max-width:1180px; margin:0 auto; padding:0 1.5rem 2.5rem; }
+    .footer__marca-nombre { font-family:var(--fuente-serif); font-size:1.375rem;
+                              font-weight:700; margin-bottom:0.4rem; }
+    .footer__marca-slogan { font-size:0.875rem; color:var(--verde-claro);
+                              font-style:italic; margin-bottom:1rem; }
+    .footer__datos p { font-size:0.875rem; color:rgba(255,255,255,0.75);
+                        margin-bottom:0.3rem; }
+    .footer__col-titulo { font-family:var(--fuente-serif); font-size:1.125rem;
+                           font-weight:700; color:var(--dorado-claro); margin-bottom:1rem;
+                           padding-bottom:0.4rem;
+                           border-bottom:2px solid rgba(240,207,133,0.3); }
+    .footer__enlaces { display:flex; flex-direction:column; gap:0.4rem; list-style:none; }
+    .footer__enlace { font-size:0.875rem; color:rgba(255,255,255,0.75);
+                       transition:var(--transicion); }
+    .footer__enlace:hover { color:var(--verde-claro); padding-left:4px; }
+    .footer__barra { border-top:1px solid rgba(255,255,255,0.1); padding:1rem 1.5rem;
+                      text-align:center; font-size:0.75rem; color:rgba(255,255,255,0.5); }
+
+    /* WA flotante */
+    .wa-flotante { position:fixed; bottom:28px; right:28px; z-index:999;
+                    width:58px; height:58px; border-radius:50%;
+                    background:var(--dorado); display:flex; align-items:center;
+                    justify-content:center; font-size:1.7rem; color:var(--blanco);
+                    box-shadow:0 4px 20px rgba(202,149,92,0.45);
+                    transition:var(--transicion); animation:pulse 2.5s ease-in-out infinite; }
+    .wa-flotante:hover { transform:scale(1.1); background:var(--dorado-claro); }
+    @keyframes pulse {
+      0%,100%{box-shadow:0 4px 20px rgba(202,149,92,0.45);}
+      50%{box-shadow:0 4px 32px rgba(202,149,92,0.7);}
+    }
+    @media(max-width:768px){
+      .nav { display:none; }
+      .footer__grid { grid-template-columns:1fr; gap:1.5rem; }
+      .articulo__imagen-destacada { height:240px; }
+      .articulo__titulo { font-size:1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo"
+         aria-label="UEP Nueva República — Inicio">
+        <img src="logo_nr.png" alt="Logo UEP Nueva República">
+        <div class="header__logo-texto">
+          <span class="header__logo-nombre">UEP Nueva República</span>
+          <span class="header__logo-sub">Unidad Educativa Privada</span>
+        </div>
+      </a>
+      <nav aria-label="Menú principal">
+        <ul class="nav__lista">
+          <li><a class="nav__enlace" href="index.html">Inicio</a></li>
+          <li><a class="nav__enlace" href="index.html#institucion">Institución</a></li>
+          <li><a class="nav__enlace" href="index.html#oferta">Oferta Académica</a></li>
+          <li><a class="nav__enlace" href="index.html#admisiones">Admisiones</a></li>
+          <li><a class="nav__enlace" href="index.html#cartelera">Cartelera</a></li>
+          <li><a class="nav__enlace" href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="encabezado-interior">
+    <h1 class="encabezado-interior__titulo">Visita educativa al Campo de Carabobo</h1>
+    <p class="encabezado-interior__sub">Paseo Escolar · Cartelera Informativa</p>
+    <div class="migas">
+      <a href="index.html">Inicio</a>
+      <span>›</span>
+      <a href="index.html">Cartelera Informativa</a>
+      <span>›</span>
+      <span aria-current="page">Campo de Carabobo</span>
+    </div>
+  </div>
+
+  <main class="articulo">
+    <div class="contenedor">
+      <a href="index.html" class="btn-volver">← Volver a la Cartelera</a>
+
+      <img src="img/paseo_campo_carabobo_01.jpeg"
+           alt="Estudiantes de UEP Nueva República en el Campo de Carabobo"
+           class="articulo__imagen-destacada">
+
+      <div class="articulo__meta">
+        <span class="articulo__categoria">🗺️ Paseo Escolar</span>
+        <span class="articulo__fecha">📅 24 de junio, 2026</span>
+      </div>
+
+      <h1 class="articulo__titulo">Visita educativa al Campo de Carabobo: cuando la historia deja de ser un libro</h1>
+      <div class="divisor"></div>
+
+      <div class="articulo__cuerpo">
+        <p>
+          El pasado 24 de junio, con motivo de la conmemoración del 205° aniversario de la
+          Batalla de Carabobo, un grupo de estudiantes de Media General de la UEP Nueva
+          República realizó una visita educativa al <strong>Parque Nacional Campo de Carabobo</strong>,
+          ubicado en el estado Carabobo, Venezuela. La jornada, organizada por el departamento
+          de Historia y Ciencias Sociales, se convirtió en una de las experiencias más
+          significativas del año escolar 2025–2026.
+        </p>
+
+        <h3>Un aula sin paredes</h3>
+        <p>
+          Recorrer el Campo de Carabobo no es simplemente visitar un lugar histórico: es
+          pisar el mismo terreno donde, el 24 de junio de 1821, el Ejército Libertador
+          comandado por Simón Bolívar asestó el golpe definitivo al dominio español en
+          Venezuela, sellando así nuestra independencia nacional.
+        </p>
+        <p>
+          Los estudiantes tuvieron la oportunidad de recorrer los principales monumentos y
+          espacios conmemorativos del parque, incluyendo el majestuoso <strong>Arco de
+          Triunfo</strong>, el <strong>Monumento al Ejército Libertador</strong> y el museo
+          de sitio, que alberga piezas originales de la época independentista y una detallada
+          narración de los eventos que condujeron a la victoria patriota.
+        </p>
+
+        <figure>
+          <img src="img/paseo_campo_carabobo_01.jpeg"
+               alt="Jóvenes recorriendo los espacios del Campo de Carabobo">
+          <figcaption>Los estudiantes recorrieron los monumentos y espacios históricos del campo de batalla</figcaption>
+        </figure>
+
+        <h3>Historia conectada con el presente</h3>
+        <p>
+          Los docentes acompañantes aprovecharon cada rincón del parque para conectar los
+          contenidos del programa de Historia de Venezuela con la experiencia directa del
+          espacio. Lejos de la dinámica tradicional del aula, los estudiantes podían sentir,
+          observar y preguntar en tiempo real, lo que generó un nivel de comprensión y
+          emoción difícil de alcanzar a través de un texto.
+        </p>
+        <p>
+          "Vine pensando que iba a ser un paseo como cualquier otro, pero cuando el guía nos
+          explicó exactamente en qué punto del terreno ocurrió cada momento de la batalla,
+          fue diferente. Entendí de verdad por qué esa fecha es tan importante para
+          Venezuela", compartió uno de los estudiantes participantes al finalizar la visita.
+        </p>
+
+        <h3>Identidad nacional desde la vivencia</h3>
+        <p>
+          Esta actividad se enmarca directamente en la misión de la UEP Nueva República de
+          conectar el aprendizaje escolar con el entorno y la realidad del país, avivando en
+          la comunidad estudiantil un profundo sentido de pertenencia e identidad nacional.
+          Creemos firmemente que la historia no debe estudiarse únicamente en los libros:
+          debe vivirse, sentirse y transmitirse de generación en generación.
+        </p>
+        <p>
+          El paseo al Campo de Carabobo fue, ante todo, un recordatorio de que somos hijos
+          de una nación con una historia rica, heroica y llena de enseñanzas que siguen
+          siendo vigentes hoy. Nuestros estudiantes regresaron con algo que ningún examen
+          puede medir: el orgullo de saber quiénes son y de dónde vienen.
+        </p>
+
+        <div class="etiquetas">
+          <span class="etiqueta">#CampoCarabobo</span>
+          <span class="etiqueta">#IdentidadNacional</span>
+          <span class="etiqueta">#24DeJunio</span>
+          <span class="etiqueta">#HistoriaViva</span>
+          <span class="etiqueta">#UEPNuevaRepública</span>
+        </div>
+      </div>
+
+      <div style="margin-top:2.5rem;">
+        <a href="index.html" class="btn-volver">← Volver a la Cartelera</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__grid">
+      <div>
+        <p class="footer__marca-nombre">UEP Nueva República</p>
+        <p class="footer__marca-slogan">Formando ciudadanos con excelencia académica y valores.</p>
+        <div class="footer__datos">
+          <p>📞 +58 422-644-9365</p>
+          <p>✉️ info@nuevarepublica.edu.ve</p>
+          <p>🕐 Lunes a Viernes: 7:00 AM – 3:00 PM</p>
+        </div>
+      </div>
+      <nav aria-label="Navegación del footer">
+        <p class="footer__col-titulo">Navegación</p>
+        <ul class="footer__enlaces">
+          <li><a class="footer__enlace" href="index.html">Inicio</a></li>
+          <li><a class="footer__enlace" href="index.html">Institución</a></li>
+          <li><a class="footer__enlace" href="index.html">Admisiones</a></li>
+          <li><a class="footer__enlace" href="index.html">Cartelera</a></li>
+          <li><a class="footer__enlace" href="index.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="footer__col-titulo">Síguenos</p>
+        <ul class="footer__enlaces">
+          <li><a class="footer__enlace" href="https://www.instagram.com/nuevarepublica_u.e.p" target="_blank" rel="noopener">📸 @nuevarepublica_u.e.p</a></li>
+          <li><a class="footer__enlace" href="https://wa.me/584226449365" target="_blank" rel="noopener">💬 WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__barra">© 2026 UEP Nueva República. Todos los derechos reservados.</div>
+  </footer>
+
+  <!-- Botón flotante WhatsApp -->
+  <a href="https://wa.me/584226449365" class="wa-flotante" target="_blank"
+     rel="noopener noreferrer" aria-label="Contactar por WhatsApp">💬</a>
+
+</body>
+</html>
