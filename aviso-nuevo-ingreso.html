@@ -1,149 +1,449 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
-  <title>Proceso de Nuevo Ingreso | UEP Nueva República</title>
-  <meta name="description" content="Proceso de inscripción para nuevos estudiantes UEP Nueva República 2026–2027.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Proceso de inscripción para nuevos estudiantes UEP Nueva República 2026–2027. Conoce los requisitos, pasos y fechas oficiales.">
+  <title>Proceso de Nuevo Ingreso 2026–2027 | UEP Nueva República</title>
+
+  <!-- Tipografías Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&family=Lora:ital,wght@0,500;0,600;0,700;1,400;1,600&display=swap"
+    rel="stylesheet">
+
   <style>
     :root {
-      --verde-oscuro:#346739; --verde-medio:#6FAF4F; --verde-claro:#A8DF65;
-      --dorado:#CA955C; --dorado-claro:#F0CF85; --blanco:#FFFFFF;
-      --texto-oscuro:#333333; --texto-medio:#555555; --gris-suave:#F5F5F2;
-      --radio-sm:6px; --radio-md:12px; --radio-lg:20px; --radio-pill:50px;
-      --sombra-tarjeta:0 4px 20px rgba(52,103,57,0.12);
-      --fuente-serif:'Lora',Georgia,serif;
-      --fuente-cuerpo:'Lato',Arial,sans-serif;
-      --transicion:all 0.3s ease;
+      --verde-bosque-oscuro: #16321c;
+      --verde-bosque-profundo: #0f2212;
+      --verde-institucional: #234b27;
+      --verde-medio: #356b3b;
+      --verde-menta: #eaf3e6;
+      --verde-menta-borde: #d0e4c8;
+      
+      --dorado: #caa156;
+      --dorado-hover: #b58d44;
+      --dorado-claro: #f4e8cb;
+      
+      --fondo-crema: #f5efe6;
+      --fondo-crema-claro: #faf7f2;
+      --blanco: #ffffff;
+      
+      --texto-oscuro: #1f2721;
+      --texto-medio: #4d5750;
+      --texto-suave: #738076;
+      --borde-suave: #e2dbce;
+      
+      --radio-sm: 6px;
+      --radio-md: 12px;
+      --radio-pill: 50px;
+      --sombra-card: 0 4px 20px rgba(22, 50, 28, 0.06);
+      --sombra-hover: 0 12px 32px rgba(22, 50, 28, 0.12);
+      
+      --fuente-serif: 'Lora', Georgia, 'Times New Roman', serif;
+      --fuente-cuerpo: 'Lato', system-ui, -apple-system, sans-serif;
+      --transicion: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
-    html { scroll-behavior:smooth; }
-    body { font-family:var(--fuente-cuerpo); font-size:1rem; color:var(--texto-oscuro);
-           background:var(--blanco); line-height:1.7; -webkit-font-smoothing:antialiased; }
-    img { max-width:100%; height:auto; display:block; }
-    a { color:inherit; text-decoration:none; transition:var(--transicion); }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--fuente-cuerpo);
+      font-size: 1rem;
+      color: var(--texto-oscuro);
+      background-color: var(--fondo-crema-claro);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transicion);
+    }
 
     /* Header */
-    .header { background:var(--verde-oscuro); position:sticky; top:0; z-index:100;
-               box-shadow:0 2px 16px rgba(0,0,0,0.18); }
-    .header__inner { display:flex; align-items:center; justify-content:space-between;
-                     padding:0.9rem 1.5rem; max-width:1180px; margin:0 auto; }
-    .header__logo { display:flex; align-items:center; gap:0.75rem; }
-    .header__logo img { height:48px; width:auto; object-fit:contain; }
-    .header__logo-texto { display:flex; flex-direction:column; }
-    .header__logo-nombre { font-family:var(--fuente-serif); font-size:1.125rem; font-weight:700;
-                            color:var(--blanco); line-height:1.2; }
-    .header__logo-sub { font-size:0.75rem; color:var(--verde-claro); text-transform:uppercase;
-                         letter-spacing:0.08em; }
-    .nav__lista { display:flex; gap:0.25rem; list-style:none; }
-    .nav__enlace { font-family:var(--fuente-serif); font-size:0.9rem; font-weight:600;
-                   color:var(--blanco); padding:0.5rem 0.8rem; border-radius:var(--radio-sm);
-                   transition:var(--transicion); }
-    .nav__enlace:hover { background:var(--verde-medio); }
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: var(--verde-bosque-oscuro);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 1.5rem;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .header__logo {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .header__logo-img {
+      height: 46px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .header__logo-texto {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header__logo-nombre {
+      font-family: var(--fuente-serif);
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--blanco);
+      line-height: 1.2;
+    }
+
+    .header__logo-sub {
+      font-size: 0.72rem;
+      color: var(--dorado);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+    }
+
+    .nav__lista {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      list-style: none;
+    }
+
+    .nav__enlace {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.85);
+      padding: 0.5rem 0.85rem;
+      border-radius: var(--radio-sm);
+    }
+
+    .nav__enlace:hover {
+      color: var(--dorado);
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .header__cta-btn {
+      display: inline-flex;
+      align-items: center;
+      background-color: var(--dorado);
+      color: #172e19;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.55rem 1.15rem;
+      border-radius: var(--radio-md);
+      transition: var(--transicion);
+    }
+
+    .header__cta-btn:hover {
+      background-color: var(--dorado-hover);
+      color: #fff;
+    }
 
     /* Encabezado interior */
     .encabezado-interior {
-      background:linear-gradient(135deg,var(--verde-oscuro),#2a5630);
-      padding:3rem 0; text-align:center;
+      background: linear-gradient(135deg, var(--verde-bosque-oscuro), var(--verde-institucional));
+      padding: 3.5rem 0 3rem;
+      text-align: center;
+      border-bottom: 3px solid var(--dorado);
     }
-    .encabezado-interior__titulo { font-family:var(--fuente-serif); font-size:2.25rem;
-                                    font-weight:700; color:var(--blanco); }
-    .encabezado-interior__sub { color:var(--verde-claro); font-size:1.125rem; margin-top:0.5rem; }
-    .migas { display:flex; justify-content:center; gap:0.5rem; margin-top:0.75rem;
-              font-size:0.875rem; color:rgba(255,255,255,0.7); }
-    .migas a { color:var(--dorado-claro); }
-    .migas a:hover { text-decoration:underline; }
 
-    /* Contenedor y artículo */
-    .contenedor { max-width:900px; margin:0 auto; padding:0 1.5rem; }
-    .articulo { padding:3rem 0 4rem; }
-    .articulo__imagen-destacada { width:100%; height:400px; object-fit:cover;
-                                   border-radius:var(--radio-md); margin-bottom:2rem;
-                                   box-shadow:var(--sombra-tarjeta);
-                                   border:3px solid var(--dorado); }
-    .articulo__meta { display:flex; gap:1rem; flex-wrap:wrap; align-items:center;
-                       margin-bottom:1.5rem; }
-    .articulo__categoria { font-size:0.75rem; font-weight:700; text-transform:uppercase;
-                            letter-spacing:0.12em; color:var(--blanco);
-                            background:var(--dorado); padding:0.25rem 0.8rem;
-                            border-radius:var(--radio-pill); }
-    .articulo__fecha { font-size:0.875rem; color:var(--texto-medio); }
-    .articulo__titulo { font-family:var(--fuente-serif); font-size:2rem; font-weight:700;
-                         color:var(--verde-oscuro); margin-bottom:1.25rem; line-height:1.25; }
-    .articulo__cuerpo p { color:var(--texto-medio); font-size:1rem; line-height:1.85;
-                            margin-bottom:1.25rem; }
-    .articulo__cuerpo h3 { font-family:var(--fuente-serif); color:var(--verde-oscuro);
-                             font-size:1.375rem; margin:2rem 0 0.75rem; }
-    .articulo__cuerpo figure { margin:2rem 0; }
-    .articulo__cuerpo figure img { width:100%; height:280px; object-fit:cover;
-                                    border-radius:var(--radio-md); border:2px solid var(--dorado); }
-    .articulo__cuerpo figcaption { font-size:0.8rem; color:var(--texto-medio);
-                                    text-align:center; margin-top:0.4rem; font-style:italic; }
-    .divisor { width:60px; height:4px; background:linear-gradient(to right,var(--verde-oscuro),var(--verde-medio));
-                border-radius:2px; margin:1rem 0 1.75rem; }
-    .etiquetas { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:2rem;
-                  padding-top:1.5rem; border-top:1px solid rgba(52,103,57,0.15); }
-    .etiqueta { font-size:0.75rem; font-weight:700; color:var(--verde-oscuro);
-                 background:var(--verde-claro); padding:0.25rem 0.7rem; border-radius:var(--radio-pill); }
-    .btn-volver { display:inline-flex; align-items:center; gap:0.4rem;
-                   color:var(--verde-oscuro); font-weight:700; font-size:0.875rem;
-                   margin-bottom:1.5rem; transition:var(--transicion); }
-    .btn-volver:hover { color:var(--verde-medio); }
+    .encabezado-interior__titulo {
+      font-family: var(--fuente-serif);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--blanco);
+    }
+
+    .encabezado-interior__sub {
+      color: var(--dorado);
+      font-size: 1.05rem;
+      margin-top: 0.4rem;
+      font-weight: 500;
+    }
+
+    .migas {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 0.85rem;
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .migas a {
+      color: var(--blanco);
+    }
+
+    .migas a:hover {
+      color: var(--dorado);
+      text-decoration: underline;
+    }
+
+    /* Contenedor & Articulo */
+    .contenedor {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .articulo {
+      padding: 3.5rem 0 5rem;
+    }
+
+    .articulo-card-box {
+      background-color: var(--blanco);
+      border: 1px solid var(--borde-suave);
+      border-radius: var(--radio-md);
+      padding: 2.5rem;
+      box-shadow: var(--sombra-card);
+    }
+
+    .btn-volver {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--verde-institucional);
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+      transition: var(--transicion);
+    }
+
+    .btn-volver:hover {
+      color: var(--dorado-hover);
+      transform: translateX(-4px);
+    }
+
+    .articulo__imagen-destacada {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border-radius: var(--radio-md);
+      margin-bottom: 2rem;
+      border: 1px solid var(--borde-suave);
+      box-shadow: var(--sombra-card);
+    }
+
+    .articulo__meta {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      margin-bottom: 1rem;
+    }
+
+    .badge-menta {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--verde-bosque-oscuro);
+      background-color: var(--verde-menta);
+      border: 1px solid var(--verde-menta-borde);
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radio-pill);
+    }
+
+    .articulo__fecha {
+      font-size: 0.85rem;
+      color: var(--texto-suave);
+    }
+
+    .articulo__titulo {
+      font-family: var(--fuente-serif);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--verde-bosque-oscuro);
+      line-height: 1.25;
+      margin-bottom: 1.25rem;
+      position: relative;
+      padding-left: 1rem;
+    }
+
+    .articulo__titulo::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10%;
+      bottom: 10%;
+      width: 4px;
+      background-color: var(--dorado);
+      border-radius: 2px;
+    }
+
+    .articulo__cuerpo p {
+      color: var(--texto-medio);
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+
+    .articulo__cuerpo h3 {
+      font-family: var(--fuente-serif);
+      color: var(--verde-bosque-oscuro);
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin: 2rem 0 0.85rem;
+    }
+
+    .etiquetas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--borde-suave);
+    }
+
+    .etiqueta {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--verde-institucional);
+      background-color: var(--verde-menta);
+      border: 1px solid var(--verde-menta-borde);
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radio-pill);
+    }
 
     /* Footer */
-    .footer { background:var(--verde-oscuro); color:var(--blanco); padding:2.5rem 0 0; }
-    .footer__grid { display:grid; grid-template-columns:2fr 1fr 1fr; gap:3rem;
-                     max-width:1180px; margin:0 auto; padding:0 1.5rem 2.5rem; }
-    .footer__marca-nombre { font-family:var(--fuente-serif); font-size:1.375rem;
-                              font-weight:700; margin-bottom:0.4rem; }
-    .footer__marca-slogan { font-size:0.875rem; color:var(--verde-claro);
-                              font-style:italic; margin-bottom:1rem; }
-    .footer__datos p { font-size:0.875rem; color:rgba(255,255,255,0.75);
-                        margin-bottom:0.3rem; }
-    .footer__col-titulo { font-family:var(--fuente-serif); font-size:1.125rem;
-                           font-weight:700; color:var(--dorado-claro); margin-bottom:1rem;
-                           padding-bottom:0.4rem;
-                           border-bottom:2px solid rgba(240,207,133,0.3); }
-    .footer__enlaces { display:flex; flex-direction:column; gap:0.4rem; list-style:none; }
-    .footer__enlace { font-size:0.875rem; color:rgba(255,255,255,0.75);
-                       transition:var(--transicion); }
-    .footer__enlace:hover { color:var(--verde-claro); padding-left:4px; }
-    .footer__barra { border-top:1px solid rgba(255,255,255,0.1); padding:1rem 1.5rem;
-                      text-align:center; font-size:0.75rem; color:rgba(255,255,255,0.5); }
-
-    /* WA flotante */
-    .wa-flotante { position:fixed; bottom:28px; right:28px; z-index:999;
-                    width:58px; height:58px; border-radius:50%;
-                    background:var(--dorado); display:flex; align-items:center;
-                    justify-content:center; font-size:1.7rem; color:var(--blanco);
-                    box-shadow:0 4px 20px rgba(202,149,92,0.45);
-                    transition:var(--transicion); animation:pulse 2.5s ease-in-out infinite; }
-    .wa-flotante:hover { transform:scale(1.1); background:var(--dorado-claro); }
-    @keyframes pulse {
-      0%,100%{box-shadow:0 4px 20px rgba(202,149,92,0.45);}
-      50%{box-shadow:0 4px 32px rgba(202,149,92,0.7);}
+    .footer {
+      background-color: var(--verde-bosque-profundo);
+      color: var(--blanco);
+      padding: 3.5rem 0 0;
+      border-top: 2px solid rgba(202, 161, 86, 0.3);
     }
-    @media(max-width:768px){
-      .nav { display:none; }
-      .footer__grid { grid-template-columns:1fr; gap:1.5rem; }
-      .articulo__imagen-destacada { height:240px; }
-      .articulo__titulo { font-size:1.5rem; }
+
+    .footer__grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    .footer__marca-nombre {
+      font-family: var(--fuente-serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer__marca-slogan {
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 1.25rem;
+    }
+
+    .footer__datos p {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 0.35rem;
+    }
+
+    .footer__col-titulo {
+      font-family: var(--fuente-serif);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--dorado);
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid rgba(202, 161, 86, 0.25);
+    }
+
+    .footer__enlaces {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      list-style: none;
+    }
+
+    .footer__enlace {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .footer__enlace:hover {
+      color: var(--dorado);
+      padding-left: 4px;
+    }
+
+    .footer__barra {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 1.25rem 1.5rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* Botón flotante */
+    .whatsapp-flotante {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 999;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background-color: var(--dorado);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(202, 161, 86, 0.45);
+      font-size: 1.7rem;
+      color: #172e19;
+    }
+
+    @media (max-width: 768px) {
+      .nav__lista { display: none; }
+      .header__cta-btn { display: none; }
+      .footer__grid { grid-template-columns: 1fr; gap: 2rem; }
+      .articulo-card-box { padding: 1.5rem; }
+      .articulo__imagen-destacada { height: 220px; }
+      .articulo__titulo { font-size: 1.5rem; }
     }
   </style>
 </head>
+
 <body>
 
   <header class="header">
     <div class="header__inner">
-      <a href="index.html" class="header__logo"
-         aria-label="UEP Nueva República — Inicio">
-        <img src="logo_nr.png" alt="Logo UEP Nueva República">
+      <a href="index.html" class="header__logo" aria-label="UEP Nueva República — Inicio">
+        <img src="img/logo_nr.png" alt="Logo UEP Nueva República" class="header__logo-img">
         <div class="header__logo-texto">
           <span class="header__logo-nombre">UEP Nueva República</span>
-          <span class="header__logo-sub">Unidad Educativa Privada</span>
+          <span class="header__logo-sub">Instituto de Educación Privada</span>
         </div>
       </a>
       <nav aria-label="Menú principal">
@@ -156,130 +456,88 @@
           <li><a class="nav__enlace" href="index.html#contacto">Contacto</a></li>
         </ul>
       </nav>
+      <a href="index.html#admisiones" class="header__cta-btn">Solicitar Cupo</a>
     </div>
   </header>
 
-  <!-- Encabezado interior -->
   <div class="encabezado-interior">
-    <h1 class="encabezado-interior__titulo">Proceso de Nuevo Ingreso</h1>
-    <p class="encabezado-interior__sub">Inscripciones abiertas · Año Escolar 2026–2027</p>
-    <div class="migas">
-      <a href="index.html">Inicio</a>
-      <span>›</span>
-      <a href="index.html">Avisos de la Dirección</a>
-      <span>›</span>
-      <span aria-current="page">Proceso de Nuevo Ingreso</span>
+    <div class="contenedor">
+      <h1 class="encabezado-interior__titulo">Proceso de Nuevo Ingreso</h1>
+      <p class="encabezado-interior__sub">Inscripciones abiertas · Año Escolar 2026–2027</p>
+      <nav class="migas" aria-label="Ruta de navegación">
+        <a href="index.html">Inicio</a>
+        <span aria-hidden="true">›</span>
+        <a href="index.html#cartelera">Cartelera</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">Nuevo Ingreso</span>
+      </nav>
     </div>
   </div>
 
-  <!-- Artículo -->
   <main class="articulo">
     <div class="contenedor">
-      <a href="index.html" class="btn-volver">← Volver a la página principal</a>
+      <div class="articulo-card-box">
+        <a href="index.html#cartelera" class="btn-volver">← Volver a la Cartelera Informativa</a>
 
-      <!-- Imagen destacada -->
-      <img src="img/nuevo_ingreso.jpeg"
-           alt="Proceso de Nuevo Ingreso — UEP Nueva República"
-           class="articulo__imagen-destacada">
+        <img src="img/nuevo_ingreso.jpeg" alt="Proceso de Nuevo Ingreso — UEP Nueva República" class="articulo__imagen-destacada">
 
-      <!-- Meta -->
-      <div class="articulo__meta">
-        <span class="articulo__categoria">📋 Aviso Institucional</span>
-        <span class="articulo__fecha">📅 Junio, 2026</span>
-      </div>
-
-      <!-- Título -->
-      <h1 class="articulo__titulo">Proceso de Nuevo Ingreso — Año Escolar 2026–2027</h1>
-      <div class="divisor"></div>
-
-      <!-- Cuerpo del aviso -->
-      <div class="articulo__cuerpo">
-        <p>
-          La Unidad Educativa Privada Nueva República, comprometida con brindar una educación
-          de calidad fundamentada en valores, informa a la comunidad que se encuentra
-          <strong>formalmente abierto el proceso de inscripción para nuevos estudiantes</strong>
-          correspondiente al año escolar 2026–2027.
-        </p>
-        <p>
-          Invitamos a todos los representantes interesados en formar parte de nuestra familia
-          institucional a conocer los detalles del proceso, los requisitos necesarios y las
-          condiciones de admisión. En UEP Nueva República creemos que cada estudiante merece
-          un espacio donde pueda crecer académica, social y espiritualmente.
-        </p>
-
-        <h3>¿Quiénes pueden inscribirse?</h3>
-        <p>
-          El proceso de nuevo ingreso está dirigido a estudiantes que deseen ingresar a cualquiera
-          de nuestros niveles educativos:
-        </p>
-        <ul style="list-style:disc;padding-left:1.5rem;color:var(--texto-medio);margin-bottom:1.25rem;line-height:2;">
-          <li><strong>Educación Primaria:</strong> desde 1° hasta 6° grado.</li>
-          <li><strong>Media General (Bachillerato):</strong> desde 1° hasta 5° año.</li>
-        </ul>
-
-        <h3>Documentos requeridos</h3>
-        <p>Para iniciar el proceso, los representantes deberán consignar los siguientes documentos:</p>
-        <ol style="list-style:decimal;padding-left:1.5rem;color:var(--texto-medio);margin-bottom:1.25rem;line-height:2.2;">
-          <li>Copia de la cédula de identidad del representante legal.</li>
-          <li>Partida de nacimiento del aspirante (original y copia).</li>
-          <li>Certificado de conducta del plantel anterior.</li>
-          <li>Boletín del último año cursado (original o copia).</li>
-          <li>Constancia de residencia actualizada.</li>
-          <li>2 fotografías tipo carnet recientes.</li>
-          <li>Tarjeta de vacunas actualizada (nivel primaria).</li>
-        </ol>
-
-        <h3>Horario de atención para inscripciones</h3>
-        <p>
-          La Secretaría del plantel atiende para el proceso de inscripción de
-          <strong>lunes a viernes de 8:00 AM a 12:00 M</strong>, durante el período de
-          inscripciones establecido. Se recomienda llamar con anticipación para confirmar
-          disponibilidad de cupos en el grado de interés.
-        </p>
-
-        <h3>¿Cómo contactarnos?</h3>
-        <p>
-          Para mayor información o para consultar la disponibilidad de cupos, comunícate
-          directamente con la institución a través de nuestros canales oficiales:
-        </p>
-        <div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1.5rem 0;">
-          <a href="https://wa.me/584226449365" target="_blank" rel="noopener"
-             style="display:inline-flex;align-items:center;gap:0.5rem;background:#25D366;
-                    color:#fff;font-weight:700;padding:0.85rem 1.75rem;border-radius:50px;
-                    font-size:1rem;transition:all 0.3s ease;">
-            💬 Escribir por WhatsApp
-          </a>
-          <a href="https://www.instagram.com/nuevarepublica_u.e.p" target="_blank" rel="noopener"
-             style="display:inline-flex;align-items:center;gap:0.5rem;
-                    background:var(--verde-oscuro);color:#fff;font-weight:700;
-                    padding:0.85rem 1.75rem;border-radius:50px;font-size:1rem;
-                    transition:all 0.3s ease;">
-            📸 Instagram oficial
-          </a>
+        <div class="articulo__meta">
+          <span class="badge-menta">Inscripciones</span>
+          <span class="articulo__fecha">📅 Junio, 2026</span>
         </div>
-        <p>
-          En UEP Nueva República entendemos que elegir la institución educativa de un hijo
-          es una decisión trascendental. Por eso, nuestro equipo directivo y administrativo
-          está dispuesto a acompañar a cada familia en este proceso con transparencia,
-          calidez y orientación personalizada.
-        </p>
-        <p>
-          Te esperamos con las puertas abiertas. Formar parte de la familia de UEP Nueva
-          República es el primer paso hacia un futuro lleno de aprendizaje, valores y
-          crecimiento integral.
-        </p>
 
-        <!-- Etiquetas -->
-        <div class="etiquetas">
-          <span class="etiqueta">#NuevoIngreso</span>
-          <span class="etiqueta">#Inscripciones2026</span>
-          <span class="etiqueta">#UEPNuevaRepública</span>
-          <span class="etiqueta">#EducaciónDeCalidad</span>
+        <h1 class="articulo__titulo">Proceso de Nuevo Ingreso — Año Escolar 2026–2027</h1>
+
+        <div class="articulo__cuerpo">
+          <p>
+            La Unidad Educativa Privada Nueva República, comprometida con brindar una educación de calidad fundamentada en valores, informa a la comunidad que se encuentra <strong>formalmente abierto el proceso de inscripción para nuevos estudiantes</strong> correspondiente al año escolar 2026–2027.
+          </p>
+          <p>
+            Invitamos a todos los representantes interesados en formar parte de nuestra familia institucional a conocer los detalles del proceso, los requisitos necesarios y las condiciones de admisión. En UEP Nueva República creemos que cada estudiante merece un espacio donde pueda crecer académica, social y espiritualmente.
+          </p>
+
+          <h3>¿Quiénes pueden inscribirse?</h3>
+          <p>El proceso de nuevo ingreso está dirigido a estudiantes que deseen ingresar a cualquiera de nuestros niveles educativos:</p>
+          <ul style="list-style:disc; padding-left:1.5rem; color:var(--texto-medio); margin-bottom:1.25rem; line-height:2;">
+            <li><strong>Educación Primaria:</strong> desde 1° hasta 6° grado.</li>
+            <li><strong>Media General (Bachillerato):</strong> desde 1° hasta 5° año.</li>
+          </ul>
+
+          <h3>Documentos requeridos</h3>
+          <p>Para iniciar el proceso, los representantes deberán consignar los siguientes documentos:</p>
+          <ol style="list-style:decimal; padding-left:1.5rem; color:var(--texto-medio); margin-bottom:1.25rem; line-height:2.2;">
+            <li>Copia de la cédula de identidad del representante legal.</li>
+            <li>Partida de nacimiento del aspirante (original y copia).</li>
+            <li>Certificado de conducta del plantel anterior.</li>
+            <li>Boletín del último año cursado (original o copia).</li>
+            <li>Constancia de residencia actualizada.</li>
+            <li>2 fotografías tipo carnet recientes.</li>
+            <li>Tarjeta de vacunas actualizada (nivel primaria).</li>
+          </ol>
+
+          <h3>Horario de atención para inscripciones</h3>
+          <p>
+            La Secretaría del plantel atiende para el proceso de inscripción de <strong>lunes a viernes de 8:00 AM a 12:00 M</strong>, durante el período de inscripciones establecido. Se recomienda contactar con anticipación para confirmar disponibilidad de cupos en el grado de interés.
+          </p>
+
+          <div style="display:flex; flex-wrap:wrap; gap:1rem; margin:2rem 0;">
+            <a href="https://wa.me/584226449365" target="_blank" rel="noopener noreferrer"
+               style="display:inline-flex; align-items:center; gap:0.5rem; background:var(--dorado); color:#172e19; font-weight:700; padding:0.85rem 1.75rem; border-radius:var(--radio-md); font-size:0.95rem;">
+              💬 Consultar Cupos por WhatsApp
+            </a>
+          </div>
+
+          <div class="etiquetas">
+            <span class="etiqueta">#NuevoIngreso</span>
+            <span class="etiqueta">#Inscripciones2026</span>
+            <span class="etiqueta">#UEPNuevaRepública</span>
+            <span class="etiqueta">#EducaciónDeCalidad</span>
+          </div>
         </div>
-      </div><!-- /articulo__cuerpo -->
 
-      <div style="margin-top:2.5rem;">
-        <a href="index.html" class="btn-volver">← Volver a la página principal</a>
+        <div style="margin-top:2.5rem;">
+          <a href="index.html#cartelera" class="btn-volver">← Volver a la Cartelera Informativa</a>
+        </div>
       </div>
     </div>
   </main>
@@ -295,30 +553,28 @@
           <p>🕐 Lunes a Viernes: 7:00 AM – 3:00 PM</p>
         </div>
       </div>
-      <nav aria-label="Navegación del footer">
+      <nav aria-label="Navegación footer">
         <p class="footer__col-titulo">Navegación</p>
         <ul class="footer__enlaces">
           <li><a class="footer__enlace" href="index.html">Inicio</a></li>
-          <li><a class="footer__enlace" href="index.html">Institución</a></li>
-          <li><a class="footer__enlace" href="index.html">Admisiones</a></li>
-          <li><a class="footer__enlace" href="index.html">Cartelera</a></li>
-          <li><a class="footer__enlace" href="index.html">Contacto</a></li>
+          <li><a class="footer__enlace" href="index.html#institucion">Institución</a></li>
+          <li><a class="footer__enlace" href="index.html#admisiones">Admisiones</a></li>
+          <li><a class="footer__enlace" href="index.html#cartelera">Cartelera</a></li>
+          <li><a class="footer__enlace" href="index.html#contacto">Contacto</a></li>
         </ul>
       </nav>
       <div>
-        <p class="footer__col-titulo">Síguenos</p>
+        <p class="footer__col-titulo">Canales Oficiales</p>
         <ul class="footer__enlaces">
-          <li><a class="footer__enlace" href="https://www.instagram.com/nuevarepublica_u.e.p" target="_blank" rel="noopener">📸 @nuevarepublica_u.e.p</a></li>
-          <li><a class="footer__enlace" href="https://wa.me/584226449365" target="_blank" rel="noopener">💬 WhatsApp</a></li>
+          <li><a class="footer__enlace" href="https://www.instagram.com/nuevarepublica_u.e.p" target="_blank" rel="noopener">📸 Instagram Oficial</a></li>
+          <li><a class="footer__enlace" href="https://wa.me/584226449365" target="_blank" rel="noopener">💬 WhatsApp Institucional</a></li>
         </ul>
       </div>
     </div>
     <div class="footer__barra">© 2026 UEP Nueva República. Todos los derechos reservados.</div>
   </footer>
 
-  <!-- Botón flotante WhatsApp -->
-  <a href="https://wa.me/584226449365" class="wa-flotante" target="_blank"
-     rel="noopener noreferrer" aria-label="Contactar por WhatsApp">💬</a>
+  <a href="https://wa.me/584226449365" class="whatsapp-flotante" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">💬</a>
 
 </body>
 </html>

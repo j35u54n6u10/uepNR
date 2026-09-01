@@ -2,120 +2,71 @@
 <html lang="es">
 
 <head>
-  <!-- =====================================================================
-       UEP NUEVA REPÚBLICA — MAQUETA HTML PRELIMINAR
-       Proyecto: Sitio Web Institucional
-       Páginas incluidas en este archivo:
-         1. Inicio (Home)
-         2. Institución (Nosotros)
-         3. Oferta Académica (+ subpáginas Primaria y Media General)
-         4. Admisiones e Inscripciones
-         5. Cartelera Informativa
-         6. Contacto
-       Nota: En producción WordPress, cada sección será una URL separada.
-             Este archivo es exclusivamente para revisión visual del cliente.
-       ===================================================================== -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Unidad Educativa Privada Nueva República — Formando ciudadanos con excelencia académica y valores.">
-  <title>UEP Nueva República — Maqueta Preliminar</title>
+    content="Unidad Educativa Privada Nueva República — Formando ciudadanos con excelencia académica y valores desde la Educación Primaria hasta el Bachillerato.">
+  <title>UEP Nueva República — Sitio Web Institucional</title>
 
-  <!-- Tipografías Google Fonts: Lora (serif formal) + Lato (cuerpo) -->
+  <!-- Tipografías Google Fonts: Lora (serif elegante) + Lato / Inter (sans-serif limpio) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&family=Lora:ital,wght@0,500;0,600;0,700;1,400;1,600&display=swap"
     rel="stylesheet">
 
-  <!-- Hoja de estilos principal -->
   <style>
     /* ==========================================================================
-   UEP NUEVA REPÚBLICA — HOJA DE ESTILOS GLOBAL
-   Proyecto: Sitio Web Institucional (Maqueta HTML Preliminar)
-   Paleta: Verde institucional + Dorado + Blanco
-   Tipografía: Lora (serif formal) + Lato (cuerpo)
-   ========================================================================== */
+       UEP NUEVA REPÚBLICA — SISTEMA DE DISEÑO INSTITUCIONAL RENOVADO
+       Paleta: Verde Bosque Profundo + Dorado Ocre + Fondo Crema Cálido + Blanco Puro
+       ========================================================================== */
 
-    /* --------------------------------------------------------------------------
-   1. IMPORTACIÓN DE TIPOGRAFÍAS (Google Fonts)
-   -------------------------------------------------------------------------- */
-
-
-    /* --------------------------------------------------------------------------
-   2. VARIABLES CSS GLOBALES (Paleta y configuración base)
-   -------------------------------------------------------------------------- */
     :root {
-      /* Colores institucionales */
-      --verde-oscuro: #346739;
-      /* Header, footer, botones CTA, fondos destacados */
-      --verde-medio: #6FAF4F;
-      /* Fondos secundarios, hover, bordes suaves       */
-      --verde-claro: #A8DF65;
-      /* Fondos muy suaves, viñetas, detalles deco      */
-      --dorado: #CA955C;
-      /* WhatsApp flotante, bordes de tarjetas, íconos  */
-      --dorado-claro: #F0CF85;
-      /* Fondo "Avisos de la Dirección", hover dorado   */
-      --blanco: #FFFFFF;
-      /* Fondo principal, texto sobre fondos oscuros     */
-      --texto-oscuro: #333333;
-      /* Texto general sobre fondos claros               */
-      --texto-medio: #555555;
-      /* Texto secundario, extractos                     */
-      --gris-suave: #F5F5F2;
-      /* Fondo alternativo de secciones claras           */
-      --sombra: rgba(52, 103, 57, 0.15);
-      /* Sombra con tono institucional      */
-
-      /* Tipografía */
-      --fuente-serif: 'Lora', Georgia, 'Times New Roman', serif;
-      --fuente-cuerpo: 'Lato', Arial, sans-serif;
-
-      /* Tamaños de texto */
-      --texto-xs: 0.75rem;
-      /*  12px */
-      --texto-sm: 0.875rem;
-      /*  14px */
-      --texto-base: 1rem;
-      /*  16px */
-      --texto-md: 1.125rem;
-      /*  18px */
-      --texto-lg: 1.375rem;
-      /*  22px */
-      --texto-xl: 1.75rem;
-      /*  28px */
-      --texto-2xl: 2.25rem;
-      /*  36px */
-      --texto-3xl: 3rem;
-      /*  48px */
-
-      /* Espaciados */
-      --espacio-xs: 0.5rem;
-      --espacio-sm: 1rem;
-      --espacio-md: 1.5rem;
-      --espacio-lg: 2.5rem;
-      --espacio-xl: 4rem;
-      --espacio-2xl: 6rem;
-
-      /* Bordes y sombras */
+      /* Colores Institucionales Principales */
+      --verde-bosque-oscuro: #16321c;
+      --verde-bosque-profundo: #0f2212;
+      --verde-institucional: #234b27;
+      --verde-medio: #356b3b;
+      --verde-claro: #5c9663;
+      --verde-menta: #eaf3e6;
+      --verde-menta-borde: #d0e4c8;
+      
+      /* Dorado / Acentos Ocre */
+      --dorado: #caa156;
+      --dorado-hover: #b58d44;
+      --dorado-claro: #f4e8cb;
+      --dorado-suave: #fcf8ee;
+      
+      /* Fondos y Neutros */
+      --fondo-crema: #f5efe6;
+      --fondo-crema-alt: #ece5d8;
+      --fondo-crema-claro: #faf7f2;
+      --blanco: #ffffff;
+      
+      /* Tipografía y Textos */
+      --texto-oscuro: #1f2721;
+      --texto-medio: #4d5750;
+      --texto-suave: #738076;
+      --borde-suave: #e2dbce;
+      
+      /* Sombras y Radios */
       --radio-sm: 6px;
       --radio-md: 12px;
-      --radio-lg: 20px;
+      --radio-lg: 18px;
       --radio-pill: 50px;
-      --sombra-tarjeta: 0 4px 20px rgba(52, 103, 57, 0.12);
-      --sombra-hover: 0 8px 32px rgba(52, 103, 57, 0.22);
-
-      /* Transición global */
-      --transicion: all 0.3s ease;
+      --sombra-card: 0 4px 20px rgba(22, 50, 28, 0.06);
+      --sombra-hover: 0 12px 32px rgba(22, 50, 28, 0.12);
+      
+      /* Tipografías */
+      --fuente-serif: 'Lora', Georgia, 'Times New Roman', serif;
+      --fuente-cuerpo: 'Lato', system-ui, -apple-system, sans-serif;
+      
+      /* Transiciones */
+      --transicion: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    /* --------------------------------------------------------------------------
-   3. RESET Y BASE
-   -------------------------------------------------------------------------- */
-    *,
-    *::before,
-    *::after {
+    /* ── Reset & Base ── */
+    *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -128,10 +79,10 @@
 
     body {
       font-family: var(--fuente-cuerpo);
-      font-size: var(--texto-base);
+      font-size: 1rem;
       color: var(--texto-oscuro);
-      background-color: var(--blanco);
-      line-height: 1.7;
+      background-color: var(--fondo-crema-claro);
+      line-height: 1.65;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -147,180 +98,262 @@
       transition: var(--transicion);
     }
 
-    ul,
-    ol {
+    ul, ol {
       list-style: none;
     }
 
-    /* --------------------------------------------------------------------------
-   4. UTILIDADES GENERALES
-   -------------------------------------------------------------------------- */
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
 
-    /* Contenedor central responsivo */
+    /* ── Contenedores y Estructura ── */
     .contenedor {
       max-width: 1180px;
       margin: 0 auto;
-      padding: 0 var(--espacio-md);
+      padding: 0 1.5rem;
     }
 
-    /* Títulos de sección */
-    .titulo-seccion {
-      font-family: var(--fuente-serif);
-      font-size: var(--texto-2xl);
-      font-weight: 700;
-      color: var(--verde-oscuro);
-      margin-bottom: var(--espacio-xs);
-    }
-
-    .subtitulo-seccion {
-      font-family: var(--fuente-cuerpo);
-      font-size: var(--texto-md);
-      color: var(--texto-medio);
-      margin-bottom: var(--espacio-lg);
-    }
-
-    /* Divisor decorativo institucional */
-    .divisor-verde {
-      width: 60px;
-      height: 4px;
-      background: linear-gradient(to right, var(--verde-oscuro), var(--verde-medio));
-      border-radius: 2px;
-      margin: var(--espacio-sm) 0 var(--espacio-md);
-    }
-
-    /* Sección padding estándar */
     .seccion {
-      padding: var(--espacio-xl) 0;
+      padding: 4.5rem 0;
     }
 
-    .seccion-gris {
-      background-color: var(--gris-suave);
+    .seccion-crema {
+      background-color: var(--fondo-crema);
     }
 
-    /* Texto centrado */
-    .texto-centro {
-      text-align: center;
+    .seccion-blanca {
+      background-color: var(--blanco);
     }
 
-    /* --------------------------------------------------------------------------
-   5. BOTONES
-   -------------------------------------------------------------------------- */
+    .seccion-verde {
+      background-color: var(--verde-bosque-oscuro);
+      color: var(--blanco);
+    }
 
-    /* Botón primario (verde oscuro) */
+    /* ── Encabezados con Barra Dorada Distintiva ── */
+    .encabezado-bloque {
+      margin-bottom: 2.5rem;
+    }
+
+    .titulo-con-barra {
+      display: inline-flex;
+      align-items: center;
+      position: relative;
+      padding-left: 1rem;
+      font-family: var(--fuente-serif);
+      font-size: 1.95rem;
+      font-weight: 700;
+      color: var(--verde-bosque-oscuro);
+      line-height: 1.25;
+    }
+
+    .titulo-con-barra::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10%;
+      bottom: 10%;
+      width: 4px;
+      background-color: var(--dorado);
+      border-radius: 2px;
+    }
+
+    .seccion-verde .titulo-con-barra {
+      color: var(--blanco);
+    }
+
+    .subtitulo-bloque {
+      font-size: 0.95rem;
+      color: var(--texto-medio);
+      margin-top: 0.45rem;
+      padding-left: 1rem;
+    }
+
+    .seccion-verde .subtitulo-bloque {
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    /* ── Botones del Sistema ── */
+    .btn-dorado {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background-color: var(--dorado);
+      color: #172e19;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.75rem 1.6rem;
+      border-radius: var(--radio-md);
+      transition: var(--transicion);
+      box-shadow: 0 4px 14px rgba(202, 161, 86, 0.25);
+    }
+
+    .btn-dorado:hover {
+      background-color: var(--dorado-hover);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(202, 161, 86, 0.35);
+    }
+
+    .btn-outline-blanco {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background-color: rgba(22, 50, 28, 0.6);
+      color: var(--blanco);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.75rem 1.6rem;
+      border-radius: var(--radio-md);
+      border: 1.5px solid rgba(255, 255, 255, 0.35);
+      backdrop-filter: blur(6px);
+      transition: var(--transicion);
+    }
+
+    .btn-outline-blanco:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+      border-color: var(--blanco);
+      transform: translateY(-2px);
+    }
+
     .btn-primario {
       display: inline-flex;
       align-items: center;
-      gap: var(--espacio-xs);
-      background-color: var(--verde-oscuro);
+      justify-content: center;
+      gap: 0.5rem;
+      background-color: var(--verde-institucional);
       color: var(--blanco);
-      font-family: var(--fuente-cuerpo);
-      font-size: var(--texto-base);
       font-weight: 700;
-      padding: 0.8rem 1.8rem;
-      border-radius: var(--radio-pill);
-      border: 2px solid var(--verde-oscuro);
-      cursor: pointer;
+      font-size: 0.95rem;
+      padding: 0.75rem 1.6rem;
+      border-radius: var(--radio-md);
       transition: var(--transicion);
-      text-align: center;
+      box-shadow: 0 4px 14px rgba(35, 75, 39, 0.2);
     }
 
     .btn-primario:hover {
-      background-color: var(--verde-medio);
-      border-color: var(--verde-medio);
+      background-color: var(--verde-bosque-oscuro);
       transform: translateY(-2px);
-      box-shadow: var(--sombra-hover);
+      box-shadow: 0 6px 20px rgba(35, 75, 39, 0.3);
     }
 
-    /* Botón secundario (contorno verde) */
     .btn-secundario {
       display: inline-flex;
       align-items: center;
-      gap: var(--espacio-xs);
+      justify-content: center;
+      gap: 0.5rem;
       background-color: transparent;
-      color: var(--verde-oscuro);
-      font-family: var(--fuente-cuerpo);
-      font-size: var(--texto-base);
+      color: var(--verde-institucional);
       font-weight: 700;
-      padding: 0.75rem 1.6rem;
-      border-radius: var(--radio-pill);
-      border: 2px solid var(--verde-oscuro);
-      cursor: pointer;
+      font-size: 0.95rem;
+      padding: 0.7rem 1.5rem;
+      border-radius: var(--radio-md);
+      border: 1.5px solid var(--verde-institucional);
       transition: var(--transicion);
     }
 
     .btn-secundario:hover {
-      background-color: var(--verde-oscuro);
+      background-color: var(--verde-institucional);
       color: var(--blanco);
       transform: translateY(-2px);
     }
 
-    /* Botón dorado (WhatsApp / CTA destacado) */
-    .btn-dorado {
+    .enlace-flecha {
       display: inline-flex;
       align-items: center;
-      gap: var(--espacio-xs);
-      background-color: var(--dorado);
-      color: var(--blanco);
-      font-family: var(--fuente-cuerpo);
-      font-size: var(--texto-md);
+      gap: 0.35rem;
       font-weight: 700;
-      padding: 1rem 2rem;
-      border-radius: var(--radio-pill);
-      border: 2px solid var(--dorado);
-      cursor: pointer;
+      font-size: 0.9rem;
+      color: var(--verde-institucional);
       transition: var(--transicion);
     }
 
-    .btn-dorado:hover {
-      background-color: var(--dorado-claro);
-      border-color: var(--dorado-claro);
-      color: var(--texto-oscuro);
-      transform: translateY(-2px);
-      box-shadow: var(--sombra-hover);
+    .enlace-flecha:hover {
+      color: var(--dorado-hover);
+      transform: translateX(4px);
     }
 
-    /* --------------------------------------------------------------------------
-   6. HEADER / MENÚ PRINCIPAL STICKY
-   -------------------------------------------------------------------------- */
+    /* ── Badges y Tags ── */
+    .badge-menta {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--verde-bosque-oscuro);
+      background-color: var(--verde-menta);
+      border: 1px solid var(--verde-menta-borde);
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radio-pill);
+    }
+
+    .badge-dorado {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #785217;
+      background-color: var(--dorado-claro);
+      border: 1px solid var(--dorado-borde);
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radio-pill);
+    }
+
+    /* ==========================================================================
+       HEADER Y NAVEGACIÓN
+       ========================================================================== */
     .header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background-color: var(--verde-oscuro);
-      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.18);
+      background-color: var(--verde-bosque-oscuro);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     }
 
     .header__inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.9rem var(--espacio-md);
+      padding: 0.85rem 1.5rem;
       max-width: 1180px;
       margin: 0 auto;
     }
 
-    /* Logo del colegio */
     .header__logo {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 0.85rem;
       text-decoration: none;
     }
 
     .header__logo-escudo {
-      width: 48px;
-      height: 48px;
-      background-color: var(--dorado);
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--dorado), var(--dorado-hover));
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: var(--fuente-serif);
-      font-size: 1.3rem;
+      font-size: 1.15rem;
       font-weight: 700;
-      color: var(--blanco);
+      color: #172e19;
       flex-shrink: 0;
       border: 2px solid var(--dorado-claro);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .header__logo-img {
+      height: 46px;
+      width: auto;
+      object-fit: contain;
     }
 
     .header__logo-texto {
@@ -330,740 +363,973 @@
 
     .header__logo-nombre {
       font-family: var(--fuente-serif);
-      font-size: var(--texto-md);
+      font-size: 1.125rem;
       font-weight: 700;
       color: var(--blanco);
       line-height: 1.2;
+      letter-spacing: 0.01em;
     }
 
     .header__logo-sub {
-      font-family: var(--fuente-cuerpo);
-      font-size: var(--texto-xs);
-      color: var(--verde-claro);
+      font-size: 0.72rem;
+      color: var(--dorado);
       text-transform: uppercase;
       letter-spacing: 0.08em;
+      font-weight: 600;
     }
 
-    /* Navegación principal */
     .nav__lista {
       display: flex;
       align-items: center;
-      gap: 0.25rem;
+      gap: 0.35rem;
     }
 
     .nav__enlace {
-      font-family: var(--fuente-serif);
-      font-size: 0.9rem;
+      font-family: var(--fuente-cuerpo);
+      font-size: 0.92rem;
       font-weight: 600;
-      color: var(--blanco);
-      padding: 0.5rem 0.8rem;
+      color: rgba(255, 255, 255, 0.85);
+      padding: 0.5rem 0.85rem;
       border-radius: var(--radio-sm);
       transition: var(--transicion);
-      white-space: nowrap;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.01em;
+      position: relative;
     }
 
-    .nav__enlace:hover,
-    .nav__enlace.activo {
-      background-color: var(--verde-medio);
+    .nav__enlace:hover {
       color: var(--blanco);
+      background-color: rgba(255, 255, 255, 0.08);
     }
 
-    /* Botón hamburguesa (móvil) */
+    .nav__enlace.activo {
+      color: var(--dorado);
+      background-color: rgba(202, 161, 86, 0.12);
+      font-weight: 700;
+    }
+
+    .nav__enlace.activo::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 15%;
+      right: 15%;
+      height: 2px;
+      background-color: var(--dorado);
+      border-radius: 2px;
+    }
+
+    .header__cta-btn {
+      display: inline-flex;
+      align-items: center;
+      background-color: var(--dorado);
+      color: #172e19;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.55rem 1.15rem;
+      border-radius: var(--radio-md);
+      transition: var(--transicion);
+      margin-left: 0.5rem;
+      white-space: nowrap;
+    }
+
+    .header__cta-btn:hover {
+      background-color: var(--dorado-hover);
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
     .hamburguesa {
       display: none;
       flex-direction: column;
       gap: 5px;
       cursor: pointer;
-      padding: 5px;
+      padding: 6px;
       background: none;
       border: none;
     }
 
     .hamburguesa span {
       display: block;
-      width: 26px;
+      width: 24px;
       height: 2px;
       background-color: var(--blanco);
       border-radius: 2px;
       transition: var(--transicion);
     }
 
-    /* --------------------------------------------------------------------------
-   7. HERO / BANNER PRINCIPAL
-   -------------------------------------------------------------------------- */
+    /* ==========================================================================
+       HERO / BIENVENIDA
+       ========================================================================== */
     .hero {
-      background:
-        linear-gradient(135deg, rgba(52, 103, 57, 0.70) 0%, rgba(42, 86, 48, 0.65) 50%, rgba(111, 175, 79, 0.58) 100%),
-        url('img/jovenes_aula_01.jpeg') center top/cover no-repeat;
-      padding: var(--espacio-2xl) 0;
       position: relative;
+      background-color: var(--verde-bosque-oscuro);
+      background-image: 
+        linear-gradient(100deg, rgba(16, 38, 20, 0.96) 0%, rgba(16, 38, 20, 0.88) 45%, rgba(22, 50, 28, 0.45) 85%, rgba(22, 50, 28, 0.3) 100%),
+        url('img/jovenes_aula_01.jpeg');
+      background-position: center right;
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 5.5rem 0 4.5rem;
       overflow: hidden;
-    }
-
-    /* Patrón decorativo de fondo */
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -80px;
-      right: -80px;
-      width: 400px;
-      height: 400px;
-      border-radius: 50%;
-      background: rgba(168, 223, 101, 0.08);
-      pointer-events: none;
-    }
-
-    .hero::after {
-      content: '';
-      position: absolute;
-      bottom: -100px;
-      left: -60px;
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      background: rgba(202, 149, 92, 0.08);
-      pointer-events: none;
     }
 
     .hero__contenido {
       position: relative;
-      z-index: 1;
-      max-width: 780px;
+      z-index: 2;
+      max-width: 680px;
     }
 
-    .hero__etiqueta {
-      display: inline-block;
-      font-family: var(--fuente-cuerpo);
-      font-size: var(--texto-xs);
+    .hero__pre-etiqueta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--verde-claro);
-      background-color: rgba(168, 223, 101, 0.12);
-      padding: 0.3rem 0.9rem;
-      border-radius: var(--radio-pill);
-      border: 1px solid rgba(168, 223, 101, 0.3);
-      margin-bottom: var(--espacio-md);
+      letter-spacing: 0.14em;
+      color: var(--dorado);
+      margin-bottom: 1rem;
+    }
+
+    .hero__pre-etiqueta::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 2px;
+      background-color: var(--dorado);
     }
 
     .hero__titulo {
       font-family: var(--fuente-serif);
-      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-size: clamp(2.3rem, 4.5vw, 3.6rem);
       font-weight: 700;
       color: var(--blanco);
-      line-height: 1.2;
-      margin-bottom: var(--espacio-sm);
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.01em;
     }
 
     .hero__titulo span {
-      color: var(--dorado-claro);
-      font-style: italic;
+      color: var(--dorado);
+      display: block;
     }
 
-    .hero__subtitulo {
-      font-family: var(--fuente-cuerpo);
-      font-size: var(--texto-md);
-      color: rgba(255, 255, 255, 0.85);
-      margin-bottom: var(--espacio-lg);
-      max-width: 560px;
-      line-height: 1.8;
+    .hero__descripcion {
+      font-size: 1.08rem;
+      color: rgba(255, 255, 255, 0.88);
+      line-height: 1.75;
+      margin-bottom: 2rem;
+      max-width: 580px;
     }
 
     .hero__acciones {
       display: flex;
-      gap: var(--espacio-sm);
+      gap: 1rem;
       flex-wrap: wrap;
       align-items: center;
+      margin-bottom: 3.5rem;
     }
 
-    /* Encabezado interior (páginas secundarias) */
-    .encabezado-interior {
-      background: linear-gradient(135deg, var(--verde-oscuro), #2a5630);
-      padding: var(--espacio-xl) 0;
-      text-align: center;
-      position: relative;
+    .hero__stats {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      gap: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      max-width: 540px;
     }
 
-    .encabezado-interior__titulo {
+    .hero__stat-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero__stat-numero {
       font-family: var(--fuente-serif);
-      font-size: var(--texto-2xl);
+      font-size: 2rem;
       font-weight: 700;
       color: var(--blanco);
-      position: relative;
-      z-index: 1;
+      line-height: 1.1;
     }
 
-    .encabezado-interior__subtitulo {
-      color: var(--verde-claro);
-      font-size: var(--texto-md);
-      margin-top: 0.5rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* Migas de pan */
-    .migas {
-      display: flex;
-      justify-content: center;
-      gap: 0.5rem;
-      margin-top: var(--espacio-sm);
-      font-size: var(--texto-sm);
+    .hero__stat-etiqueta {
+      font-size: 0.82rem;
       color: rgba(255, 255, 255, 0.7);
-      position: relative;
-      z-index: 1;
+      margin-top: 0.2rem;
+      text-transform: capitalize;
     }
 
-    .migas a {
-      color: var(--dorado-claro);
-    }
-
-    .migas a:hover {
-      text-decoration: underline;
-    }
-
-    /* --------------------------------------------------------------------------
-   8. BARRA DE ACCESO RÁPIDO
-   -------------------------------------------------------------------------- */
+    /* ==========================================================================
+       SECCIÓN: ACCESO RÁPIDO
+       ========================================================================== */
     .acceso-rapido {
-      padding: var(--espacio-lg) 0;
-      background-color: var(--blanco);
-      border-bottom: 1px solid rgba(52, 103, 57, 0.08);
+      padding: 3.5rem 0;
+      background-color: var(--fondo-crema-claro);
+    }
+
+    .acceso-rapido__badge-centro {
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--dorado-hover);
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .acceso-rapido__badge-centro::before,
+    .acceso-rapido__badge-centro::after {
+      content: '';
+      display: inline-block;
+      width: 40px;
+      height: 1px;
+      background-color: var(--dorado);
+      opacity: 0.6;
     }
 
     .acceso-rapido__grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: var(--espacio-md);
+      gap: 1.5rem;
     }
 
-    .tarjeta-acceso {
+    .tarjeta-acceso-renovada {
       background-color: var(--blanco);
-      border: 2px solid var(--dorado);
+      border: 1px solid var(--borde-suave);
       border-radius: var(--radio-md);
-      padding: var(--espacio-lg) var(--espacio-md);
-      text-align: center;
+      padding: 1.75rem 1.5rem;
       transition: var(--transicion);
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: var(--espacio-sm);
-      box-shadow: var(--sombra-tarjeta);
+      box-shadow: var(--sombra-card);
       cursor: pointer;
     }
 
-    .tarjeta-acceso:hover {
-      transform: translateY(-5px);
+    .tarjeta-acceso-renovada:hover {
+      transform: translateY(-4px);
       box-shadow: var(--sombra-hover);
-      border-color: var(--verde-oscuro);
-      background-color: var(--gris-suave);
+      border-color: var(--dorado);
     }
 
-    .tarjeta-acceso__icono {
-      width: 64px;
-      height: 64px;
-      background-color: var(--dorado-claro);
-      border-radius: 50%;
+    .tarjeta-acceso__icono-caja {
+      width: 44px;
+      height: 44px;
+      background-color: var(--verde-menta);
+      border: 1px solid var(--verde-menta-borde);
+      border-radius: var(--radio-sm);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.75rem;
-      margin-bottom: 0.25rem;
+      font-size: 1.3rem;
+      color: var(--verde-institucional);
+      margin-bottom: 1.25rem;
     }
 
     .tarjeta-acceso__titulo {
       font-family: var(--fuente-serif);
-      font-size: var(--texto-lg);
+      font-size: 1.2rem;
       font-weight: 700;
-      color: var(--verde-oscuro);
+      color: var(--verde-bosque-oscuro);
+      margin-bottom: 0.5rem;
     }
 
     .tarjeta-acceso__descripcion {
-      font-size: var(--texto-sm);
+      font-size: 0.9rem;
       color: var(--texto-medio);
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+      flex: 1;
     }
 
-    /* --------------------------------------------------------------------------
-   9. SECCIÓN AVISOS DE LA DIRECCIÓN
-   -------------------------------------------------------------------------- */
-    .avisos {
-      background-color: var(--dorado-claro);
-      padding: var(--espacio-xl) 0;
+    /* ==========================================================================
+       SECCIÓN: AVISOS DE LA DIRECCIÓN
+       ========================================================================== */
+    .avisos-grid-horizontal {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
     }
 
-    .avisos .titulo-seccion {
-      color: var(--verde-oscuro);
-    }
-
-    .avisos__grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: var(--espacio-md);
-      margin-top: var(--espacio-md);
-    }
-
-    .aviso-tarjeta {
+    .aviso-card-horizontal {
       background-color: var(--blanco);
+      border: 1px solid var(--borde-suave);
       border-radius: var(--radio-md);
-      padding: var(--espacio-md);
-      border-left: 5px solid var(--verde-oscuro);
-      box-shadow: 0 2px 12px rgba(202, 149, 92, 0.15);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      box-shadow: var(--sombra-card);
       transition: var(--transicion);
     }
 
-    .aviso-tarjeta:hover {
+    .aviso-card-horizontal:hover {
       transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(202, 149, 92, 0.25);
+      box-shadow: var(--sombra-hover);
+      border-color: var(--dorado);
     }
 
-    .aviso-tarjeta__fecha {
-      font-size: var(--texto-xs);
+    .aviso-card__img-box {
+      height: 100%;
+      min-height: 180px;
+      overflow: hidden;
+    }
+
+    .aviso-card__img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .aviso-card-horizontal:hover .aviso-card__img-box img {
+      transform: scale(1.04);
+    }
+
+    .aviso-card__cuerpo {
+      padding: 1.5rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .aviso-card__meta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .aviso-card__fecha {
+      font-size: 0.82rem;
+      color: var(--texto-suave);
+      font-weight: 500;
+    }
+
+    .aviso-card__titulo {
+      font-family: var(--fuente-serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--verde-bosque-oscuro);
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+
+    .aviso-card__extracto {
+      font-size: 0.92rem;
+      color: var(--texto-medio);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    /* ==========================================================================
+       SECCIÓN: NUESTRA OFERTA ACADÉMICA
+       ========================================================================== */
+    .oferta-academica-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.75rem;
+    }
+
+    .tarjeta-oferta-renovada {
+      background-color: var(--blanco);
+      border: 1px solid var(--borde-suave);
+      border-radius: var(--radio-md);
+      overflow: hidden;
+      box-shadow: var(--sombra-card);
+      display: flex;
+      flex-direction: column;
+      transition: var(--transicion);
+    }
+
+    .tarjeta-oferta-renovada:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--sombra-hover);
+      border-color: var(--dorado);
+    }
+
+    .tarjeta-oferta__cabecera {
+      background-color: var(--verde-institucional);
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .tarjeta-oferta__icono-circulo {
+      width: 42px;
+      height: 42px;
+      background-color: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      color: var(--blanco);
+      flex-shrink: 0;
+    }
+
+    .tarjeta-oferta__titulos {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tarjeta-oferta__sub {
+      font-size: 0.72rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.1em;
       color: var(--dorado);
-      margin-bottom: 0.4rem;
     }
 
-    .aviso-tarjeta__titulo {
+    .tarjeta-oferta__nombre {
       font-family: var(--fuente-serif);
-      font-size: var(--texto-md);
-      font-weight: 600;
-      color: var(--verde-oscuro);
-      margin-bottom: 0.5rem;
-    }
-
-    .aviso-tarjeta__extracto {
-      font-size: var(--texto-sm);
-      color: var(--texto-medio);
-      margin-bottom: var(--espacio-sm);
-    }
-
-    .enlace-leer-mas {
-      font-size: var(--texto-sm);
+      font-size: 1.25rem;
       font-weight: 700;
-      color: var(--verde-oscuro);
+      color: var(--blanco);
+    }
+
+    .tarjeta-oferta__cuerpo {
+      padding: 1.75rem 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tarjeta-oferta__desc {
+      font-size: 0.92rem;
+      color: var(--texto-medio);
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+    }
+
+    .tarjeta-oferta__lista {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-bottom: 1.5rem;
+      flex: 1;
+    }
+
+    .tarjeta-oferta__item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.88rem;
+      color: var(--texto-oscuro);
+    }
+
+    .tarjeta-oferta__check {
+      color: var(--verde-institucional);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ==========================================================================
+       SECCIÓN: VIDA ESCOLAR (GALERÍA 4 COLUMNAS)
+       ========================================================================== */
+    .vida-escolar__cabecera-flex {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .vida-escolar__enlace-ver-mas {
+      color: var(--dorado);
+      font-weight: 700;
+      font-size: 0.92rem;
       display: inline-flex;
       align-items: center;
-      gap: 0.3rem;
+      gap: 0.35rem;
+      transition: var(--transicion);
     }
 
-    .enlace-leer-mas:hover {
-      color: var(--verde-medio);
+    .vida-escolar__enlace-ver-mas:hover {
+      color: var(--blanco);
+      transform: translateX(4px);
     }
 
-    /* --------------------------------------------------------------------------
-   10. OFERTA ACADÉMICA (RESUMEN EN HOME)
-   -------------------------------------------------------------------------- */
-    .oferta-resumen {
-      padding: var(--espacio-xl) 0;
-      background-color: var(--blanco);
-    }
-
-    .oferta-resumen__grid {
+    .galeria-cuatro-cols {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: var(--espacio-md);
-      margin-top: var(--espacio-lg);
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
     }
 
-    .tarjeta-nivel {
+    .galeria-card {
+      position: relative;
       border-radius: var(--radio-md);
       overflow: hidden;
-      box-shadow: var(--sombra-tarjeta);
-      transition: var(--transicion);
-      display: flex;
-      flex-direction: column;
+      height: 200px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     }
 
-    .tarjeta-nivel:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--sombra-hover);
-    }
-
-    .tarjeta-nivel__cabecera {
-      background: linear-gradient(135deg, var(--verde-oscuro), var(--verde-medio));
-      padding: var(--espacio-lg) var(--espacio-md);
-      display: flex;
-      align-items: center;
-      gap: var(--espacio-sm);
-    }
-
-    .tarjeta-nivel__icono {
-      font-size: 2.5rem;
-      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-    }
-
-    .tarjeta-nivel__nombre {
-      font-family: var(--fuente-serif);
-      font-size: var(--texto-xl);
-      font-weight: 700;
-      color: var(--blanco);
-    }
-
-    .tarjeta-nivel__cuerpo {
-      background-color: var(--blanco);
-      padding: var(--espacio-md);
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .tarjeta-nivel__descripcion {
-      color: var(--texto-medio);
-      margin-bottom: var(--espacio-md);
-      flex: 1;
-    }
-
-    /* --------------------------------------------------------------------------
-   11. BANNER / GALERÍA
-   -------------------------------------------------------------------------- */
-    .galeria-banner {
-      width: 100%;
-      height: 340px;
-      overflow: hidden;
-      position: relative;
-      background: linear-gradient(135deg, var(--verde-medio), var(--verde-claro));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .galeria-banner__texto {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      color: var(--blanco);
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-    }
-
-    .galeria-banner__titulo {
-      font-family: var(--fuente-serif);
-      font-size: var(--texto-2xl);
-      font-weight: 700;
-    }
-
-    .galeria-banner__subtitulo {
-      font-size: var(--texto-md);
-      margin-top: 0.5rem;
-      opacity: 0.9;
-    }
-
-    /* Placeholder visual para slider (sin imágenes reales aún) */
-    .galeria-placeholder {
-      display: flex;
+    .galeria-card img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .galeria-card:hover img {
+      transform: scale(1.08);
+    }
+
+    .galeria-card__overlay {
       position: absolute;
-      top: 0;
-      left: 0;
+      inset: 0;
+      background: linear-gradient(to top, rgba(16, 38, 20, 0.85) 0%, rgba(16, 38, 20, 0.2) 60%, transparent 100%);
+      display: flex;
+      align-items: flex-end;
+      padding: 1rem;
+      opacity: 0.95;
+      transition: opacity 0.3s ease;
     }
 
-    .galeria-placeholder__item {
-      flex: 1;
-      transition: flex 0.4s ease;
+    .galeria-card:hover .galeria-card__overlay {
+      opacity: 1;
     }
 
-    .galeria-placeholder__item:nth-child(1) {
-      background: rgba(52, 103, 57, 0.5);
+    .galeria-card__texto {
+      font-family: var(--fuente-serif);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--blanco);
+      line-height: 1.25;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
 
-    .galeria-placeholder__item:nth-child(2) {
-      background: rgba(111, 175, 79, 0.4);
+    /* ==========================================================================
+       FOOTER RENOVADO
+       ========================================================================== */
+    .footer {
+      background-color: var(--verde-bosque-profundo);
+      color: var(--blanco);
+      padding: 4rem 0 0;
+      border-top: 2px solid rgba(202, 161, 86, 0.3);
     }
 
-    .galeria-placeholder__item:nth-child(3) {
-      background: rgba(168, 223, 101, 0.3);
+    .footer__grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 3.5rem;
     }
 
-    .galeria-placeholder__item:nth-child(4) {
-      background: rgba(202, 149, 92, 0.2);
+    .footer__marca-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
     }
 
-    /* --------------------------------------------------------------------------
-   12. MISIÓN / VISIÓN / VALORES
-   -------------------------------------------------------------------------- */
+    .footer__marca-nombre {
+      font-family: var(--fuente-serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--blanco);
+    }
+
+    .footer__marca-slogan {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 1.5rem;
+      line-height: 1.55;
+    }
+
+    .footer__datos-lista {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .footer__dato-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .footer__dato-icono {
+      color: var(--dorado);
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .footer__col-titulo {
+      font-family: var(--fuente-serif);
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--dorado);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid rgba(202, 161, 86, 0.25);
+    }
+
+    .footer__enlaces-lista {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .footer__enlace-item {
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.75);
+      transition: var(--transicion);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .footer__enlace-item::before {
+      content: '›';
+      color: var(--dorado);
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+
+    .footer__enlace-item:hover {
+      color: var(--dorado);
+      transform: translateX(4px);
+    }
+
+    .footer__barra-inferior {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 1.25rem 0;
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer__barra-inferior .contenedor {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    /* ==========================================================================
+       PÁGINAS INTERIOR / PESTAÑAS (INSTITUCIÓN, OFERTA, ADMISIONES, ETC.)
+       ========================================================================== */
+    .pagina {
+      display: none;
+    }
+
+    .pagina.visible {
+      display: block;
+    }
+
+    .encabezado-interior {
+      background: linear-gradient(135deg, var(--verde-bosque-oscuro), var(--verde-institucional));
+      padding: 3.5rem 0 3rem;
+      text-align: center;
+      position: relative;
+      border-bottom: 3px solid var(--dorado);
+    }
+
+    .encabezado-interior__titulo {
+      font-family: var(--fuente-serif);
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--blanco);
+    }
+
+    .encabezado-interior__subtitulo {
+      color: var(--dorado);
+      font-size: 1.05rem;
+      margin-top: 0.5rem;
+      font-weight: 500;
+    }
+
+    .migas {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 0.85rem;
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .migas a {
+      color: var(--blanco);
+    }
+
+    .migas a:hover {
+      color: var(--dorado);
+      text-decoration: underline;
+    }
+
+    /* Misión, Visión, Valores */
     .mvv__grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: var(--espacio-md);
-      margin-top: var(--espacio-lg);
+      gap: 1.5rem;
     }
 
     .mvv-tarjeta {
       background-color: var(--blanco);
       border-radius: var(--radio-md);
-      padding: var(--espacio-lg) var(--espacio-md);
-      text-align: center;
-      box-shadow: var(--sombra-tarjeta);
-      border-top: 4px solid var(--verde-medio);
+      padding: 2rem 1.75rem;
+      border: 1px solid var(--borde-suave);
+      border-top: 4px solid var(--verde-institucional);
+      box-shadow: var(--sombra-card);
       transition: var(--transicion);
     }
 
     .mvv-tarjeta:hover {
-      border-top-color: var(--dorado);
       transform: translateY(-4px);
+      box-shadow: var(--sombra-hover);
+      border-top-color: var(--dorado);
     }
 
     .mvv-tarjeta__icono {
-      font-size: 2.5rem;
-      margin-bottom: var(--espacio-sm);
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: var(--verde-institucional);
     }
 
     .mvv-tarjeta__titulo {
       font-family: var(--fuente-serif);
-      font-size: var(--texto-lg);
+      font-size: 1.3rem;
       font-weight: 700;
-      color: var(--verde-oscuro);
-      margin-bottom: var(--espacio-sm);
+      color: var(--verde-bosque-oscuro);
+      margin-bottom: 0.75rem;
     }
 
-    /* --------------------------------------------------------------------------
-   13. EQUIPO DIRECTIVO
-   -------------------------------------------------------------------------- */
+    .mvv-tarjeta p {
+      font-size: 0.92rem;
+      color: var(--texto-medio);
+      line-height: 1.7;
+    }
+
+    /* Reseña Histórica */
+    .historia__contenido {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .historia__texto p {
+      margin-bottom: 1rem;
+      color: var(--texto-medio);
+      font-size: 0.95rem;
+      line-height: 1.75;
+    }
+
+    .historia__img-box {
+      border-radius: var(--radio-md);
+      overflow: hidden;
+      box-shadow: var(--sombra-card);
+      border: 2px solid var(--borde-suave);
+      height: 320px;
+    }
+
+    .historia__img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Equipo Directivo */
     .directivo__grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: var(--espacio-md);
-      margin-top: var(--espacio-lg);
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
     }
 
     .directivo-tarjeta {
       text-align: center;
-      padding: var(--espacio-lg) var(--espacio-md);
+      padding: 2rem 1.5rem;
       background-color: var(--blanco);
       border-radius: var(--radio-md);
-      box-shadow: var(--sombra-tarjeta);
+      border: 1px solid var(--borde-suave);
+      box-shadow: var(--sombra-card);
       transition: var(--transicion);
     }
 
     .directivo-tarjeta:hover {
-      transform: translateY(-3px);
+      transform: translateY(-4px);
       box-shadow: var(--sombra-hover);
+      border-color: var(--dorado);
     }
 
     .directivo-tarjeta__avatar {
-      width: 90px;
-      height: 90px;
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--verde-oscuro), var(--verde-medio));
+      background: linear-gradient(135deg, var(--verde-institucional), var(--verde-medio));
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: var(--fuente-serif);
-      font-size: 2rem;
+      font-size: 1.6rem;
       font-weight: 700;
       color: var(--blanco);
-      margin: 0 auto var(--espacio-sm);
+      margin: 0 auto 1rem;
       border: 3px solid var(--dorado);
     }
 
     .directivo-tarjeta__nombre {
       font-family: var(--fuente-serif);
-      font-size: var(--texto-md);
+      font-size: 1.15rem;
       font-weight: 700;
-      color: var(--verde-oscuro);
+      color: var(--verde-bosque-oscuro);
     }
 
     .directivo-tarjeta__cargo {
-      font-size: var(--texto-sm);
-      color: var(--dorado);
-      font-weight: 600;
-      margin-top: 0.3rem;
+      font-size: 0.85rem;
+      color: var(--dorado-hover);
+      font-weight: 700;
+      margin-top: 0.25rem;
     }
 
-    /* --------------------------------------------------------------------------
-   14. RESEÑA HISTÓRICA
-   -------------------------------------------------------------------------- */
-    .historia {
-      background-color: var(--gris-suave);
-    }
-
-    .historia__contenido {
+    /* Marco Legal */
+    .legal__grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--espacio-xl);
-      align-items: center;
-      margin-top: var(--espacio-lg);
-    }
-
-    .historia__texto p {
-      margin-bottom: var(--espacio-sm);
-      color: var(--texto-medio);
-    }
-
-    .historia__imagen-placeholder {
-      width: 100%;
-      height: 280px;
-      background: linear-gradient(135deg, var(--verde-claro), var(--dorado-claro));
-      border-radius: var(--radio-md);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 4rem;
-      color: var(--verde-oscuro);
-      border: 3px solid var(--dorado);
-    }
-
-    /* --------------------------------------------------------------------------
-   15. MARCO LEGAL
-   -------------------------------------------------------------------------- */
-    .legal__lista {
-      margin-top: var(--espacio-lg);
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: var(--espacio-sm);
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
     }
 
     .legal__item {
       display: flex;
       align-items: flex-start;
-      gap: var(--espacio-sm);
-      padding: var(--espacio-md);
+      gap: 1rem;
+      padding: 1.5rem;
       background-color: var(--blanco);
       border-radius: var(--radio-md);
-      box-shadow: var(--sombra-tarjeta);
+      border: 1px solid var(--borde-suave);
+      box-shadow: var(--sombra-card);
     }
 
     .legal__item-icono {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
       flex-shrink: 0;
-      margin-top: 0.1rem;
     }
 
     .legal__item-titulo {
       font-family: var(--fuente-serif);
       font-weight: 700;
-      color: var(--verde-oscuro);
-      margin-bottom: 0.2rem;
+      font-size: 1rem;
+      color: var(--verde-bosque-oscuro);
+      margin-bottom: 0.35rem;
     }
 
     .legal__item-texto {
-      font-size: var(--texto-sm);
+      font-size: 0.85rem;
       color: var(--texto-medio);
+      line-height: 1.6;
     }
 
-    /* --------------------------------------------------------------------------
-   16. PLAN DE ESTUDIOS
-   -------------------------------------------------------------------------- */
-    .plan-estudios {
-      background-color: var(--gris-suave);
-    }
-
+    /* Plan de estudios materias */
     .plan-estudios__grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: var(--espacio-sm);
-      margin-top: var(--espacio-lg);
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 0.75rem;
+      margin-top: 1.25rem;
     }
 
     .materia-chip {
       background-color: var(--blanco);
-      border: 1px solid rgba(52, 103, 57, 0.15);
-      border-left: 4px solid var(--verde-medio);
+      border: 1px solid var(--borde-suave);
+      border-left: 3px solid var(--verde-institucional);
       border-radius: var(--radio-sm);
-      padding: 0.75rem 1rem;
-      font-size: var(--texto-sm);
-      font-weight: 600;
-      color: var(--verde-oscuro);
+      padding: 0.7rem 0.9rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--verde-bosque-oscuro);
       transition: var(--transicion);
     }
 
     .materia-chip:hover {
       border-left-color: var(--dorado);
-      background-color: var(--dorado-claro);
+      background-color: var(--dorado-suave);
+      transform: translateX(2px);
     }
 
-    /* --------------------------------------------------------------------------
-   17. ADMISIONES — PROCESO PASO A PASO
-   -------------------------------------------------------------------------- */
-    .proceso-pasos {
-      margin-top: var(--espacio-lg);
-    }
-
+    /* Admisiones */
     .paso {
       display: flex;
-      gap: var(--espacio-md);
-      margin-bottom: var(--espacio-md);
+      gap: 1rem;
+      margin-bottom: 1.25rem;
       align-items: flex-start;
     }
 
     .paso__numero {
       flex-shrink: 0;
-      width: 48px;
-      height: 48px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
-      background-color: var(--verde-oscuro);
+      background-color: var(--verde-institucional);
       color: var(--blanco);
       font-family: var(--fuente-serif);
-      font-size: var(--texto-lg);
+      font-size: 1.15rem;
       font-weight: 700;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 2px 8px rgba(52, 103, 57, 0.3);
+      box-shadow: 0 2px 8px rgba(35, 75, 39, 0.25);
     }
 
     .paso__contenido-titulo {
       font-family: var(--fuente-serif);
-      font-size: var(--texto-md);
+      font-size: 1.05rem;
       font-weight: 700;
-      color: var(--verde-oscuro);
-      margin-bottom: 0.3rem;
+      color: var(--verde-bosque-oscuro);
+      margin-bottom: 0.2rem;
     }
 
     .paso__contenido-texto {
       color: var(--texto-medio);
-      font-size: var(--texto-sm);
+      font-size: 0.88rem;
+      line-height: 1.6;
     }
 
-    /* --------------------------------------------------------------------------
-   18. FORMULARIO DE ADMISIONES
-   -------------------------------------------------------------------------- */
-    .formulario-admision {
+    .formulario-box {
       background-color: var(--blanco);
       border-radius: var(--radio-md);
-      padding: var(--espacio-xl);
-      box-shadow: var(--sombra-tarjeta);
-      border-top: 4px solid var(--verde-oscuro);
-    }
-
-    .formulario-admision__titulo {
-      font-family: var(--fuente-serif);
-      font-size: var(--texto-xl);
-      font-weight: 700;
-      color: var(--verde-oscuro);
-      margin-bottom: var(--espacio-md);
+      padding: 2.25rem;
+      border: 1px solid var(--borde-suave);
+      box-shadow: var(--sombra-card);
+      border-top: 4px solid var(--verde-institucional);
     }
 
     .campo-grupo {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: var(--espacio-sm);
-      margin-bottom: var(--espacio-sm);
+      gap: 1rem;
+      margin-bottom: 1rem;
     }
 
     .campo {
       display: flex;
       flex-direction: column;
-      margin-bottom: var(--espacio-sm);
+      margin-bottom: 1rem;
     }
 
     .campo label {
-      font-size: var(--texto-sm);
+      font-size: 0.85rem;
       font-weight: 700;
-      color: var(--verde-oscuro);
-      margin-bottom: 0.4rem;
+      color: var(--verde-bosque-oscuro);
+      margin-bottom: 0.35rem;
     }
 
     .campo input,
     .campo select,
     .campo textarea {
       font-family: var(--fuente-cuerpo);
-      font-size: var(--texto-base);
+      font-size: 0.92rem;
       color: var(--texto-oscuro);
-      background-color: var(--gris-suave);
-      border: 2px solid rgba(52, 103, 57, 0.15);
+      background-color: var(--fondo-crema-claro);
+      border: 1px solid var(--borde-suave);
       border-radius: var(--radio-sm);
       padding: 0.75rem 1rem;
       transition: var(--transicion);
@@ -1073,44 +1339,31 @@
     .campo input:focus,
     .campo select:focus,
     .campo textarea:focus {
-      border-color: var(--verde-medio);
+      border-color: var(--verde-institucional);
       background-color: var(--blanco);
-      box-shadow: 0 0 0 3px rgba(111, 175, 79, 0.15);
+      box-shadow: 0 0 0 3px rgba(35, 75, 39, 0.12);
     }
 
     .campo textarea {
       resize: vertical;
-      min-height: 100px;
+      min-height: 90px;
     }
 
-    .aviso-proteccion {
-      font-size: var(--texto-xs);
-      color: var(--texto-medio);
-      margin-top: var(--espacio-sm);
-      padding: 0.5rem;
-      background-color: var(--gris-suave);
-      border-radius: var(--radio-sm);
-      border-left: 3px solid var(--verde-claro);
-    }
-
-    /* --------------------------------------------------------------------------
-   19. CARTELERA INFORMATIVA
-   -------------------------------------------------------------------------- */
+    /* Cartelera */
     .cartelera__filtros {
       display: flex;
-      gap: var(--espacio-xs);
+      gap: 0.5rem;
       flex-wrap: wrap;
-      margin-bottom: var(--espacio-lg);
+      margin-bottom: 2rem;
     }
 
     .filtro-btn {
-      padding: 0.4rem 1.2rem;
+      padding: 0.45rem 1.15rem;
       border-radius: var(--radio-pill);
-      border: 2px solid var(--verde-medio);
-      background-color: transparent;
-      color: var(--verde-oscuro);
-      font-family: var(--fuente-cuerpo);
-      font-size: var(--texto-sm);
+      border: 1.5px solid var(--borde-suave);
+      background-color: var(--blanco);
+      color: var(--texto-medio);
+      font-size: 0.88rem;
       font-weight: 700;
       cursor: pointer;
       transition: var(--transicion);
@@ -1118,22 +1371,23 @@
 
     .filtro-btn:hover,
     .filtro-btn.activo {
-      background-color: var(--verde-oscuro);
-      border-color: var(--verde-oscuro);
+      background-color: var(--verde-institucional);
+      border-color: var(--verde-institucional);
       color: var(--blanco);
     }
 
     .cartelera__grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: var(--espacio-md);
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
     }
 
     .entrada-tarjeta {
       background-color: var(--blanco);
+      border: 1px solid var(--borde-suave);
       border-radius: var(--radio-md);
       overflow: hidden;
-      box-shadow: var(--sombra-tarjeta);
+      box-shadow: var(--sombra-card);
       transition: var(--transicion);
       display: flex;
       flex-direction: column;
@@ -1142,426 +1396,180 @@
     .entrada-tarjeta:hover {
       transform: translateY(-4px);
       box-shadow: var(--sombra-hover);
+      border-color: var(--dorado);
     }
 
     .entrada-tarjeta__imagen {
-      height: 160px;
-      background: linear-gradient(135deg, var(--verde-oscuro), var(--verde-medio));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3rem;
+      height: 180px;
+      overflow: hidden;
+    }
+
+    .entrada-tarjeta__imagen img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .entrada-tarjeta__cuerpo {
-      padding: var(--espacio-md);
+      padding: 1.5rem;
       flex: 1;
       display: flex;
       flex-direction: column;
     }
 
-    .entrada-tarjeta__categoria {
-      font-size: var(--texto-xs);
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--dorado);
-      margin-bottom: 0.3rem;
-    }
-
-    .entrada-tarjeta__titulo {
-      font-family: var(--fuente-serif);
-      font-size: var(--texto-md);
-      font-weight: 700;
-      color: var(--verde-oscuro);
-      margin-bottom: 0.5rem;
-    }
-
-    .entrada-tarjeta__fecha {
-      font-size: var(--texto-xs);
-      color: var(--texto-medio);
-      margin-bottom: 0.5rem;
-    }
-
-    .entrada-tarjeta__extracto {
-      font-size: var(--texto-sm);
-      color: var(--texto-medio);
-      flex: 1;
-      margin-bottom: var(--espacio-sm);
-    }
-
     .paginacion {
       display: flex;
       justify-content: center;
-      gap: var(--espacio-xs);
-      margin-top: var(--espacio-xl);
+      gap: 0.5rem;
+      margin-top: 2.5rem;
     }
 
     .pagina-btn {
-      width: 40px;
-      height: 40px;
+      width: 38px;
+      height: 38px;
       border-radius: var(--radio-sm);
-      border: 2px solid var(--verde-medio);
-      background-color: transparent;
-      color: var(--verde-oscuro);
+      border: 1px solid var(--borde-suave);
+      background-color: var(--blanco);
+      color: var(--verde-bosque-oscuro);
       font-weight: 700;
       cursor: pointer;
-      transition: var(--transicion);
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: var(--transicion);
     }
 
     .pagina-btn.activo,
     .pagina-btn:hover {
-      background-color: var(--verde-oscuro);
-      border-color: var(--verde-oscuro);
+      background-color: var(--verde-institucional);
+      border-color: var(--verde-institucional);
       color: var(--blanco);
     }
 
-    /* --------------------------------------------------------------------------
-   20. CONTACTO
-   -------------------------------------------------------------------------- */
+    /* Contacto */
     .contacto__grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: var(--espacio-xl);
-      margin-top: var(--espacio-lg);
+      gap: 2.5rem;
     }
 
     .contacto__info-item {
       display: flex;
       align-items: flex-start;
-      gap: var(--espacio-sm);
-      margin-bottom: var(--espacio-md);
-      padding: var(--espacio-md);
-      background-color: var(--gris-suave);
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      padding: 1.25rem;
+      background-color: var(--blanco);
+      border: 1px solid var(--borde-suave);
       border-radius: var(--radio-md);
+      box-shadow: var(--sombra-card);
     }
 
     .contacto__icono {
-      font-size: 1.75rem;
+      font-size: 1.5rem;
+      color: var(--verde-institucional);
       flex-shrink: 0;
     }
 
     .contacto__dato-titulo {
       font-family: var(--fuente-serif);
       font-weight: 700;
-      color: var(--verde-oscuro);
+      color: var(--verde-bosque-oscuro);
       margin-bottom: 0.2rem;
+      font-size: 0.95rem;
     }
 
     .contacto__dato-valor {
       color: var(--texto-medio);
-      font-size: var(--texto-sm);
+      font-size: 0.88rem;
     }
 
-    .contacto__whatsapp-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background-color: #25D366;
-      color: var(--blanco);
-      font-weight: 700;
-      font-size: var(--texto-md);
-      padding: 1rem 2rem;
-      border-radius: var(--radio-pill);
-      margin-top: var(--espacio-sm);
-      transition: var(--transicion);
-    }
-
-    .contacto__whatsapp-btn:hover {
-      background-color: #128C7E;
-      transform: translateY(-2px);
-      box-shadow: var(--sombra-hover);
-    }
-
-    .mapa-contenedor {
+    .mapa-box {
       border-radius: var(--radio-md);
       overflow: hidden;
-      box-shadow: var(--sombra-tarjeta);
-      border: 3px solid var(--dorado);
-    }
-
-    .mapa-placeholder {
-      width: 100%;
+      box-shadow: var(--sombra-card);
+      border: 2px solid var(--borde-suave);
       height: 380px;
-      background: linear-gradient(135deg, var(--verde-claro), var(--dorado-claro));
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: var(--espacio-sm);
-      color: var(--verde-oscuro);
-      font-family: var(--fuente-serif);
     }
 
-    .mapa-placeholder__icono {
-      font-size: 3.5rem;
+    .mapa-box iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
     }
 
-    .mapa-placeholder__texto {
-      font-size: var(--texto-md);
-      font-weight: 700;
-    }
-
-    .mapa-placeholder__sub {
-      font-size: var(--texto-sm);
-      color: var(--texto-medio);
-    }
-
-    /* --------------------------------------------------------------------------
-   21. FOOTER
-   -------------------------------------------------------------------------- */
-    .footer {
-      background-color: var(--verde-oscuro);
-      color: var(--blanco);
-      padding: var(--espacio-xl) 0 0;
-    }
-
-    .footer__grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: var(--espacio-xl);
-      margin-bottom: var(--espacio-xl);
-    }
-
-    .footer__marca-nombre {
-      font-family: var(--fuente-serif);
-      font-size: var(--texto-lg);
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: var(--blanco);
-    }
-
-    .footer__marca-slogan {
-      font-size: var(--texto-sm);
-      color: var(--verde-claro);
-      margin-bottom: var(--espacio-md);
-      font-style: italic;
-    }
-
-    .footer__datos p {
-      font-size: var(--texto-sm);
-      color: rgba(255, 255, 255, 0.75);
-      margin-bottom: 0.3rem;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .footer__col-titulo {
-      font-family: var(--fuente-serif);
-      font-size: var(--texto-md);
-      font-weight: 700;
-      color: var(--dorado-claro);
-      margin-bottom: var(--espacio-md);
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid rgba(240, 207, 133, 0.3);
-    }
-
-    .footer__enlaces {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .footer__enlace {
-      font-size: var(--texto-sm);
-      color: rgba(255, 255, 255, 0.75);
-      transition: var(--transicion);
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .footer__enlace::before {
-      content: '›';
-      color: var(--verde-claro);
-      font-size: 1.1rem;
-    }
-
-    .footer__enlace:hover {
-      color: var(--verde-claro);
-      padding-left: 4px;
-    }
-
-    .footer__social {
-      display: flex;
-      gap: var(--espacio-xs);
-      margin-top: var(--espacio-sm);
-    }
-
-    .footer__social-btn {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-      color: var(--blanco);
-      transition: var(--transicion);
-    }
-
-    .footer__social-btn:hover {
-      background-color: var(--dorado);
-      border-color: var(--dorado);
-      transform: translateY(-3px);
-    }
-
-    .footer__barra-inferior {
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      padding: var(--espacio-md) 0;
-      text-align: center;
-      font-size: var(--texto-xs);
-      color: rgba(255, 255, 255, 0.5);
-    }
-
-    /* --------------------------------------------------------------------------
-   22. BOTÓN FLOTANTE DE WHATSAPP
-   -------------------------------------------------------------------------- */
+    /* Botón flotante WhatsApp */
     .whatsapp-flotante {
       position: fixed;
       bottom: 28px;
       right: 28px;
       z-index: 999;
-      width: 60px;
-      height: 60px;
+      width: 58px;
+      height: 58px;
       border-radius: 50%;
       background-color: var(--dorado);
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 20px rgba(202, 149, 92, 0.45);
+      box-shadow: 0 4px 20px rgba(202, 161, 86, 0.45);
       transition: var(--transicion);
       cursor: pointer;
-      animation: pulsar 2.5s ease-in-out infinite;
+      animation: pulsar 2.8s ease-in-out infinite;
     }
 
     .whatsapp-flotante:hover {
-      background-color: var(--dorado-claro);
-      transform: scale(1.1);
-      box-shadow: 0 6px 28px rgba(202, 149, 92, 0.6);
+      background-color: var(--dorado-hover);
+      transform: scale(1.08);
+      box-shadow: 0 6px 28px rgba(202, 161, 86, 0.6);
     }
 
     .whatsapp-flotante__icono {
-      font-size: 1.75rem;
-      color: var(--blanco);
-    }
-
-    /* Tooltip del botón flotante */
-    .whatsapp-flotante__tooltip {
-      position: absolute;
-      right: 70px;
-      white-space: nowrap;
-      background-color: var(--texto-oscuro);
-      color: var(--blanco);
-      font-size: var(--texto-xs);
-      padding: 0.4rem 0.75rem;
-      border-radius: var(--radio-sm);
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-    }
-
-    .whatsapp-flotante:hover .whatsapp-flotante__tooltip {
-      opacity: 1;
+      font-size: 1.7rem;
+      color: #172e19;
     }
 
     @keyframes pulsar {
-
-      0%,
-      100% {
-        box-shadow: 0 4px 20px rgba(202, 149, 92, 0.45);
-      }
-
-      50% {
-        box-shadow: 0 4px 32px rgba(202, 149, 92, 0.7);
-      }
+      0%, 100% { box-shadow: 0 4px 20px rgba(202, 161, 86, 0.4); }
+      50% { box-shadow: 0 4px 30px rgba(202, 161, 86, 0.7); }
     }
 
-    /* --------------------------------------------------------------------------
-   23. NAVEGACIÓN DE PÁGINAS (barra de tabs por página activa)
-   -------------------------------------------------------------------------- */
-    .tabs-pagina {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: var(--espacio-xs);
-      padding: var(--espacio-md) 0;
-      background-color: var(--gris-suave);
-      border-bottom: 2px solid rgba(52, 103, 57, 0.1);
-      position: sticky;
-      top: 72px;
-      /* Debajo del header sticky */
-      z-index: 100;
-    }
-
-    .tab-pagina {
-      padding: 0.5rem 1.2rem;
-      border-radius: var(--radio-pill);
-      font-size: var(--texto-sm);
-      font-weight: 700;
-      cursor: pointer;
-      border: 2px solid transparent;
-      background-color: transparent;
-      color: var(--verde-oscuro);
-      font-family: var(--fuente-cuerpo);
-      transition: var(--transicion);
-    }
-
-    .tab-pagina:hover,
-    .tab-pagina.activo {
-      background-color: var(--verde-oscuro);
-      color: var(--blanco);
-      border-color: var(--verde-oscuro);
-    }
-
-    /* --------------------------------------------------------------------------
-   24. SECCIONES DE PÁGINA (visibilidad por pestaña)
-   -------------------------------------------------------------------------- */
-    .pagina {
-      display: none;
-    }
-
-    .pagina.visible {
-      display: block;
-    }
-
-    /* --------------------------------------------------------------------------
-   25. RESPONSIVE — BREAKPOINTS MÓVIL / TABLET
-   -------------------------------------------------------------------------- */
-
-    /* Tablet (≤ 900px) */
-    @media (max-width: 900px) {
-      .mvv__grid {
+    /* ==========================================================================
+       RESPONSIVE DESIGN (TABLET Y MÓVIL)
+       ========================================================================== */
+    @media (max-width: 960px) {
+      .acceso-rapido__grid {
         grid-template-columns: 1fr;
       }
-
-      .historia__contenido {
+      .oferta-academica-grid {
         grid-template-columns: 1fr;
       }
-
+      .galeria-cuatro-cols {
+        grid-template-columns: repeat(2, 1fr);
+      }
       .footer__grid {
         grid-template-columns: 1fr 1fr;
       }
-
-      .oferta-resumen__grid {
+      .mvv__grid {
         grid-template-columns: 1fr;
       }
-
+      .historia__contenido {
+        grid-template-columns: 1fr;
+      }
+      .directivo__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .legal__grid {
+        grid-template-columns: 1fr;
+      }
       .contacto__grid {
+        grid-template-columns: 1fr;
+      }
+      .cartelera__grid {
         grid-template-columns: 1fr;
       }
     }
 
-    /* Móvil (≤ 640px) */
-    @media (max-width: 640px) {
-
-      /* Menú hamburguesa */
+    @media (max-width: 680px) {
       .hamburguesa {
         display: flex;
       }
@@ -1571,10 +1579,11 @@
         top: 100%;
         left: 0;
         right: 0;
-        background-color: var(--verde-oscuro);
-        padding: var(--espacio-sm);
+        background-color: var(--verde-bosque-oscuro);
+        padding: 1rem;
         display: none;
-        border-top: 2px solid var(--verde-medio);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
       }
 
       .nav.abierto {
@@ -1584,204 +1593,49 @@
       .nav__lista {
         flex-direction: column;
         align-items: stretch;
-        gap: 0.2rem;
+        gap: 0.4rem;
       }
 
       .nav__enlace {
         padding: 0.75rem 1rem;
-        font-size: var(--texto-base);
-        border-radius: var(--radio-sm);
-        text-align: left;
       }
 
-      /* Grids en una columna */
-      .acceso-rapido__grid {
+      .header__cta-btn {
+        display: none;
+      }
+
+      .hero {
+        padding: 3.5rem 0 3rem;
+      }
+
+      .hero__stats {
         grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
+
+      .aviso-card-horizontal {
+        grid-template-columns: 1fr;
+      }
+
+      .aviso-card__img-box {
+        height: 180px;
+      }
+
+      .galeria-cuatro-cols {
+        grid-template-columns: 1fr;
+      }
+
+      .footer__grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
       }
 
       .campo-grupo {
         grid-template-columns: 1fr;
       }
 
-      .footer__grid {
-        grid-template-columns: 1fr;
-      }
-
-      .cartelera__grid {
-        grid-template-columns: 1fr;
-      }
-
       .directivo__grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      /* Hero */
-      .hero {
-        padding: var(--espacio-xl) 0;
-      }
-
-      .hero__acciones {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      /* Títulos */
-      .titulo-seccion {
-        font-size: var(--texto-xl);
-      }
-
-      .hero__titulo {
-        font-size: var(--texto-2xl);
-      }
-    }
-
-
-
-    /* ── Galería Slider ── */
-    .galeria-slider {
-      position: relative;
-      width: 100%;
-      height: 400px;
-      overflow: hidden;
-      background: var(--verde-oscuro);
-    }
-
-    .slider-track {
-      display: flex;
-      height: 100%;
-      transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
-      will-change: transform;
-    }
-
-    .slide {
-      min-width: 100%;
-      height: 100%;
-      position: relative;
-      flex-shrink: 0;
-    }
-
-    .slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      filter: brightness(0.85);
-      transition: filter 0.4s ease;
-    }
-
-    .slide:hover img {
-      filter: brightness(0.92);
-    }
-
-    .slide__caption {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 1.5rem 2rem;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.72) 0%, transparent 100%);
-      color: #fff;
-    }
-
-    .slide__caption span {
-      display: inline-block;
-      font-size: 0.72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      background: var(--dorado);
-      padding: 0.2rem 0.7rem;
-      border-radius: 50px;
-      margin-bottom: 0.4rem;
-    }
-
-    .slide__caption p {
-      font-family: var(--fuente-serif);
-      font-size: 1.2rem;
-      font-weight: 600;
-      line-height: 1.35;
-      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-    }
-
-    .slider-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(52, 103, 57, 0.72);
-      color: #fff;
-      border: 2px solid rgba(255, 255, 255, 0.3);
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      font-size: 1.6rem;
-      cursor: pointer;
-      z-index: 10;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: var(--transicion);
-      backdrop-filter: blur(4px);
-    }
-
-    .slider-btn:hover {
-      background: var(--dorado);
-      border-color: var(--dorado);
-      transform: translateY(-50%) scale(1.08);
-    }
-
-    .slider-btn--prev {
-      left: 16px;
-    }
-
-    .slider-btn--next {
-      right: 16px;
-    }
-
-    .slider-dots {
-      position: absolute;
-      bottom: 14px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 7px;
-      z-index: 10;
-    }
-
-    .slider-dot {
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.4);
-      border: none;
-      cursor: pointer;
-      transition: var(--transicion);
-      padding: 0;
-    }
-
-    .slider-dot.activo {
-      background: var(--dorado);
-      width: 26px;
-      border-radius: 5px;
-    }
-
-    @media (max-width: 640px) {
-      .galeria-slider {
-        height: 260px;
-      }
-
-      .slide__caption p {
-        font-size: 0.95rem;
-      }
-
-      .slider-btn {
-        width: 38px;
-        height: 38px;
-        font-size: 1.2rem;
-      }
-
-      .aviso-tarjeta[style*="grid-template-columns"] {
-        display: flex !important;
-        flex-direction: column !important;
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -1789,56 +1643,51 @@
 
 <body>
 
-
-
   <!-- ======================================================================
-       HEADER / MENÚ PRINCIPAL STICKY
-       - Presente en todas las páginas
-       - Sticky: se mantiene fijo al hacer scroll (position: sticky)
-       - En móvil colapsa a menú hamburguesa
+       HEADER INSTITUCIONAL STICKY
        ====================================================================== -->
   <header class="header" role="banner">
     <div class="header__inner">
 
-      <!-- Logo institucional (izquierda) -->
-      <a href="#" class="header__logo" data-ir-a="pagina-inicio" aria-label="UEP Nueva República — Ir al inicio">
-        <img src="img/logo_nr.png" alt="Logo UEP Nueva República"
-          style="height:48px; width:auto; display:block; object-fit:contain;">
+      <!-- Logo Institucional -->
+      <a href="#inicio" class="header__logo" data-ir-a="pagina-inicio" aria-label="UEP Nueva República — Inicio">
+        <img src="img/logo_nr.png" alt="Logo UEP Nueva República" class="header__logo-img">
         <div class="header__logo-texto">
           <span class="header__logo-nombre">UEP Nueva República</span>
-          <span class="header__logo-sub">Unidad Educativa Privada</span>
+          <span class="header__logo-sub">Instituto de Educación Privada</span>
         </div>
       </a>
 
-      <!-- Botón hamburguesa (visible solo en móvil) -->
-      <button class="hamburguesa" id="hamburguesa" aria-label="Abrir menú" aria-expanded="false"
+      <!-- Botón hamburguesa móvil -->
+      <button class="hamburguesa" id="hamburguesa" aria-label="Abrir menú de navegación" aria-expanded="false"
         aria-controls="nav-principal">
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <!-- Navegación principal (colapsa en móvil) -->
+      <!-- Navegación principal -->
       <nav class="nav" id="nav-principal" role="navigation" aria-label="Menú principal">
         <ul class="nav__lista" role="list">
           <li><a class="nav__enlace activo" data-pagina="pagina-inicio" href="#inicio">Inicio</a></li>
           <li><a class="nav__enlace" data-pagina="pagina-institucion" href="#institucion">Institución</a></li>
           <li><a class="nav__enlace" data-pagina="pagina-oferta" href="#oferta">Oferta Académica</a></li>
           <li><a class="nav__enlace" data-pagina="pagina-admisiones" href="#admisiones">Admisiones</a></li>
-          <li><a class="nav__enlace" data-pagina="pagina-cartelera" href="#cartelera">Cartelera Informativa</a></li>
+          <li><a class="nav__enlace" data-pagina="pagina-cartelera" href="#cartelera">Cartelera</a></li>
           <li><a class="nav__enlace" data-pagina="pagina-contacto" href="#contacto">Contacto</a></li>
         </ul>
       </nav>
 
+      <!-- CTA Botón Header -->
+      <button class="header__cta-btn" data-ir-a="pagina-admisiones">
+        Solicitar Cupo
+      </button>
+
     </div>
-  </header><!-- /header -->
-
-
+  </header>
 
   <!-- ======================================================================
-       CONTENIDO PRINCIPAL — 6 PÁGINAS
-       Cada <main> tiene id="pagina-xxx" y se muestra/oculta con JavaScript
-       según la tab o enlace seleccionado.
+       CONTENIDO PRINCIPAL MULTI-PÁGINA
        ====================================================================== -->
   <div id="contenido-principal">
 
@@ -1847,269 +1696,271 @@
          ================================================================== -->
     <main id="pagina-inicio" class="pagina visible" role="main" aria-label="Página de inicio">
 
-      <!-- ----------------------------------------------------------------
-           SECCIÓN 1.1: HERO / BIENVENIDA
-           Fondo: gradiente verde oscuro → verde medio
-           ---------------------------------------------------------------- -->
+      <!-- ── 1. HERO RENOVADO ── -->
       <section class="hero" aria-labelledby="hero-titulo">
         <div class="contenedor">
           <div class="hero__contenido">
-            <!-- Etiqueta pequeña de presentación -->
-            <span class="hero__etiqueta">Institución Educativa Privada — Venezuela</span>
+            <!-- Pre-título con guión institucional -->
+            <span class="hero__pre-etiqueta">Instituto de Educación Privada · Venezuela</span>
 
-            <!-- Título principal -->
+            <!-- Título en dos tonos: Blanco y Dorado -->
             <h1 class="hero__titulo" id="hero-titulo">
-              Unidad Educativa Privada<br>
+              Unidad Educativa
               <span>Nueva República</span>
             </h1>
 
-            <!-- Subtítulo / slogan institucional -->
-            <p class="hero__subtitulo">
-              Formando ciudadanos con excelencia académica y valores,
-              comprometidos con el desarrollo integral de cada estudiante
-              desde la Educación Primaria hasta el Bachillerato.
+            <!-- Descripción institucional -->
+            <p class="hero__descripcion">
+              Formamos ciudadanos con excelencia académica y valores, comprometidos con el desarrollo integral de cada estudiante desde la Educación Primaria hasta el Bachillerato.
             </p>
 
-            <!-- Botones de acción -->
+            <!-- Acciones CTA -->
             <div class="hero__acciones">
-              <!-- CTA principal: WhatsApp (dorado) -->
               <a href="https://wa.me/584226449365" target="_blank" rel="noopener noreferrer" class="btn-dorado"
                 aria-label="Contáctanos por WhatsApp">
                 💬 Contáctanos por WhatsApp
               </a>
-              <!-- CTA secundario: Admisiones -->
-              <button class="btn-secundario" data-ir-a="pagina-admisiones" style="color:#fff; border-color:#fff;">
+              <button class="btn-outline-blanco" data-ir-a="pagina-admisiones">
                 📋 Solicitar Cupo
               </button>
             </div>
+
+            <!-- Indicadores estadísticos -->
+            <div class="hero__stats">
+              <div class="hero__stat-item">
+                <span class="hero__stat-numero">+400</span>
+                <span class="hero__stat-etiqueta">Estudiantes</span>
+              </div>
+              <div class="hero__stat-item">
+                <span class="hero__stat-numero">20+</span>
+                <span class="hero__stat-etiqueta">Años de trayectoria</span>
+              </div>
+              <div class="hero__stat-item">
+                <span class="hero__stat-numero">2</span>
+                <span class="hero__stat-etiqueta">Niveles educativos</span>
+              </div>
+            </div>
           </div>
         </div>
-      </section><!-- /hero -->
+      </section>
 
-      <!-- ----------------------------------------------------------------
-           SECCIÓN 1.2: BARRA DE ACCESO RÁPIDO
-           Tres tarjetas con accesos directos a las áreas más consultadas
-           ---------------------------------------------------------------- -->
+      <!-- ── 2. SECCIÓN: ACCESO RÁPIDO ── -->
       <section class="acceso-rapido" aria-labelledby="acceso-titulo">
         <div class="contenedor">
-          <h2 class="titulo-seccion texto-centro" id="acceso-titulo"
-            style="font-size:1.3rem; color:#555; font-family:'Lato',sans-serif; font-weight:400; letter-spacing:0.04em; text-transform:uppercase;">
+          <div class="acceso-rapido__badge-centro" id="acceso-titulo">
             Acceso Rápido
-          </h2>
+          </div>
 
-          <!-- Grid de 3 tarjetas (responsive: 1 columna en móvil) -->
           <div class="acceso-rapido__grid" role="list">
-
             <!-- Tarjeta 1: Solicitud de Cupo -->
-            <a class="tarjeta-acceso" data-ir-a="pagina-admisiones" href="#admisiones" role="listitem"
-              aria-label="Ir a Solicitud de Cupo">
-              <div class="tarjeta-acceso__icono" aria-hidden="true">📋</div>
+            <div class="tarjeta-acceso-renovada" data-ir-a="pagina-admisiones" role="listitem">
+              <div class="tarjeta-acceso__icono-caja" aria-hidden="true">📋</div>
               <h3 class="tarjeta-acceso__titulo">Solicitud de Cupo</h3>
               <p class="tarjeta-acceso__descripcion">
-                Inicia el proceso de inscripción para el año escolar. Consulta requisitos y disponibilidad.
+                Inicia el proceso de inscripción para el año escolar. Consulta requisitos y disponibilidad de vacantes.
               </p>
-            </a>
+              <span class="enlace-flecha">Ver más →</span>
+            </div>
 
             <!-- Tarjeta 2: Calendario Escolar -->
-            <a class="tarjeta-acceso" data-ir-a="pagina-cartelera" href="#cartelera" role="listitem"
-              aria-label="Ver Calendario Escolar en la Cartelera">
-              <div class="tarjeta-acceso__icono" aria-hidden="true">📅</div>
+            <div class="tarjeta-acceso-renovada" data-ir-a="pagina-cartelera" role="listitem">
+              <div class="tarjeta-acceso__icono-caja" aria-hidden="true">📅</div>
               <h3 class="tarjeta-acceso__titulo">Calendario Escolar</h3>
               <p class="tarjeta-acceso__descripcion">
-                Fechas de inicio, recesos, efemérides y actividades institucionales del año escolar.
+                Fechas de inicio, recesos académicos, efemérides patrias y actividades institucionales del período.
               </p>
-            </a>
+              <span class="enlace-flecha">Ver más →</span>
+            </div>
 
             <!-- Tarjeta 3: Contacto Directo -->
-            <a class="tarjeta-acceso" href="https://wa.me/584226449365" target="_blank" rel="noopener noreferrer"
-              role="listitem" aria-label="Contactar por WhatsApp">
-              <div class="tarjeta-acceso__icono" aria-hidden="true">💬</div>
+            <a class="tarjeta-acceso-renovada" href="https://wa.me/584226449365" target="_blank" rel="noopener noreferrer" role="listitem">
+              <div class="tarjeta-acceso__icono-caja" aria-hidden="true">💬</div>
               <h3 class="tarjeta-acceso__titulo">Contacto Directo</h3>
               <p class="tarjeta-acceso__descripcion">
-                Comunícate directamente con la institución vía WhatsApp para atención personalizada.
+                Comunícate directamente con la coordinación de la institución vía WhatsApp para atención personalizada.
               </p>
+              <span class="enlace-flecha">Ver más →</span>
             </a>
-
           </div>
         </div>
-      </section><!-- /acceso-rapido -->
+      </section>
 
-      <!-- ----------------------------------------------------------------
-           SECCIÓN 1.3: ÚLTIMOS AVISOS DE LA DIRECCIÓN
-           Fondo: dorado claro (#F0CF85)
-           Listado de 4 circulares recientes con extracto y enlace
-           ---------------------------------------------------------------- -->
-      <section class="avisos" aria-labelledby="avisos-titulo">
+      <!-- ── 3. SECCIÓN: AVISOS DE LA DIRECCIÓN ── -->
+      <section class="seccion seccion-crema" aria-labelledby="avisos-titulo">
         <div class="contenedor">
-          <h2 class="titulo-seccion" id="avisos-titulo">📢 Avisos de la Dirección</h2>
-          <div class="divisor-verde"></div>
-          <p class="subtitulo-seccion">Comunicaciones y circulares institucionales recientes.</p>
+          <div class="encabezado-bloque">
+            <h2 class="titulo-con-barra" id="avisos-titulo">Avisos de la Dirección</h2>
+            <p class="subtitulo-bloque">Comunicados importantes para nuestra comunidad educativa.</p>
+          </div>
 
-          <!-- Un único aviso real institucional -->
-          <div class="avisos__grid" role="list" style="grid-template-columns:1fr;">
-
-            <article class="aviso-tarjeta" role="listitem"
-              style="display:grid;grid-template-columns:260px 1fr;gap:1.5rem;align-items:center;">
-              <!-- Imagen del aviso -->
-              <div style="border-radius:var(--radio-md);overflow:hidden;height:180px;flex-shrink:0;">
-                <img src="img/nuevo_ingreso.jpeg" alt="Proceso de Nuevo Ingreso UEP Nueva República"
-                  style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div class="avisos-grid-horizontal" role="list">
+            <!-- Aviso 1: Nuevo Ingreso -->
+            <article class="aviso-card-horizontal" role="listitem">
+              <div class="aviso-card__img-box">
+                <img src="img/nuevo_ingreso.jpeg" alt="Proceso de Nuevo Ingreso UEP Nueva República">
               </div>
-              <!-- Contenido -->
-              <div>
-                <p class="aviso-tarjeta__fecha">Junio, 2026</p>
-                <h3 class="aviso-tarjeta__titulo">Proceso de Nuevo Ingreso</h3>
-                <p class="aviso-tarjeta__extracto">
-                  La Unidad Educativa Privada Nueva República informa a la comunidad que se
-                  encuentra abierto el proceso de inscripción para nuevos estudiantes del año
-                  escolar 2026–2027. Los representantes interesados podrán obtener toda la
-                  información necesaria a través de nuestros canales oficiales.
+              <div class="aviso-card__cuerpo">
+                <div class="aviso-card__meta">
+                  <span class="badge-menta">Inscripciones</span>
+                  <span class="aviso-card__fecha">Junio 2026</span>
+                </div>
+                <h3 class="aviso-card__titulo">Proceso de Nuevo Ingreso 2026–2027</h3>
+                <p class="aviso-card__extracto">
+                  La UEP Nueva República informa que se encuentra formalmente abierto el proceso de solicitud de cupos y recepción de recaudos para estudiantes de nuevo ingreso.
                 </p>
-                <a href="aviso-nuevo-ingreso.html" class="enlace-leer-mas"
-                  aria-label="Leer más sobre el proceso de nuevo ingreso">
-                  Leer más →
-                </a>
+                <a href="aviso-nuevo-ingreso.html" class="enlace-flecha">Leer más →</a>
               </div>
             </article>
 
+            <!-- Aviso 2: Experiencia y Cierre Académico -->
+            <article class="aviso-card-horizontal" role="listitem">
+              <div class="aviso-card__img-box">
+                <img src="img/jovenes_aula_01.jpeg" alt="Estudiantes en el aula de clases UEP Nueva República">
+              </div>
+              <div class="aviso-card__cuerpo">
+                <div class="aviso-card__meta">
+                  <span class="badge-menta">Académico</span>
+                  <span class="aviso-card__fecha">Mayo 2026</span>
+                </div>
+                <h3 class="aviso-card__titulo">Cierre del Año Escolar y Actos de Graduación</h3>
+                <p class="aviso-card__extracto">
+                  Se comunica a los representantes el cronograma de evaluaciones finales, entrega de boletines integrales y actos solemnes de promoción académica.
+                </p>
+                <a href="articulo-experiencia-estudiantil.html" class="enlace-flecha">Leer más →</a>
+              </div>
+            </article>
           </div>
         </div>
-      </section><!-- /avisos -->
+      </section>
 
-      <!-- ----------------------------------------------------------------
-           SECCIÓN 1.4: RESUMEN DE OFERTA ACADÉMICA
-           Fondo: blanco. Dos tarjetas de nivel educativo.
-           ---------------------------------------------------------------- -->
-      <section class="oferta-resumen seccion" aria-labelledby="oferta-resumen-titulo">
+      <!-- ── 4. SECCIÓN: NUESTRA OFERTA ACADÉMICA ── -->
+      <section class="seccion seccion-crema" style="padding-top:0;" aria-labelledby="oferta-resumen-titulo">
         <div class="contenedor">
-          <h2 class="titulo-seccion" id="oferta-resumen-titulo">📚 Nuestra Oferta Académica</h2>
-          <div class="divisor-verde"></div>
-          <p class="subtitulo-seccion">
-            Ofrecemos formación integral en dos niveles educativos, con metodologías actualizadas
-            y un equipo docente comprometido con la excelencia.
-          </p>
+          <div class="encabezado-bloque">
+            <h2 class="titulo-con-barra" id="oferta-resumen-titulo">Nuestra Oferta Académica</h2>
+            <p class="subtitulo-bloque">Ofrecemos una educación integral adaptada a cada etapa de desarrollo, garantizando la excelencia.</p>
+          </div>
 
-          <div class="oferta-resumen__grid">
-
-            <!-- Tarjeta: Educación Primaria -->
-            <article class="tarjeta-nivel">
-              <div class="tarjeta-nivel__cabecera">
-                <span class="tarjeta-nivel__icono" aria-hidden="true">🎒</span>
-                <h3 class="tarjeta-nivel__nombre">Educación Primaria</h3>
+          <div class="oferta-academica-grid">
+            <!-- Nivel Primaria -->
+            <article class="tarjeta-oferta-renovada">
+              <div class="tarjeta-oferta__cabecera">
+                <div class="tarjeta-oferta__icono-circulo" aria-hidden="true">🎒</div>
+                <div class="tarjeta-oferta__titulos">
+                  <span class="tarjeta-oferta__sub">Nivel Primaria</span>
+                  <h3 class="tarjeta-oferta__nombre">Educación Primaria</h3>
+                </div>
               </div>
-              <div class="tarjeta-nivel__cuerpo">
-                <p class="tarjeta-nivel__descripcion">
-                  Desde 1° hasta 6° grado, con enfoque en el desarrollo cognitivo, emocional y social
-                  del niño. Trabajamos por proyectos y con metodologías participativas para despertar
-                  la curiosidad y el pensamiento crítico desde temprana edad.
+              <div class="tarjeta-oferta__cuerpo">
+                <p class="tarjeta-oferta__desc">
+                  Desde 1° hasta 6° grado, con enfoque en el desarrollo cognitivo, emocional y social del niño. Metodologías participativas para despertar la curiosidad y el pensamiento crítico.
                 </p>
-                <button class="btn-secundario" data-ir-a="pagina-oferta">
+                <ul class="tarjeta-oferta__lista">
+                  <li class="tarjeta-oferta__item">
+                    <span class="tarjeta-oferta__check">✓</span>
+                    <span>Desarrollo de habilidades lingüísticas y lógico-matemáticas</span>
+                  </li>
+                  <li class="tarjeta-oferta__item">
+                    <span class="tarjeta-oferta__check">✓</span>
+                    <span>Formación continua en valores humanos y ciudadanía</span>
+                  </li>
+                  <li class="tarjeta-oferta__item">
+                    <span class="tarjeta-oferta__check">✓</span>
+                    <span>Acompañamiento pedagógico cercano y personalizado</span>
+                  </li>
+                </ul>
+                <button class="enlace-flecha" data-ir-a="pagina-oferta">
                   Ver más información →
                 </button>
               </div>
             </article>
 
-            <!-- Tarjeta: Media General (Bachillerato) -->
-            <article class="tarjeta-nivel">
-              <div class="tarjeta-nivel__cabecera">
-                <span class="tarjeta-nivel__icono" aria-hidden="true">🎓</span>
-                <h3 class="tarjeta-nivel__nombre">Media General (Bachillerato)</h3>
+            <!-- Nivel Media General -->
+            <article class="tarjeta-oferta-renovada">
+              <div class="tarjeta-oferta__cabecera">
+                <div class="tarjeta-oferta__icono-circulo" aria-hidden="true">🎓</div>
+                <div class="tarjeta-oferta__titulos">
+                  <span class="tarjeta-oferta__sub">Nivel Secundario</span>
+                  <h3 class="tarjeta-oferta__nombre">Media General</h3>
+                </div>
               </div>
-              <div class="tarjeta-nivel__cuerpo">
-                <p class="tarjeta-nivel__descripcion">
-                  Bachillerato completo con formación científica, humanística y técnica.
-                  Preparamos a nuestros estudiantes para la educación superior y para asumir
-                  con responsabilidad su rol como ciudadanos activos de la sociedad venezolana.
+              <div class="tarjeta-oferta__cuerpo">
+                <p class="tarjeta-oferta__desc">
+                  Bachillerato completo con formación científica, humanística y tecnológica. Preparamos a nuestros estudiantes para el éxito universitario y el liderazgo social.
                 </p>
-                <button class="btn-secundario" data-ir-a="pagina-oferta">
+                <ul class="tarjeta-oferta__lista">
+                  <li class="tarjeta-oferta__item">
+                    <span class="tarjeta-oferta__check">✓</span>
+                    <span>Orientación vocacional, científica y humanística</span>
+                  </li>
+                  <li class="tarjeta-oferta__item">
+                    <span class="tarjeta-oferta__check">✓</span>
+                    <span>Preparación sólida para la educación superior</span>
+                  </li>
+                  <li class="tarjeta-oferta__item">
+                    <span class="tarjeta-oferta__check">✓</span>
+                    <span>Actividades extracurriculares, deporte y cultura</span>
+                  </li>
+                </ul>
+                <button class="enlace-flecha" data-ir-a="pagina-oferta">
                   Ver más información →
                 </button>
               </div>
             </article>
-
           </div>
         </div>
-      </section><!-- /oferta-resumen -->
+      </section>
 
-      <!-- ----------------------------------------------------------------
-           SECCIÓN 1.5: BANNER DE IMÁGENES INSTITUCIONALES
-           Placeholder visual (sin fotos reales todavía)
-           En producción: slider con imágenes reales del plantel
-           ---------------------------------------------------------------- -->
-      <!-- ── Galería Slider Institucional ── -->
-      <section class="galeria-slider" aria-label="Galería institucional">
-        <div class="slider-track" id="sliderTrack">
-
-          <div class="slide">
-            <img src="img/danzas_culturales_01.jpeg" alt="Estudiantes en presentación de danzas folclóricas venezolanas"
-              loading="lazy" style="object-position: center top;">
-            <div class="slide__caption">
-              <span>🎭 Identidad y Cultura</span>
-              <p>Nuestros estudiantes celebran las tradiciones venezolanas a través de las artes escénicas</p>
+      <!-- ── 5. SECCIÓN: VIDA ESCOLAR (FONDO BOSQUE OSCURO) ── -->
+      <section class="seccion seccion-verde" aria-labelledby="vida-escolar-titulo">
+        <div class="contenedor">
+          <div class="vida-escolar__cabecera-flex">
+            <div>
+              <h2 class="titulo-con-barra" id="vida-escolar-titulo">Vida Escolar</h2>
+              <p class="subtitulo-bloque">Momentos que definen nuestra comunidad educativa</p>
             </div>
+            <button class="vida-escolar__enlace-ver-mas" data-ir-a="pagina-cartelera">
+              Ver galería completa ›
+            </button>
           </div>
 
-          <div class="slide">
-            <img src="img/acto_historico_bolivar.jpeg"
-              alt="Estudiantes disfrazados de Simón Bolívar y próceres venezolanos" loading="lazy"
-              style="object-position: center 20%;">
-            <div class="slide__caption">
-              <span>🏛️ Historia y Patria</span>
-              <p>Conmemorando nuestra independencia con dramatizaciones históricas</p>
+          <div class="galeria-cuatro-cols">
+            <!-- Foto 1: Acto Patriótico -->
+            <div class="galeria-card">
+              <img src="img/acto_historico_bolivar.jpeg" alt="Estudiantes en dramatización y acto cívico patriótico" loading="lazy">
+              <div class="galeria-card__overlay">
+                <span class="galeria-card__texto">Identidad y Patria</span>
+              </div>
+            </div>
+
+            <!-- Foto 2: Conciencia Ambiental -->
+            <div class="galeria-card">
+              <img src="img/evento_ambiental_01.jpeg" alt="Jornada de educación ambiental y proyectos" loading="lazy">
+              <div class="galeria-card__overlay">
+                <span class="galeria-card__texto">Educación Ecológica</span>
+              </div>
+            </div>
+
+            <!-- Foto 3: Deporte y Paseo -->
+            <div class="galeria-card">
+              <img src="img/paseo_campo_carabobo_01.jpeg" alt="Visita pedagógica y actividades al aire libre" loading="lazy">
+              <div class="galeria-card__overlay">
+                <span class="galeria-card__texto">Experiencias y Deporte</span>
+              </div>
+            </div>
+
+            <!-- Foto 4: Cultura y Danza -->
+            <div class="galeria-card">
+              <img src="img/danzas_culturales_01.jpeg" alt="Presentación de danzas folclóricas y artes" loading="lazy">
+              <div class="galeria-card__overlay">
+                <span class="galeria-card__texto">Cultura y Tradición</span>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div class="slide">
-            <img src="img/evento_ambiental_01.jpeg" alt="Estudiantes con carteles del planeta tierra, agua y árboles"
-              loading="lazy" style="object-position: center center;">
-            <div class="slide__caption">
-              <span>🌿 Conciencia Ambiental</span>
-              <p>Formamos agentes de cambio comprometidos con la preservación del planeta</p>
-            </div>
-          </div>
-
-          <div class="slide">
-            <img src="img/evento_ambiental_02.jpeg"
-              alt="Jóvenes disfrazados de árboles y mariposas en jornada ambiental" loading="lazy"
-              style="object-position: center top;">
-            <div class="slide__caption">
-              <span>🌿 Ecoeducación</span>
-              <p>La educación ambiental como forma de vida dentro y fuera del aula</p>
-            </div>
-          </div>
-
-          <div class="slide">
-            <img src="img/evento_ambiental_03.jpeg" alt="Estudiantes con trajes inspirados en la naturaleza"
-              loading="lazy" style="object-position: center center;">
-            <div class="slide__caption">
-              <span>🦋 Creatividad y Naturaleza</span>
-              <p>Arte y ecología unidos en una misma experiencia de aprendizaje</p>
-            </div>
-          </div>
-
-          <div class="slide">
-            <img src="img/misa_escolar_01.jpeg" alt="Estudiantes reunidos en celebración de misa escolar" loading="lazy"
-              style="object-position: center top;">
-            <div class="slide__caption">
-              <span>🙏 Valores Espirituales</span>
-              <p>La formación en valores espirituales es parte integral de nuestra comunidad</p>
-            </div>
-          </div>
-
-        </div><!-- /slider-track -->
-        <button class="slider-btn slider-btn--prev" id="sliderPrev" aria-label="Foto anterior">&#8249;</button>
-        <button class="slider-btn slider-btn--next" id="sliderNext" aria-label="Foto siguiente">&#8250;</button>
-        <div class="slider-dots" id="sliderDots"></div>
-      </section><!-- /galeria-slider -->
-
-      <!-- Footer dentro de la página de inicio (componente compartido) -->
-      <!-- Se incluye el footer completo al final del body, fuera de las páginas -->
-
-    </main><!-- /pagina-inicio -->
-
-    </style>
-
-
+    </main>
 
 
     <!-- ==================================================================
@@ -2117,202 +1968,128 @@
          ================================================================== -->
     <main id="pagina-institucion" class="pagina" role="main" aria-label="Página Institución">
 
-      <!-- Encabezado interior -->
       <div class="encabezado-interior">
-        <h1 class="encabezado-interior__titulo">Nuestra Institución</h1>
-        <p class="encabezado-interior__subtitulo">Conoce nuestra historia, misión y equipo</p>
-        <nav class="migas" aria-label="Ruta de navegación">
-          <a data-ir-a="pagina-inicio" href="#">Inicio</a>
-          <span aria-hidden="true">›</span>
-          <span aria-current="page">Institución</span>
-        </nav>
+        <div class="contenedor">
+          <h1 class="encabezado-interior__titulo">Nuestra Institución</h1>
+          <p class="encabezado-interior__subtitulo">Historia, identidad pedagógica y liderazgo educativo</p>
+          <nav class="migas" aria-label="Ruta de navegación">
+            <a data-ir-a="pagina-inicio" href="#inicio">Inicio</a>
+            <span aria-hidden="true">›</span>
+            <span aria-current="page">Institución</span>
+          </nav>
+        </div>
       </div>
 
-      <!-- ----------------------------------------------------------------
-           SECCIÓN 2.1: MISIÓN, VISIÓN Y VALORES
-           Tres tarjetas con íconos representativos
-           ---------------------------------------------------------------- -->
-      <section class="seccion" aria-labelledby="mvv-titulo">
+      <!-- Pilares -->
+      <section class="seccion seccion-crema">
         <div class="contenedor">
-          <h2 class="titulo-seccion texto-centro" id="mvv-titulo">Pilares Institucionales</h2>
-          <div class="divisor-verde" style="margin: 0.5rem auto 1.5rem;"></div>
+          <div class="encabezado-bloque">
+            <h2 class="titulo-con-barra">Pilares Institucionales</h2>
+            <p class="subtitulo-bloque">Principios fundamentales que guían nuestro modelo educativo.</p>
+          </div>
 
           <div class="mvv__grid">
-
-            <!-- Misión -->
             <article class="mvv-tarjeta">
               <div class="mvv-tarjeta__icono" aria-hidden="true">🎯</div>
               <h3 class="mvv-tarjeta__titulo">Misión</h3>
               <p>
-                Formar integralmente a nuestros estudiantes logrando un equilibrio perfecto
-                entre lo pedagógico y lo social, inculcando valores humanos esenciales como
-                el respeto, la libertad y la solidaridad, conectando siempre el aprendizaje
-                con el entorno y la realidad del país. Nuestro propósito es avivar en la
-                comunidad estudiantil un profundo sentido de pertenencia e identidad nacional,
-                inspirándolos a transformar su entorno con ética y a prosperar de manera
-                consciente.
+                Formar integralmente a nuestros estudiantes logrando un equilibrio perfecto entre lo pedagógico y lo social, inculcando valores esenciales como el respeto, la libertad y la solidaridad, conectando siempre el aprendizaje con el entorno y la realidad del país.
               </p>
             </article>
 
-            <!-- Visión -->
             <article class="mvv-tarjeta">
               <div class="mvv-tarjeta__icono" aria-hidden="true">🔭</div>
               <h3 class="mvv-tarjeta__titulo">Visión</h3>
               <p>
-                Garantizar una educación de alta calidad fundamentada en valores, consolidando
-                la formación de ciudadanos críticos, creativos y respetuosos, dotándolos de
-                las herramientas de adaptabilidad necesarias para afrontar con éxito y
-                liderazgo los retos del mañana.
+                Garantizar una educación de alta calidad fundamentada en valores, consolidando la formación de ciudadanos críticos, creativos y respetuosos, dotándolos de las herramientas necesarias para afrontar con éxito y liderazgo los retos del mañana.
               </p>
             </article>
 
-            <!-- Valores -->
             <article class="mvv-tarjeta">
               <div class="mvv-tarjeta__icono" aria-hidden="true">⭐</div>
               <h3 class="mvv-tarjeta__titulo">Valores</h3>
               <p>
                 <strong>Respeto · Responsabilidad · Honestidad</strong><br>
                 <strong>Solidaridad · Patriotismo · Excelencia</strong><br><br>
-                Principios que guían cada aspecto de la vida institucional
-                y el desarrollo personal de nuestros estudiantes.
+                Fundamentos éticos que orientan cada interacción pedagógica y formativa en nuestro plantel.
               </p>
             </article>
-
           </div>
-
-          <!-- ── Compromiso Ecológico (nuevo bloque) ── -->
-          <h3 style="font-family:var(--fuente-serif);color:var(--verde-oscuro);
-                     text-align:center;margin:2.5rem 0 1.25rem;font-size:1.375rem;">
-            🌿 Compromiso Ecológico
-          </h3>
-          <div class="mvv__grid" style="grid-template-columns:repeat(2,1fr);">
-
-            <article class="mvv-tarjeta" style="border-top-color:var(--verde-medio);">
-              <div class="mvv-tarjeta__icono" aria-hidden="true">🌱</div>
-              <h3 class="mvv-tarjeta__titulo">Misión Ecológica</h3>
-              <p>
-                Vincular lo pedagógico con lo social a través de la educación ambiental,
-                promoviendo valores que impulsen a los estudiantes a ser agentes activos
-                en la preservación de la naturaleza y en la transformación ética de su
-                comunidad.
-              </p>
-            </article>
-
-            <article class="mvv-tarjeta" style="border-top-color:var(--verde-claro);">
-              <div class="mvv-tarjeta__icono" aria-hidden="true">🌍</div>
-              <h3 class="mvv-tarjeta__titulo">Visión Ecológica</h3>
-              <p>
-                Consolidarse como una institución de referencia en ecoeducación, proyectando
-                al futuro ciudadanos responsables y preparados para proponer soluciones
-                sostenibles ante los desafíos globales del mañana.
-              </p>
-            </article>
-
-          </div>
-          <!-- ── /Compromiso Ecológico ── -->
-
         </div>
-      </section><!-- /mvv -->
+      </section>
 
-      <!-- ----------------------------------------------------------------
-           SECCIÓN 2.2: RESEÑA HISTÓRICA
-           Párrafos narrativos + imagen placeholder
-           ---------------------------------------------------------------- -->
-      <section class="seccion historia" aria-labelledby="historia-titulo">
+      <!-- Reseña Histórica -->
+      <section class="seccion seccion-blanca">
         <div class="contenedor">
-          <h2 class="titulo-seccion" id="historia-titulo">Nuestra Historia</h2>
-          <div class="divisor-verde"></div>
+          <div class="encabezado-bloque">
+            <h2 class="titulo-con-barra">Nuestra Historia</h2>
+            <p class="subtitulo-bloque">Más de dos décadas dedicadas a la formación de excelencia.</p>
+          </div>
 
           <div class="historia__contenido">
             <div class="historia__texto">
               <p>
-                La Unidad Educativa Privada Nueva República fue fundada con la firme convicción
-                de que toda familia venezolana merece acceso a una educación de calidad, integral
-                y fundamentada en valores. Desde sus primeros años, la institución se consolidó
-                como un referente académico en la comunidad.
+                La Unidad Educativa Privada Nueva República nació con el firme propósito de ofrecer a las familias venezolanas una propuesta educativa rigurosa, humana y contextualizada en los más altos valores ciudadanos.
               </p>
               <p>
-                A lo largo de su trayectoria, Nueva República ha graduado a cientos de bachilleres
-                que hoy contribuyen en distintos ámbitos profesionales, académicos y sociales del país.
-                Cada generación ha llevado consigo el sello de excelencia y compromiso que
-                caracteriza a nuestra institución.
+                A lo largo de nuestros años de trayectoria ininterrumpida, hemos formado promociones de egresados que hoy destacan en diversas ramas científicas, humanísticas y profesionales a nivel nacional e internacional.
               </p>
               <p>
-                Hoy, con la misma dedicación de sus fundadores y un equipo docente renovado,
-                seguimos ofreciendo una educación de vanguardia que responde a los retos del siglo XXI,
-                sin perder de vista los valores que nos definen como comunidad.
+                Contamos con una infraestructura armónica y un cuerpo docente altamente capacitado que acompaña de forma cercana el desarrollo integral de cada niño y joven.
               </p>
             </div>
-
-            <!-- Imagen institucional real -->
-            <div class="historia__imagen-placeholder" style="padding:0;overflow:hidden;">
-              <img src="img/acto_historico_bolivar.jpeg"
-                alt="Estudiantes de UEP Nueva República en acto histórico institucional"
-                style="width:100%;height:100%;object-fit:cover;object-position:center 20%;border-radius:var(--radio-md);">
+            <div class="historia__img-box">
+              <img src="img/acto_historico_bolivar.jpeg" alt="Acto histórico institucional en UEP Nueva República">
             </div>
           </div>
         </div>
-      </section><!-- /historia -->
+      </section>
 
-      <!-- ----------------------------------------------------------------
-           SECCIÓN 2.3: EQUIPO DIRECTIVO Y DOCENTE
-           Tarjetas con avatar, nombre y cargo
-           ---------------------------------------------------------------- -->
-      <section class="seccion" aria-labelledby="directivos-titulo">
+      <!-- Equipo Directivo -->
+      <section class="seccion seccion-crema">
         <div class="contenedor">
-          <h2 class="titulo-seccion" id="directivos-titulo">Equipo Directivo</h2>
-          <div class="divisor-verde"></div>
-          <p class="subtitulo-seccion">Las personas comprometidas con el liderazgo de nuestra institución.</p>
+          <div class="encabezado-bloque">
+            <h2 class="titulo-con-barra">Equipo Directivo</h2>
+            <p class="subtitulo-bloque">Profesionales comprometidos con el liderazgo y la gestión académica.</p>
+          </div>
 
           <div class="directivo__grid">
-
-            <!-- Director -->
             <article class="directivo-tarjeta">
-              <div class="directivo-tarjeta__avatar" aria-hidden="true">JT</div>
-              <!-- Reemplazar "JT" con foto real en producción -->
+              <div class="directivo-tarjeta__avatar">JT</div>
               <h3 class="directivo-tarjeta__nombre">Prof. Julio Téllez</h3>
-              <p class="directivo-tarjeta__cargo">Director</p>
+              <p class="directivo-tarjeta__cargo">Director General</p>
             </article>
 
-            <!-- Coordinadora 1 -->
             <article class="directivo-tarjeta">
-              <div class="directivo-tarjeta__avatar" aria-hidden="true">ND</div>
+              <div class="directivo-tarjeta__avatar">ND</div>
               <h3 class="directivo-tarjeta__nombre">Prof. Ninoska Díaz</h3>
               <p class="directivo-tarjeta__cargo">Coordinadora Académica</p>
             </article>
 
-            <!-- Coordinadora 2 -->
             <article class="directivo-tarjeta">
-              <div class="directivo-tarjeta__avatar" aria-hidden="true">MG</div>
+              <div class="directivo-tarjeta__avatar">MG</div>
               <h3 class="directivo-tarjeta__nombre">Prof. Mirtha Goncalves</h3>
               <p class="directivo-tarjeta__cargo">Coordinadora de Evaluación</p>
             </article>
-
           </div>
         </div>
-      </section><!-- /directivos -->
+      </section>
 
-      <!-- ----------------------------------------------------------------
-           SECCIÓN 2.4: NORMATIVA Y MARCO LEGAL
-           LOPNNA y lineamientos MPPE
-           ---------------------------------------------------------------- -->
-      <section class="seccion seccion-gris" aria-labelledby="legal-titulo">
+      <!-- Marco Legal -->
+      <section class="seccion seccion-blanca">
         <div class="contenedor">
-          <h2 class="titulo-seccion" id="legal-titulo">Normativa y Marco Legal</h2>
-          <div class="divisor-verde"></div>
-          <p class="subtitulo-seccion">
-            Nuestra institución opera bajo el marco legal venezolano vigente en materia educativa.
-          </p>
+          <div class="encabezado-bloque">
+            <h2 class="titulo-con-barra">Marco Legal y Normativa</h2>
+            <p class="subtitulo-bloque">Cumplimiento irrestricto de las regulaciones educativas venezolanas.</p>
+          </div>
 
-          <div class="legal__lista">
-
+          <div class="legal__grid">
             <div class="legal__item">
               <span class="legal__item-icono" aria-hidden="true">⚖️</span>
               <div>
-                <p class="legal__item-titulo">Ley Orgánica para la Protección del Niño, Niña y Adolescente (LOPNNA)</p>
+                <p class="legal__item-titulo">LOPNNA</p>
                 <p class="legal__item-texto">
-                  Marco legal que regula todos los derechos y garantías de los menores en Venezuela.
-                  Nuestra institución garantiza su cumplimiento en todos los ámbitos de la vida escolar.
+                  Garantía plena de los derechos y deberes de niños, niñas y adolescentes en el entorno escolar.
                 </p>
               </div>
             </div>
@@ -2320,10 +2097,9 @@
             <div class="legal__item">
               <span class="legal__item-icono" aria-hidden="true">📜</span>
               <div>
-                <p class="legal__item-titulo">Lineamientos del Ministerio del Poder Popular para la Educación (MPPE)</p>
+                <p class="legal__item-titulo">Lineamientos MPPE</p>
                 <p class="legal__item-texto">
-                  Seguimos el currículo nacional bolivariano y todas las disposiciones curriculares,
-                  administrativas y pedagógicas del MPPE para educación privada.
+                  Adherencia total al diseño curricular nacional y directrices del Ministerio de Educación.
                 </p>
               </div>
             </div>
@@ -2331,198 +2107,113 @@
             <div class="legal__item">
               <span class="legal__item-icono" aria-hidden="true">📋</span>
               <div>
-                <p class="legal__item-titulo">Reglamento Interno Institucional</p>
+                <p class="legal__item-titulo">Reglamento Interno</p>
                 <p class="legal__item-texto">
-                  Normativa interna que regula la convivencia, los derechos y deberes de estudiantes,
-                  docentes y representantes dentro de nuestra comunidad educativa.
+                  Normas de convivencia armónica, disciplina positiva y corresponsabilidad escolar.
                 </p>
               </div>
             </div>
-
-          </div>
-        </div>
-      </section><!-- /legal -->
-
-    </main><!-- /pagina-institucion -->
-
-
-    <!-- ==================================================================
-         PÁGINA 3: OFERTA ACADÉMICA (Contenedora + Subpáginas)
-         ================================================================== -->
-    <main id="pagina-oferta" class="pagina" role="main" aria-label="Oferta Académica">
-
-      <!-- Encabezado interior -->
-      <div class="encabezado-interior">
-        <h1 class="encabezado-interior__titulo">Oferta Académica</h1>
-        <p class="encabezado-interior__subtitulo">Excelencia educativa en dos niveles de formación</p>
-        <nav class="migas" aria-label="Ruta de navegación">
-          <a data-ir-a="pagina-inicio" href="#">Inicio</a>
-          <span aria-hidden="true">›</span>
-          <span aria-current="page">Oferta Académica</span>
-        </nav>
-      </div>
-
-      <!-- ----------------------------------------------------------------
-           SECCIÓN 3.1: INTRODUCCIÓN Y TARJETAS DE NAVEGACIÓN LOCAL
-           ---------------------------------------------------------------- -->
-      <section class="seccion" aria-labelledby="oferta-intro-titulo">
-        <div class="contenedor">
-          <h2 class="titulo-seccion" id="oferta-intro-titulo">Nuestro Proyecto Educativo</h2>
-          <div class="divisor-verde"></div>
-          <p style="color:var(--texto-medio); max-width:720px; margin-bottom:2.5rem; font-size:var(--texto-md);">
-            En UEP Nueva República desarrollamos un proyecto educativo centrado en el ser humano,
-            que integra conocimiento académico riguroso con formación en valores, preparando a nuestros
-            estudiantes para los desafíos del presente y del futuro.
-          </p>
-
-          <!-- Tarjetas de navegación local a las subpáginas -->
-          <div class="oferta-resumen__grid">
-            <article class="tarjeta-nivel">
-              <div class="tarjeta-nivel__cabecera">
-                <span class="tarjeta-nivel__icono" aria-hidden="true">🎒</span>
-                <h3 class="tarjeta-nivel__nombre">Educación Primaria<br><small
-                    style="font-size:0.75rem; font-weight:400;">1° a 6° Grado</small></h3>
-              </div>
-              <div class="tarjeta-nivel__cuerpo">
-                <p class="tarjeta-nivel__descripcion">
-                  Formación integral en los primeros años escolares. Desarrollo cognitivo,
-                  emocional y social del niño mediante metodologías participativas y proyectos pedagógicos.
-                </p>
-                <a href="#oferta-primaria" class="btn-primario" style="align-self:flex-start;"
-                  onclick="document.getElementById('oferta-primaria').scrollIntoView({behavior:'smooth'}); return false;">
-                  Ver plan de estudios ↓
-                </a>
-              </div>
-            </article>
-
-            <article class="tarjeta-nivel">
-              <div class="tarjeta-nivel__cabecera">
-                <span class="tarjeta-nivel__icono" aria-hidden="true">🎓</span>
-                <h3 class="tarjeta-nivel__nombre">Media General<br><small
-                    style="font-size:0.75rem; font-weight:400;">Bachillerato</small></h3>
-              </div>
-              <div class="tarjeta-nivel__cuerpo">
-                <p class="tarjeta-nivel__descripcion">
-                  Bachillerato con formación científica, humanística y ciudadana.
-                  Preparación para la educación superior y el ejercicio responsable de la ciudadanía.
-                </p>
-                <a href="#oferta-media" class="btn-primario" style="align-self:flex-start;"
-                  onclick="document.getElementById('oferta-media').scrollIntoView({behavior:'smooth'}); return false;">
-                  Ver plan de estudios ↓
-                </a>
-              </div>
-            </article>
           </div>
         </div>
       </section>
 
-      <!-- ----------------------------------------------------------------
-           SECCIÓN 3.2: SUBPÁGINA — EDUCACIÓN PRIMARIA
-           (En WordPress: URL /oferta-academica/primaria)
-           ---------------------------------------------------------------- -->
-      <section id="oferta-primaria" class="seccion seccion-gris" aria-labelledby="primaria-titulo">
+    </main>
+
+
+    <!-- ==================================================================
+         PÁGINA 3: OFERTA ACADÉMICA
+         ================================================================== -->
+    <main id="pagina-oferta" class="pagina" role="main" aria-label="Oferta Académica">
+
+      <div class="encabezado-interior">
         <div class="contenedor">
-          <span
-            style="display:inline-block; background:var(--verde-claro); color:var(--verde-oscuro); font-size:0.75rem; font-weight:700; padding:0.25rem 0.75rem; border-radius:50px; margin-bottom:0.75rem; text-transform:uppercase; letter-spacing:0.08em;">
-            Nivel Primaria
-          </span>
-          <h2 class="titulo-seccion" id="primaria-titulo">🎒 Educación Primaria (1° a 6° Grado)</h2>
-          <div class="divisor-verde"></div>
+          <h1 class="encabezado-interior__titulo">Oferta Académica</h1>
+          <p class="encabezado-interior__subtitulo">Formación integral desde 1° Grado de Primaria hasta el Bachillerato</p>
+          <nav class="migas" aria-label="Ruta de navegación">
+            <a data-ir-a="pagina-inicio" href="#inicio">Inicio</a>
+            <span aria-hidden="true">›</span>
+            <span aria-current="page">Oferta Académica</span>
+          </nav>
+        </div>
+      </div>
 
-          <div style="border-radius:var(--radio-md);overflow:hidden;margin-bottom:1.5rem;
-                       box-shadow:var(--sombra-tarjeta);border:3px solid var(--verde-medio);">
-            <img src="img/jovenes_aula_01.jpeg" alt="Estudiantes de Educación Primaria en el aula de clases"
-              style="width:100%;height:240px;object-fit:cover;object-position:center top;display:block;">
-          </div>
-          <p style="color:var(--texto-medio); max-width:720px; margin-bottom:2rem; font-size:var(--texto-md);">
-            El nivel primario de UEP Nueva República centra su enfoque pedagógico en el aprendizaje
-            significativo, el trabajo por proyectos y la educación emocional. Nuestros docentes acompañan
-            cada etapa del desarrollo del niño, promoviendo la curiosidad, la autonomía y el respeto.
-          </p>
-
-          <!-- Plan de estudios resumido -->
-          <h3 style="font-family:var(--fuente-serif); color:var(--verde-oscuro); margin-bottom:1rem;">
-            Plan de Estudios — Áreas y Asignaturas
-          </h3>
-          <div class="plan-estudios__grid">
-            <div class="materia-chip">📖 Lengua y Literatura</div>
-            <div class="materia-chip">🔢 Matemática</div>
-            <div class="materia-chip">🌍 Ciencias Naturales</div>
-            <div class="materia-chip">🗺️ Ciencias Sociales</div>
-            <div class="materia-chip">🎨 Educación Artística</div>
-            <div class="materia-chip">⚽ Educación Física</div>
-            <div class="materia-chip">🕌 Educación Religiosa</div>
-            <div class="materia-chip">💻 Tecnología e Informática</div>
-            <div class="materia-chip">🌐 Inglés</div>
-            <div class="materia-chip">🌿 Educación Ambiental</div>
-            <div class="materia-chip">🏛️ Valores y Ciudadanía</div>
-            <div class="materia-chip">🧪 Laboratorio de Ciencias</div>
+      <!-- Detalle Primaria -->
+      <section class="seccion seccion-crema">
+        <div class="contenedor">
+          <div class="encabezado-bloque">
+            <span class="badge-menta" style="margin-bottom:0.5rem;">Nivel Primaria</span>
+            <h2 class="titulo-con-barra">Educación Primaria (1° a 6° Grado)</h2>
+            <p class="subtitulo-bloque">Bases sólidas para el desarrollo del pensamiento crítico y la creatividad.</p>
           </div>
 
-          <!-- CTA contextual -->
-          <div style="margin-top:var(--espacio-lg);">
-            <button class="btn-dorado" data-ir-a="pagina-admisiones">
-              📋 Iniciar Solicitud de Cupo
-            </button>
+          <div class="historia__contenido">
+            <div class="historia__texto">
+              <p>
+                En el nivel de Educación Primaria fomentamos el amor por el aprendizaje mediante proyectos interactivos, lectura comprensiva, razonamiento lógico-matemático y expresión artística.
+              </p>
+              <p>
+                Nuestros maestros brindan una atención individualizada, promoviendo hábitos de estudio, autonomía y empatía en cada etapa escolar.
+              </p>
+              <h3 style="font-family:var(--fuente-serif); color:var(--verde-bosque-oscuro); margin: 1.5rem 0 0.5rem; font-size:1.15rem;">
+                Áreas de Aprendizaje:
+              </h3>
+              <div class="plan-estudios__grid">
+                <div class="materia-chip">📖 Lengua y Comunicación</div>
+                <div class="materia-chip">🔢 Matemática Aplicada</div>
+                <div class="materia-chip">🌿 Ciencias Naturales</div>
+                <div class="materia-chip">🗺️ Ciencias Sociales</div>
+                <div class="materia-chip">🎨 Artes y Expresión</div>
+                <div class="materia-chip">⚽ Educación Física</div>
+                <div class="materia-chip">💻 Informática Básica</div>
+                <div class="materia-chip">🌐 Inglés Inicial</div>
+              </div>
+            </div>
+            <div class="historia__img-box">
+              <img src="img/jovenes_aula_01.jpeg" alt="Alumnos en clase de Educación Primaria">
+            </div>
           </div>
         </div>
-      </section><!-- /oferta-primaria -->
+      </section>
 
-      <!-- ----------------------------------------------------------------
-           SECCIÓN 3.3: SUBPÁGINA — MEDIA GENERAL (BACHILLERATO)
-           (En WordPress: URL /oferta-academica/media-general)
-           ---------------------------------------------------------------- -->
-      <section id="oferta-media" class="seccion" aria-labelledby="media-titulo">
+      <!-- Detalle Media General -->
+      <section class="seccion seccion-blanca">
         <div class="contenedor">
-          <span
-            style="display:inline-block; background:var(--dorado-claro); color:var(--verde-oscuro); font-size:0.75rem; font-weight:700; padding:0.25rem 0.75rem; border-radius:50px; margin-bottom:0.75rem; text-transform:uppercase; letter-spacing:0.08em;">
-            Nivel Media General
-          </span>
-          <h2 class="titulo-seccion" id="media-titulo">🎓 Media General (Bachillerato)</h2>
-          <div class="divisor-verde"></div>
-
-          <div style="border-radius:var(--radio-md);overflow:hidden;margin-bottom:1.5rem;
-                       box-shadow:var(--sombra-tarjeta);border:3px solid var(--dorado);">
-            <img src="img/jovenes_aula_02.jpeg" alt="Estudiantes de Media General (Bachillerato) en el aula"
-              style="width:100%;height:240px;object-fit:cover;object-position:center top;display:block;">
-          </div>
-          <p style="color:var(--texto-medio); max-width:720px; margin-bottom:2rem; font-size:var(--texto-md);">
-            Nuestro bachillerato forma egresados con sólida base científica y humanística,
-            capacitados para el ingreso a la educación superior venezolana e internacional,
-            y comprometidos con el progreso de su comunidad y su nación.
-          </p>
-
-          <!-- Plan de estudios -->
-          <h3 style="font-family:var(--fuente-serif); color:var(--verde-oscuro); margin-bottom:1rem;">
-            Plan de Estudios — Asignaturas por Año
-          </h3>
-          <div class="plan-estudios__grid">
-            <div class="materia-chip">📚 Castellano y Literatura</div>
-            <div class="materia-chip">🔢 Matemática</div>
-            <div class="materia-chip">⚗️ Química</div>
-            <div class="materia-chip">🔬 Biología</div>
-            <div class="materia-chip">⚙️ Física</div>
-            <div class="materia-chip">🌍 Geografía de Venezuela</div>
-            <div class="materia-chip">🏛️ Historia de Venezuela</div>
-            <div class="materia-chip">🌐 Historia Universal</div>
-            <div class="materia-chip">🇬🇧 Inglés</div>
-            <div class="materia-chip">💻 Informática</div>
-            <div class="materia-chip">🎨 Educación Artística</div>
-            <div class="materia-chip">⚽ Educación Física</div>
-            <div class="materia-chip">🤝 Desarrollo Endógeno</div>
-            <div class="materia-chip">🏛️ Educación Ciudadana</div>
+          <div class="encabezado-bloque">
+            <span class="badge-dorado" style="margin-bottom:0.5rem;">Nivel Secundario</span>
+            <h2 class="titulo-con-barra">Media General (Bachillerato)</h2>
+            <p class="subtitulo-bloque">Rigor científico, humanístico y preparación para los estudios superiores.</p>
           </div>
 
-          <!-- CTA contextual -->
-          <div style="margin-top:var(--espacio-lg);">
-            <button class="btn-dorado" data-ir-a="pagina-admisiones">
-              📋 Iniciar Solicitud de Cupo
-            </button>
+          <div class="historia__contenido">
+            <div class="historia__texto">
+              <p>
+                El ciclo de Media General capacita a los jóvenes en el método científico, la oratoria, la investigación documental y el dominio de tecnologías para desenvolverse con éxito en el ámbito universitario.
+              </p>
+              <p>
+                Complementamos la formación con proyectos de servicio comunitario y actividades que fortalecen la identidad patria y la conciencia ecológica.
+              </p>
+              <h3 style="font-family:var(--fuente-serif); color:var(--verde-bosque-oscuro); margin: 1.5rem 0 0.5rem; font-size:1.15rem;">
+                Asignaturas del Plan de Estudio:
+              </h3>
+              <div class="plan-estudios__grid">
+                <div class="materia-chip">📚 Castellano y Literatura</div>
+                <div class="materia-chip">🔢 Matemáticas</div>
+                <div class="materia-chip">⚗️ Química</div>
+                <div class="materia-chip">🔬 Biología</div>
+                <div class="materia-chip">⚙️ Física</div>
+                <div class="materia-chip">🌍 Geografía e Historia</div>
+                <div class="materia-chip">🇬🇧 Inglés Avanzado</div>
+                <div class="materia-chip">💻 Tecnologías de Información</div>
+              </div>
+            </div>
+            <div class="historia__img-box">
+              <img src="img/jovenes_aula_02.jpeg" alt="Estudiantes de Bachillerato en el aula">
+            </div>
           </div>
         </div>
-      </section><!-- /oferta-media -->
+      </section>
 
-    </main><!-- /pagina-oferta -->
+    </main>
 
 
     <!-- ==================================================================
@@ -2530,198 +2221,157 @@
          ================================================================== -->
     <main id="pagina-admisiones" class="pagina" role="main" aria-label="Admisiones e Inscripciones">
 
-      <!-- Encabezado interior -->
       <div class="encabezado-interior">
-        <h1 class="encabezado-interior__titulo">Admisiones e Inscripciones</h1>
-        <p class="encabezado-interior__subtitulo">Proceso de solicitud de cupo para el año escolar 2026–2027</p>
-        <nav class="migas" aria-label="Ruta de navegación">
-          <a data-ir-a="pagina-inicio" href="#">Inicio</a>
-          <span aria-hidden="true">›</span>
-          <span aria-current="page">Admisiones</span>
-        </nav>
+        <div class="contenedor">
+          <h1 class="encabezado-interior__titulo">Admisiones e Inscripciones</h1>
+          <p class="encabezado-interior__subtitulo">Proceso de nuevo ingreso y asignación de cupos 2026–2027</p>
+          <nav class="migas" aria-label="Ruta de navegación">
+            <a data-ir-a="pagina-inicio" href="#inicio">Inicio</a>
+            <span aria-hidden="true">›</span>
+            <span aria-current="page">Admisiones</span>
+          </nav>
+        </div>
       </div>
 
-      <section class="seccion" aria-labelledby="admisiones-titulo">
+      <section class="seccion seccion-crema">
         <div class="contenedor">
+          <div style="display:grid; grid-template-columns: 1.1fr 0.9fr; gap: 2.5rem; align-items:start;">
 
-          <!-- Grid: Proceso (izquierda) + Formulario (derecha) -->
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:var(--espacio-xl);">
-
-            <!-- -------------------------------------------------------
-                 COLUMNA IZQUIERDA: Proceso paso a paso + Requisitos
-                 ------------------------------------------------------- -->
+            <!-- Pasos y requisitos -->
             <div>
-              <h2 class="titulo-seccion" id="admisiones-titulo">Proceso de Inscripción</h2>
-              <div class="divisor-verde"></div>
-
-              <!-- Pasos -->
-              <div class="proceso-pasos">
-                <div class="paso">
-                  <div class="paso__numero" aria-hidden="true">1</div>
-                  <div>
-                    <p class="paso__contenido-titulo">Consultar disponibilidad de cupos</p>
-                    <p class="paso__contenido-texto">
-                      Contactarnos por WhatsApp o vía telefónica para verificar disponibilidad
-                      en el grado de interés antes de iniciar el proceso.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="paso">
-                  <div class="paso__numero" aria-hidden="true">2</div>
-                  <div>
-                    <p class="paso__contenido-titulo">Consignar documentación requerida</p>
-                    <p class="paso__contenido-texto">
-                      Presentar los documentos en la Secretaría del plantel en horario de 8:00 AM a 12:00 M
-                      de lunes a viernes durante el período de inscripciones.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="paso">
-                  <div class="paso__numero" aria-hidden="true">3</div>
-                  <div>
-                    <p class="paso__contenido-titulo">Evaluación de documentos y entrevista</p>
-                    <p class="paso__contenido-texto">
-                      El equipo directivo revisará los documentos y, de ser necesario,
-                      se pautará una entrevista con el representante y el aspirante.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="paso">
-                  <div class="paso__numero" aria-hidden="true">4</div>
-                  <div>
-                    <p class="paso__contenido-titulo">Confirmación y pago de aranceles</p>
-                    <p class="paso__contenido-texto">
-                      Una vez aprobada la solicitud, se informarán los aranceles correspondientes
-                      y se confirma la inscripción formal del estudiante.
-                    </p>
-                  </div>
-                </div>
+              <div class="encabezado-bloque">
+                <h2 class="titulo-con-barra">Pasos para la Inscripción</h2>
+                <p class="subtitulo-bloque">Guía para formalizar el ingreso de su representado.</p>
               </div>
 
-              <!-- Requisitos -->
-              <div
-                style="margin-top:var(--espacio-lg); padding:var(--espacio-md); background:var(--gris-suave); border-radius:var(--radio-md); border-left:4px solid var(--verde-medio);">
-                <h3 style="font-family:var(--fuente-serif); color:var(--verde-oscuro); margin-bottom:0.75rem;">
-                  📎 Documentos Requeridos
-                </h3>
-                <ol
-                  style="list-style:decimal; padding-left:1.25rem; color:var(--texto-medio); font-size:var(--texto-sm);">
-                  <li style="margin-bottom:0.4rem;">Copia de la cédula de identidad del representante</li>
-                  <li style="margin-bottom:0.4rem;">Partida de nacimiento del aspirante (original y copia)</li>
-                  <li style="margin-bottom:0.4rem;">Certificado de conducta del plantel anterior</li>
-                  <li style="margin-bottom:0.4rem;">Boletín del último año cursado</li>
-                  <li style="margin-bottom:0.4rem;">Constancia de residencia</li>
-                  <li style="margin-bottom:0.4rem;">2 fotos carnet recientes</li>
-                  <li>Tarjeta de vacunas (nivel primaria)</li>
-                </ol>
-              </div>
-            </div><!-- /columna izquierda -->
-
-            <!-- -------------------------------------------------------
-                 COLUMNA DERECHA: Formulario de Solicitud de Cupo
-                 ------------------------------------------------------- -->
-            <div>
-              <div class="formulario-admision">
-                <h2 class="formulario-admision__titulo">📝 Solicitud de Cupo en Línea</h2>
-                <p style="color:var(--texto-medio); font-size:var(--texto-sm); margin-bottom:var(--espacio-md);">
-                  Complete el formulario y nos comunicaremos con usted a la brevedad posible.
-                  Los campos marcados con <strong>*</strong> son obligatorios.
-                </p>
-
-                <!-- Formulario (sin backend aún — validación con JS básico) -->
-                <form id="formulario-cupo" novalidate>
-
-                  <!-- Nombre del representante -->
-                  <div class="campo">
-                    <label for="nombre-representante">Nombre del Representante *</label>
-                    <input type="text" id="nombre-representante" name="nombre-representante"
-                      placeholder="Ej: María González de Pérez" required aria-required="true">
-                  </div>
-
-                  <!-- Teléfono y correo en fila -->
-                  <div class="campo-grupo">
-                    <div class="campo">
-                      <label for="telefono">Teléfono / WhatsApp *</label>
-                      <input type="tel" id="telefono" name="telefono" placeholder="Ej: 0412-0000000" required
-                        aria-required="true">
-                    </div>
-                    <div class="campo">
-                      <label for="correo">Correo Electrónico</label>
-                      <input type="email" id="correo" name="correo" placeholder="Ej: correo@ejemplo.com">
-                    </div>
-                  </div>
-
-                  <!-- Nombre del aspirante -->
-                  <div class="campo">
-                    <label for="nombre-aspirante">Nombre del Aspirante *</label>
-                    <input type="text" id="nombre-aspirante" name="nombre-aspirante"
-                      placeholder="Ej: Andrés Pérez González" required aria-required="true">
-                  </div>
-
-                  <!-- Grado al que aspira -->
-                  <div class="campo">
-                    <label for="grado">Grado al que Aspira *</label>
-                    <select id="grado" name="grado" required aria-required="true">
-                      <option value="" disabled selected>— Seleccione el grado —</option>
-                      <optgroup label="Educación Primaria">
-                        <option value="1ro-primaria">1° Grado</option>
-                        <option value="2do-primaria">2° Grado</option>
-                        <option value="3ro-primaria">3° Grado</option>
-                        <option value="4to-primaria">4° Grado</option>
-                        <option value="5to-primaria">5° Grado</option>
-                        <option value="6to-primaria">6° Grado</option>
-                      </optgroup>
-                      <optgroup label="Media General (Bachillerato)">
-                        <option value="1ro-media">1° Año</option>
-                        <option value="2do-media">2° Año</option>
-                        <option value="3ro-media">3° Año</option>
-                        <option value="4to-media">4° Año</option>
-                        <option value="5to-media">5° Año</option>
-                      </optgroup>
-                    </select>
-                  </div>
-
-                  <!-- Mensaje opcional -->
-                  <div class="campo">
-                    <label for="mensaje">Mensaje Adicional (opcional)</label>
-                    <textarea id="mensaje" name="mensaje"
-                      placeholder="Información adicional, dudas o consultas sobre el proceso de admisión..."></textarea>
-                  </div>
-
-                  <!-- Botón de envío -->
-                  <button type="submit" class="btn-primario" style="width:100%; justify-content:center;">
-                    📤 Enviar Solicitud
-                  </button>
-
-                  <!-- Mensaje de éxito (se muestra al enviar correctamente) -->
-                  <div id="mensaje-exito" style="display:none; margin-top:var(--espacio-sm);
-                       padding:var(--espacio-sm); background-color:#d4edda; color:#155724;
-                       border-radius:var(--radio-sm); border-left:4px solid #28a745; font-size:var(--texto-sm);">
-                    ✅ <strong>¡Solicitud enviada!</strong> Nos comunicaremos con usted a la brevedad
-                    al número de teléfono indicado.
-                  </div>
-
-                  <!-- Aviso de protección de datos -->
-                  <p class="aviso-proteccion">
-                    🔒 <strong>Protección de datos:</strong> Los datos suministrados en este formulario
-                    serán utilizados exclusivamente para el proceso de admisión de UEP Nueva República,
-                    en cumplimiento con la normativa venezolana vigente sobre protección de datos personales.
+              <div class="paso">
+                <div class="paso__numero">1</div>
+                <div>
+                  <p class="paso__contenido-titulo">Consulta de Disponibilidad</p>
+                  <p class="paso__contenido-texto">
+                    Verificar vacantes disponibles en el grado o año requerido mediante el formulario o vía WhatsApp.
                   </p>
-
-                </form>
-
+                </div>
               </div>
-            </div><!-- /columna derecha -->
 
-          </div><!-- /grid admisiones -->
+              <div class="paso">
+                <div class="paso__numero">2</div>
+                <div>
+                  <p class="paso__contenido-titulo">Consignación de Documentos</p>
+                  <p class="paso__contenido-texto">
+                    Presentar la documentación en la secretaría del colegio en horario matutino.
+                  </p>
+                </div>
+              </div>
 
+              <div class="paso">
+                <div class="paso__numero">3</div>
+                <div>
+                  <p class="paso__contenido-titulo">Entrevista y Evaluación</p>
+                  <p class="paso__contenido-texto">
+                    Reunión de conocimiento entre el equipo pedagógico, el estudiante y sus representantes.
+                  </p>
+                </div>
+              </div>
+
+              <div class="paso">
+                <div class="paso__numero">4</div>
+                <div>
+                  <p class="paso__contenido-titulo">Formalización de Matrícula</p>
+                  <p class="paso__contenido-texto">
+                    Firma del acta de compromiso y cancelación de los aranceles correspondientes.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Recaudos -->
+              <div style="margin-top:2rem; padding:1.5rem; background:var(--blanco); border:1px solid var(--borde-suave); border-radius:var(--radio-md); border-left:4px solid var(--dorado);">
+                <h3 style="font-family:var(--fuente-serif); color:var(--verde-bosque-oscuro); margin-bottom:0.75rem; font-size:1.1rem;">
+                  📎 Recaudos Principales
+                </h3>
+                <ul style="font-size:0.88rem; color:var(--texto-medio); line-height:1.7;">
+                  <li>• Copia de C.I. del representante y del estudiante (si aplica)</li>
+                  <li>• Partida de nacimiento original y copia</li>
+                  <li>• Notas certificadas y constancia de buena conducta del plantel de origen</li>
+                  <li>• 2 fotografías tipo carnet recientes</li>
+                  <li>• Tarjeta de vacunación (Nivel Primaria)</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Formulario -->
+            <div class="formulario-box">
+              <h2 style="font-family:var(--fuente-serif); font-size:1.35rem; color:var(--verde-bosque-oscuro); margin-bottom:0.5rem; font-weight:700;">
+                📝 Solicitud de Cupo en Línea
+              </h2>
+              <p style="font-size:0.88rem; color:var(--texto-medio); margin-bottom:1.5rem;">
+                Complete los datos y nos comunicaremos con usted a la mayor brevedad.
+              </p>
+
+              <form id="formulario-cupo" novalidate>
+                <div class="campo">
+                  <label for="nombre-rep">Nombre del Representante *</label>
+                  <input type="text" id="nombre-rep" required placeholder="Ej: María González">
+                </div>
+
+                <div class="campo-grupo">
+                  <div class="campo" style="margin-bottom:0;">
+                    <label for="tel-rep">Teléfono / WhatsApp *</label>
+                    <input type="tel" id="tel-rep" required placeholder="Ej: 0412-0000000">
+                  </div>
+                  <div class="campo" style="margin-bottom:0;">
+                    <label for="correo-rep">Correo Electrónico</label>
+                    <input type="email" id="correo-rep" placeholder="correo@ejemplo.com">
+                  </div>
+                </div>
+
+                <div class="campo">
+                  <label for="nombre-est">Nombre del Aspirante *</label>
+                  <input type="text" id="nombre-est" required placeholder="Ej: Carlos Pérez González">
+                </div>
+
+                <div class="campo">
+                  <label for="grado-aspira">Grado o Año al que Aspira *</label>
+                  <select id="grado-aspira" required>
+                    <option value="" disabled selected>— Seleccione el nivel —</option>
+                    <optgroup label="Educación Primaria">
+                      <option value="1-primaria">1° Grado Primaria</option>
+                      <option value="2-primaria">2° Grado Primaria</option>
+                      <option value="3-primaria">3° Grado Primaria</option>
+                      <option value="4-primaria">4° Grado Primaria</option>
+                      <option value="5-primaria">5° Grado Primaria</option>
+                      <option value="6-primaria">6° Grado Primaria</option>
+                    </optgroup>
+                    <optgroup label="Media General (Bachillerato)">
+                      <option value="1-media">1° Año Bachillerato</option>
+                      <option value="2-media">2° Año Bachillerato</option>
+                      <option value="3-media">3° Año Bachillerato</option>
+                      <option value="4-media">4° Año Bachillerato</option>
+                      <option value="5-media">5° Año Bachillerato</option>
+                    </optgroup>
+                  </select>
+                </div>
+
+                <div class="campo">
+                  <label for="mensaje-extra">Mensaje o Consulta Adicional</label>
+                  <textarea id="mensaje-extra" placeholder="Detalles de interés..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-dorado" style="width:100%;">
+                  Enviar Solicitud de Cupo
+                </button>
+
+                <div id="mensaje-exito" style="display:none; margin-top:1rem; padding:0.85rem; background:#d4edda; color:#155724; border-radius:var(--radio-sm); font-size:0.88rem; border-left:4px solid #28a745;">
+                  ✅ <strong>¡Solicitud recibida con éxito!</strong> Nos pondremos en contacto vía WhatsApp o telefónica.
+                </div>
+              </form>
+            </div>
+
+          </div>
         </div>
       </section>
 
-    </main><!-- /pagina-admisiones -->
+    </main>
 
 
     <!-- ==================================================================
@@ -2729,92 +2379,76 @@
          ================================================================== -->
     <main id="pagina-cartelera" class="pagina" role="main" aria-label="Cartelera Informativa">
 
-      <!-- Encabezado interior -->
       <div class="encabezado-interior">
-        <h1 class="encabezado-interior__titulo">Cartelera Informativa</h1>
-        <p class="encabezado-interior__subtitulo">Circulares, eventos, efemérides y comunicados institucionales</p>
-        <nav class="migas" aria-label="Ruta de navegación">
-          <a data-ir-a="pagina-inicio" href="#">Inicio</a>
-          <span aria-hidden="true">›</span>
-          <span aria-current="page">Cartelera</span>
-        </nav>
+        <div class="contenedor">
+          <h1 class="encabezado-interior__titulo">Cartelera Informativa</h1>
+          <p class="encabezado-interior__subtitulo">Circulares, eventos, visitas pedagógicas y comunicados</p>
+          <nav class="migas" aria-label="Ruta de navegación">
+            <a data-ir-a="pagina-inicio" href="#inicio">Inicio</a>
+            <span aria-hidden="true">›</span>
+            <span aria-current="page">Cartelera</span>
+          </nav>
+        </div>
       </div>
 
-      <section class="seccion" aria-labelledby="cartelera-titulo">
+      <section class="seccion seccion-crema">
         <div class="contenedor">
-          <h2 class="titulo-seccion" id="cartelera-titulo">Publicaciones Recientes</h2>
-          <div class="divisor-verde"></div>
-
-          <!-- Filtros por categoría -->
-          <div class="cartelera__filtros" role="group" aria-label="Filtrar publicaciones por categoría">
-            <button class="filtro-btn activo" data-categoria="todas">📋 Todas</button>
-            <button class="filtro-btn" data-categoria="circulares">📄 Circulares</button>
-            <button class="filtro-btn" data-categoria="eventos">🎉 Eventos</button>
-            <button class="filtro-btn" data-categoria="efemerides">🏛️ Efemérides</button>
+          <div class="encabezado-bloque">
+            <h2 class="titulo-con-barra">Publicaciones Recientes</h2>
+            <p class="subtitulo-bloque">Mantente informado sobre las actividades de nuestra comunidad.</p>
           </div>
 
-          <!-- 2 artículos reales institucionales -->
+          <div class="cartelera__filtros" role="group" aria-label="Filtros">
+            <button class="filtro-btn activo" data-categoria="todas">📋 Todas</button>
+            <button class="filtro-btn" data-categoria="eventos">🎉 Eventos y Salidas</button>
+            <button class="filtro-btn" data-categoria="academico">📚 Vida Académica</button>
+          </div>
+
           <div class="cartelera__grid">
-
-            <!-- ── Artículo 1: Paseo Campo Carabobo ── -->
+            <!-- Artículo 1 -->
             <article class="entrada-tarjeta" data-categoria="eventos">
-              <div class="entrada-tarjeta__imagen" style="padding:0;overflow:hidden;height:180px;">
-                <img src="img/paseo_campo_carabobo_01.jpeg" alt="Estudiantes en visita educativa al Campo de Carabobo"
-                  style="width:100%;height:180px;object-fit:cover;object-position:center top;display:block;">
+              <div class="entrada-tarjeta__imagen">
+                <img src="img/paseo_campo_carabobo_01.jpeg" alt="Visita al Campo de Carabobo" loading="lazy">
               </div>
               <div class="entrada-tarjeta__cuerpo">
-                <span class="entrada-tarjeta__categoria">🗺️ Paseo Escolar</span>
-                <h3 class="entrada-tarjeta__titulo">Visita educativa al Campo de Carabobo</h3>
-                <p class="entrada-tarjeta__fecha">📅 24 de junio, 2026</p>
-                <p class="entrada-tarjeta__extracto">
-                  Un grupo de estudiantes de Media General vivió una experiencia histórica
-                  única al visitar el Campo de Carabobo, escenario de la batalla que
-                  selló la independencia venezolana en 1821.
+                <span class="badge-menta" style="align-self:flex-start; margin-bottom:0.6rem;">Salida Pedagógica</span>
+                <h3 style="font-family:var(--fuente-serif); font-size:1.15rem; color:var(--verde-bosque-oscuro); margin-bottom:0.5rem; font-weight:700;">
+                  Visita educativa al Campo de Carabobo
+                </h3>
+                <p style="font-size:0.88rem; color:var(--texto-medio); line-height:1.6; margin-bottom:1rem; flex:1;">
+                  Estudiantes de Media General vivieron una experiencia histórica en el monumento nacional donde se selló la independencia venezolana.
                 </p>
-                <a href="articulo-campo-carabobo.html" class="enlace-leer-mas"
-                  aria-label="Leer artículo sobre visita al Campo de Carabobo">
-                  Leer más →
-                </a>
+                <a href="articulo-campo-carabobo.html" class="enlace-flecha">Leer artículo completo →</a>
               </div>
             </article>
 
-            <!-- ── Artículo 2: Experiencia estudiantil ── -->
+            <!-- Artículo 2 -->
             <article class="entrada-tarjeta" data-categoria="academico">
-              <div class="entrada-tarjeta__imagen" style="padding:0;overflow:hidden;height:180px;">
-                <img src="img/jovenes_aula_02.jpeg"
-                  alt="Jóvenes estudiando y creciendo dentro de las aulas de UEP Nueva República"
-                  style="width:100%;height:180px;object-fit:cover;object-position:center top;display:block;">
+              <div class="entrada-tarjeta__imagen">
+                <img src="img/jovenes_aula_02.jpeg" alt="Estudiantes en el aula de clases" loading="lazy">
               </div>
               <div class="entrada-tarjeta__cuerpo">
-                <span class="entrada-tarjeta__categoria">📚 Vida Estudiantil</span>
-                <h3 class="entrada-tarjeta__titulo">Aprender y crecer dentro de nuestras aulas</h3>
-                <p class="entrada-tarjeta__fecha">📅 Mayo, 2026</p>
-                <p class="entrada-tarjeta__extracto">
-                  El aula de clases en UEP Nueva República es mucho más que un espacio físico:
-                  es el lugar donde cada estudiante construye su carácter, descubre sus talentos
-                  y da sus primeros pasos hacia el futuro.
+                <span class="badge-dorado" style="align-self:flex-start; margin-bottom:0.6rem;">Vida Estudiantil</span>
+                <h3 style="font-family:var(--fuente-serif); font-size:1.15rem; color:var(--verde-bosque-oscuro); margin-bottom:0.5rem; font-weight:700;">
+                  Aprender y crecer dentro de nuestras aulas
+                </h3>
+                <p style="font-size:0.88rem; color:var(--texto-medio); line-height:1.6; margin-bottom:1rem; flex:1;">
+                  El espacio de clase como núcleo de descubrimiento de talentos, formación del carácter y proyectos de desarrollo personal.
                 </p>
-                <a href="articulo-experiencia-estudiantil.html" class="enlace-leer-mas"
-                  aria-label="Leer artículo sobre la experiencia estudiantil">
-                  Leer más →
-                </a>
+                <a href="articulo-experiencia-estudiantil.html" class="enlace-flecha">Leer artículo completo →</a>
               </div>
             </article>
+          </div>
 
-          </div><!-- /cartelera__grid -->
-
-          <!-- Paginación -->
-          <nav class="paginacion" aria-label="Paginación de publicaciones">
-            <button class="pagina-btn activo" aria-current="page" aria-label="Página 1">1</button>
-            <button class="pagina-btn" aria-label="Página 2">2</button>
-            <button class="pagina-btn" aria-label="Página 3">3</button>
-            <button class="pagina-btn" aria-label="Siguiente página">›</button>
+          <nav class="paginacion" aria-label="Paginación">
+            <button class="pagina-btn activo">1</button>
+            <button class="pagina-btn">2</button>
+            <button class="pagina-btn">›</button>
           </nav>
-
         </div>
       </section>
 
-    </main><!-- /pagina-cartelera -->
+    </main>
 
 
     <!-- ==================================================================
@@ -2822,73 +2456,62 @@
          ================================================================== -->
     <main id="pagina-contacto" class="pagina" role="main" aria-label="Página de Contacto">
 
-      <!-- Encabezado interior -->
       <div class="encabezado-interior">
-        <h1 class="encabezado-interior__titulo">Contacto</h1>
-        <p class="encabezado-interior__subtitulo">Estamos aquí para atenderte</p>
-        <nav class="migas" aria-label="Ruta de navegación">
-          <a data-ir-a="pagina-inicio" href="#">Inicio</a>
-          <span aria-hidden="true">›</span>
-          <span aria-current="page">Contacto</span>
-        </nav>
+        <div class="contenedor">
+          <h1 class="encabezado-interior__titulo">Contacto</h1>
+          <p class="encabezado-interior__subtitulo">Canales oficiales de comunicación y atención a representantes</p>
+          <nav class="migas" aria-label="Ruta de navegación">
+            <a data-ir-a="pagina-inicio" href="#inicio">Inicio</a>
+            <span aria-hidden="true">›</span>
+            <span aria-current="page">Contacto</span>
+          </nav>
+        </div>
       </div>
 
-      <section class="seccion" aria-labelledby="contacto-titulo">
+      <section class="seccion seccion-crema">
         <div class="contenedor">
-          <h2 class="titulo-seccion" id="contacto-titulo">Comunícate con Nosotros</h2>
-          <div class="divisor-verde"></div>
-          <p class="subtitulo-seccion">
-            Nuestro equipo está disponible para atender cualquier consulta de lunes a viernes, de 8:00 AM a 3:00 PM.
-          </p>
-
           <div class="contacto__grid">
 
-            <!-- -------------------------------------------------------
-                 COLUMNA IZQUIERDA: Información de contacto
-                 ------------------------------------------------------- -->
+            <!-- Información -->
             <div>
-              <!-- Teléfono / WhatsApp (CTA principal de esta página) -->
+              <div class="encabezado-bloque">
+                <h2 class="titulo-con-barra">Atención al Representante</h2>
+                <p class="subtitulo-bloque">Estamos listos para atender sus requerimientos e inquietudes.</p>
+              </div>
+
               <div class="contacto__info-item">
                 <span class="contacto__icono" aria-hidden="true">📞</span>
                 <div>
                   <p class="contacto__dato-titulo">Teléfono Institucional</p>
-                  <p class="contacto__dato-valor" style="font-size:1.3rem; font-weight:700; color:var(--verde-oscuro);">
+                  <p class="contacto__dato-valor" style="font-size:1.15rem; font-weight:700; color:var(--verde-institucional);">
                     +58 422-644-9365
                   </p>
-                  <!-- Botón de acción principal en Contacto: WhatsApp directo -->
-                  <a href="https://wa.me/584226449365" target="_blank" rel="noopener noreferrer"
-                    class="contacto__whatsapp-btn" aria-label="Abrir WhatsApp con UEP Nueva República">
-                    💬 Escribir por WhatsApp
+                  <a href="https://wa.me/584226449365" target="_blank" rel="noopener noreferrer" class="btn-dorado" style="margin-top:0.75rem; font-size:0.85rem; padding:0.5rem 1rem;">
+                    💬 Chatear por WhatsApp
                   </a>
                 </div>
               </div>
 
-              <!-- Dirección -->
               <div class="contacto__info-item">
                 <span class="contacto__icono" aria-hidden="true">📍</span>
                 <div>
-                  <p class="contacto__dato-titulo">Dirección</p>
+                  <p class="contacto__dato-titulo">Ubicación del Plantel</p>
                   <p class="contacto__dato-valor">
-                    [Dirección completa del plantel]<br>
-                    [Municipio, Estado], Venezuela
+                    Sede Institucional UEP Nueva República, Venezuela
                   </p>
                 </div>
               </div>
 
-              <!-- Correo electrónico -->
               <div class="contacto__info-item">
                 <span class="contacto__icono" aria-hidden="true">✉️</span>
                 <div>
                   <p class="contacto__dato-titulo">Correo Electrónico</p>
                   <p class="contacto__dato-valor">
-                    <a href="mailto:info@nuevarepublica.edu.ve" style="color:var(--verde-oscuro); font-weight:600;">
-                      info@nuevarepublica.edu.ve
-                    </a>
+                    info@nuevarepublica.edu.ve
                   </p>
                 </div>
               </div>
 
-              <!-- Horario -->
               <div class="contacto__info-item">
                 <span class="contacto__icono" aria-hidden="true">🕐</span>
                 <div>
@@ -2899,165 +2522,119 @@
                   </p>
                 </div>
               </div>
+            </div>
 
-              <!-- Instagram -->
-              <div class="contacto__info-item">
-                <span class="contacto__icono" aria-hidden="true">📸</span>
-                <div>
-                  <p class="contacto__dato-titulo">Instagram</p>
-                  <p class="contacto__dato-valor">
-                    <a href="https://www.instagram.com/nuevarepublica_u.e.p" target="_blank" rel="noopener noreferrer"
-                      style="color:var(--verde-oscuro); font-weight:600;">
-                      @nuevarepublica_u.e.p
-                    </a>
-                  </p>
-                </div>
+            <!-- Mapa Google Maps -->
+            <div>
+              <div class="encabezado-bloque">
+                <h2 class="titulo-con-barra">Mapa de Ubicación</h2>
+                <p class="subtitulo-bloque">Acceso fácil y seguro a nuestras instalaciones.</p>
               </div>
 
-            </div><!-- /columna izquierda -->
-
-            <!-- -------------------------------------------------------
-                 COLUMNA DERECHA: Mapa interactivo (Google Maps)
-                 ------------------------------------------------------- -->
-            <div>
-              <div class="mapa-contenedor">
-                <!-- 
-                  NOTA PARA PRODUCCIÓN: 
-                  Reemplazar el div .mapa-placeholder con el iframe de Google Maps.
-                  Ejemplo:
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=..."
-                    width="100%" height="380" style="border:0;"
-                    allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="Ubicación de UEP Nueva República">
-                  </iframe>
-                -->
-                <!-- <div class="mapa-placeholder" role="img" aria-label="Mapa de ubicación — Por configurar">
-                  <span class="mapa-placeholder__icono" aria-hidden="true">🗺️</span>
-                  <p class="mapa-placeholder__texto">Mapa de Ubicación</p>
-                  <p class="mapa-placeholder__sub">
-                    [Google Maps se integrará aquí en la versión WordPress]
-                  </p>
-                </div> -->
+              <div class="mapa-box">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d981.6806510161366!2d-67.57420707152674!3d10.203167319263498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDEyJzExLjQiTiA2N8KwMzQnMjQuOCJX!5e0!3m2!1ses!2sve!4v1782867899981!5m2!1ses!2sve"
-                  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                  referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                  allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Ubicación UEP Nueva República"></iframe>
               </div>
+            </div>
 
-              <!-- Dirección textual bajo el mapa -->
-              <div style="margin-top:var(--espacio-sm); padding:var(--espacio-sm);
-                          background:var(--gris-suave); border-radius:var(--radio-sm);
-                          font-size:var(--texto-sm); color:var(--texto-medio);">
-                📍 <strong>[Dirección completa]</strong> — [Municipio, Estado], Venezuela.
-              </div>
-
-            </div><!-- /columna derecha -->
-
-          </div><!-- /contacto__grid -->
-
+          </div>
         </div>
       </section>
 
-    </main><!-- /pagina-contacto -->
+    </main>
 
   </div><!-- /contenido-principal -->
 
 
   <!-- ======================================================================
-       FOOTER — COMÚN A TODAS LAS PÁGINAS
-       Fondo: #346739 (verde oscuro) | Texto: blanco
+       FOOTER INSTITUCIONAL
        ====================================================================== -->
   <footer class="footer" role="contentinfo">
     <div class="contenedor">
       <div class="footer__grid">
 
-        <!-- Columna 1: Marca y datos de contacto rápido -->
-        <div class="footer__marca">
-          <h2 class="footer__marca-nombre">UEP Nueva República</h2>
-          <p class="footer__marca-slogan">Formando ciudadanos con excelencia académica y valores.</p>
-          <div class="footer__datos">
-            <p>📍 [Dirección del plantel], Venezuela</p>
-            <p>📞 +58 422-644-9365</p>
-            <p>✉️ info@nuevarepublica.edu.ve</p>
-            <p>🕐 Lunes a Viernes: 7:00 AM – 3:00 PM</p>
+        <!-- Columna 1: Marca y Contacto -->
+        <div>
+          <div class="footer__marca-header">
+            <div class="header__logo-escudo" style="width:36px; height:36px; font-size:0.95rem;">NR</div>
+            <span class="footer__marca-nombre">UEP Nueva República</span>
           </div>
-          <!-- Redes sociales -->
-          <div class="footer__social">
-            <a href="https://www.instagram.com/nuevarepublica_u.e.p" target="_blank" rel="noopener noreferrer"
-              class="footer__social-btn" aria-label="Seguirnos en Instagram">📸</a>
-            <a href="https://wa.me/584226449365" target="_blank" rel="noopener noreferrer" class="footer__social-btn"
-              aria-label="WhatsApp institucional">💬</a>
+          <p class="footer__marca-slogan">
+            Formando ciudadanos con excelencia académica y valores.
+          </p>
+          <div class="footer__datos-lista">
+            <div class="footer__dato-item">
+              <span class="footer__dato-icono">📍</span>
+              <span>Sede Institucional, Venezuela</span>
+            </div>
+            <div class="footer__dato-item">
+              <span class="footer__dato-icono">📞</span>
+              <span>+58 422-644-9365</span>
+            </div>
+            <div class="footer__dato-item">
+              <span class="footer__dato-icono">✉️</span>
+              <span>info@nuevarepublica.edu.ve</span>
+            </div>
+            <div class="footer__dato-item">
+              <span class="footer__dato-icono">🕐</span>
+              <span>Lunes a Viernes: 7:00 AM – 3:00 PM</span>
+            </div>
           </div>
         </div>
 
-        <!-- Columna 2: Navegación rápida -->
-        <nav aria-label="Navegación del footer">
+        <!-- Columna 2: Navegación -->
+        <nav aria-label="Navegación del pie de página">
           <h3 class="footer__col-titulo">Navegación</h3>
-          <ul class="footer__enlaces">
-            <li><a class="footer__enlace" data-ir-a="pagina-inicio" href="#">Inicio</a></li>
-            <li><a class="footer__enlace" data-ir-a="pagina-institucion" href="#">Institución</a></li>
-            <li><a class="footer__enlace" data-ir-a="pagina-oferta" href="#">Oferta Académica</a></li>
-            <li><a class="footer__enlace" data-ir-a="pagina-admisiones" href="#">Admisiones</a></li>
-            <li><a class="footer__enlace" data-ir-a="pagina-cartelera" href="#">Cartelera Informativa</a></li>
-            <li><a class="footer__enlace" data-ir-a="pagina-contacto" href="#">Contacto</a></li>
+          <ul class="footer__enlaces-lista">
+            <li><a class="footer__enlace-item" data-ir-a="pagina-inicio" href="#inicio">Inicio</a></li>
+            <li><a class="footer__enlace-item" data-ir-a="pagina-institucion" href="#institucion">Institución</a></li>
+            <li><a class="footer__enlace-item" data-ir-a="pagina-oferta" href="#oferta">Oferta Académica</a></li>
+            <li><a class="footer__enlace-item" data-ir-a="pagina-admisiones" href="#admisiones">Admisiones</a></li>
+            <li><a class="footer__enlace-item" data-ir-a="pagina-cartelera" href="#cartelera">Cartelera Informativa</a></li>
+            <li><a class="footer__enlace-item" data-ir-a="pagina-contacto" href="#contacto">Contacto</a></li>
           </ul>
         </nav>
 
-        <!-- Columna 3: Información adicional -->
+        <!-- Columna 3: Niveles Educativos -->
         <div>
           <h3 class="footer__col-titulo">Niveles Educativos</h3>
-          <ul class="footer__enlaces">
-            <li><a class="footer__enlace" data-ir-a="pagina-oferta" href="#">Educación Primaria (1° a 6°)</a></li>
-            <li><a class="footer__enlace" data-ir-a="pagina-oferta" href="#">Media General (Bachillerato)</a></li>
-            <li><a class="footer__enlace" data-ir-a="pagina-admisiones" href="#">Proceso de Admisión</a></li>
-            <li><a class="footer__enlace" data-ir-a="pagina-admisiones" href="#">Requisitos de Inscripción</a></li>
-            <li><a class="footer__enlace" data-ir-a="pagina-cartelera" href="#">Circulares y Avisos</a></li>
+          <ul class="footer__enlaces-lista">
+            <li><a class="footer__enlace-item" data-ir-a="pagina-oferta" href="#oferta">Educación Primaria (1° a 6°)</a></li>
+            <li><a class="footer__enlace-item" data-ir-a="pagina-oferta" href="#oferta">Media General (Bachillerato)</a></li>
+            <li><a class="footer__enlace-item" data-ir-a="pagina-admisiones" href="#admisiones">Proceso de Admisión</a></li>
+            <li><a class="footer__enlace-item" data-ir-a="pagina-admisiones" href="#admisiones">Programas de Formación</a></li>
+            <li><a class="footer__enlace-item" data-ir-a="pagina-cartelera" href="#cartelera">Deporte y Artes</a></li>
           </ul>
         </div>
 
       </div>
     </div>
 
-    <!-- Barra de copyright -->
+    <!-- Barra de copyright inferior -->
     <div class="footer__barra-inferior">
       <div class="contenedor">
-        © 2026 UEP Nueva República. Todos los derechos reservados.
-        — Diseño web: [Nombre del desarrollador / agencia]
+        <div>© 2026 UEP Nueva República. Todos los derechos reservados.</div>
+        <div>Diseño institucional educativo</div>
       </div>
     </div>
-
-  </footer><!-- /footer -->
-
+  </footer>
 
   <!-- ======================================================================
        BOTÓN FLOTANTE DE WHATSAPP
-       Posición: fija en esquina inferior derecha (todas las páginas)
-       Color: dorado (#CA955C) con pulso animado
        ====================================================================== -->
   <a href="https://wa.me/584226449365" class="whatsapp-flotante" target="_blank" rel="noopener noreferrer"
     aria-label="Contactar a UEP Nueva República por WhatsApp">
-    <!-- Ícono de WhatsApp (emoji — reemplazar con SVG real en producción) -->
     <span class="whatsapp-flotante__icono" aria-hidden="true">💬</span>
-    <!-- Tooltip al hacer hover -->
-    <span class="whatsapp-flotante__tooltip">¡Escríbenos!</span>
   </a>
 
-
-  <!-- Script principal (menú, tabs, filtros, formulario) -->
+  <!-- ======================================================================
+       SCRIPTS INTERACTIVOS (NAVEGACIÓN, TABS, FILTROS, FORMULARIO)
+       ====================================================================== -->
   <script>
-    /* ==========================================================================
-       UEP NUEVA REPÚBLICA — JAVASCRIPT GLOBAL
-       Funciones: menú hamburguesa, navegación por tabs (demo multi-página),
-       filtros de cartelera y validación de formulario.
-       ========================================================================== */
-
     document.addEventListener('DOMContentLoaded', function () {
 
-      /* -----------------------------------------------------------------------
-         1. MENÚ HAMBURGUESA (móvil)
-         ----------------------------------------------------------------------- */
+      /* 1. Menú móvil hamburguesa */
       const hamburguesa = document.getElementById('hamburguesa');
       const nav = document.getElementById('nav-principal');
 
@@ -3065,7 +2642,6 @@
         hamburguesa.addEventListener('click', function () {
           const abierto = nav.classList.toggle('abierto');
           hamburguesa.setAttribute('aria-expanded', abierto);
-          // Animar las tres barras a X cuando está abierto
           const barras = hamburguesa.querySelectorAll('span');
           if (abierto) {
             barras[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
@@ -3077,212 +2653,110 @@
             barras[2].style.transform = '';
           }
         });
-
-        // Cerrar menú al hacer clic en un enlace
-        nav.querySelectorAll('.nav__enlace').forEach(function (enlace) {
-          enlace.addEventListener('click', function () {
-            nav.classList.remove('abierto');
-            hamburguesa.setAttribute('aria-expanded', 'false');
-            const barras = hamburguesa.querySelectorAll('span');
-            barras[0].style.transform = '';
-            barras[1].style.opacity = '';
-            barras[2].style.transform = '';
-          });
-        });
       }
 
-      /* -----------------------------------------------------------------------
-         2. NAVEGACIÓN ENTRE PÁGINAS (sistema de tabs para la maqueta demo)
-         Permite navegar entre las 6 secciones del sitio sin recargar la página.
-         En WordPress real, cada una será una URL separada.
-         ----------------------------------------------------------------------- */
-      const tabsBotones = document.querySelectorAll('.tab-pagina');
-      const paginasContenido = document.querySelectorAll('.pagina');
+      /* 2. Sistema de navegación entre páginas / pestañas */
+      const paginas = document.querySelectorAll('.pagina');
+      const navEnlaces = document.querySelectorAll('.nav__enlace');
 
-      function mostrarPagina(idPagina) {
-        // Ocultar todas las páginas
-        paginasContenido.forEach(function (p) {
+      function irAPagina(idPagina) {
+        paginas.forEach(function (p) {
           p.classList.remove('visible');
         });
-        // Desactivar todos los tabs
-        tabsBotones.forEach(function (t) {
-          t.classList.remove('activo');
-        });
-        // Mostrar la página seleccionada
-        const paginaActiva = document.getElementById(idPagina);
-        if (paginaActiva) paginaActiva.classList.add('visible');
-        // Activar el tab correspondiente
-        const tabActivo = document.querySelector('[data-pagina="' + idPagina + '"]');
-        if (tabActivo) tabActivo.classList.add('activo');
-        // También actualizar el enlace del menú principal
-        document.querySelectorAll('.nav__enlace').forEach(function (enlace) {
-          enlace.classList.remove('activo');
+        const target = document.getElementById(idPagina);
+        if (target) {
+          target.classList.add('visible');
+        }
+
+        navEnlaces.forEach(function (enlace) {
           if (enlace.getAttribute('data-pagina') === idPagina) {
             enlace.classList.add('activo');
+          } else {
+            enlace.classList.remove('activo');
           }
         });
-        // Hacer scroll al inicio
+
+        // Cerrar menú móvil si estuviera abierto
+        if (nav && nav.classList.contains('abierto')) {
+          nav.classList.remove('abierto');
+          hamburguesa.setAttribute('aria-expanded', 'false');
+          const barras = hamburguesa.querySelectorAll('span');
+          barras[0].style.transform = '';
+          barras[1].style.opacity = '';
+          barras[2].style.transform = '';
+        }
+
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
 
-      // Asignar eventos a los tabs de navegación
-      tabsBotones.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          const pagina = this.getAttribute('data-pagina');
-          if (pagina) mostrarPagina(pagina);
-        });
-      });
-
-      // Asignar eventos a los enlaces del menú principal
-      document.querySelectorAll('.nav__enlace[data-pagina]').forEach(function (enlace) {
+      navEnlaces.forEach(function (enlace) {
         enlace.addEventListener('click', function (e) {
           e.preventDefault();
-          const pagina = this.getAttribute('data-pagina');
-          if (pagina) mostrarPagina(pagina);
+          const p = this.getAttribute('data-pagina');
+          if (p) irAPagina(p);
         });
       });
 
-      // Asignar eventos a todos los botones/enlaces internos con data-pagina
       document.querySelectorAll('[data-ir-a]').forEach(function (el) {
         el.addEventListener('click', function (e) {
           e.preventDefault();
-          const pagina = this.getAttribute('data-ir-a');
-          if (pagina) mostrarPagina(pagina);
+          const p = this.getAttribute('data-ir-a');
+          if (p) irAPagina(p);
         });
       });
 
-      // Mostrar la página de inicio por defecto
-      mostrarPagina('pagina-inicio');
+      /* 3. Filtros de Cartelera */
+      const filtros = document.querySelectorAll('.filtro-btn');
+      const entradas = document.querySelectorAll('.entrada-tarjeta');
 
-      /* -----------------------------------------------------------------------
-         3. FILTROS DE LA CARTELERA INFORMATIVA
-         ----------------------------------------------------------------------- */
-      const filtrosBtns = document.querySelectorAll('.filtro-btn');
-      const entradasTarjetas = document.querySelectorAll('.entrada-tarjeta');
-
-      filtrosBtns.forEach(function (btn) {
+      filtros.forEach(function (btn) {
         btn.addEventListener('click', function () {
-          // Actualizar estado activo
-          filtrosBtns.forEach(function (b) { b.classList.remove('activo'); });
+          filtros.forEach(function (b) { b.classList.remove('activo'); });
           this.classList.add('activo');
 
-          const categoria = this.getAttribute('data-categoria');
-
-          entradasTarjetas.forEach(function (tarjeta) {
-            if (categoria === 'todas') {
-              tarjeta.style.display = '';
+          const cat = this.getAttribute('data-categoria');
+          entradas.forEach(function (card) {
+            if (cat === 'todas' || card.getAttribute('data-categoria') === cat) {
+              card.style.display = 'flex';
             } else {
-              // Mostrar u ocultar según categoría
-              const catTarjeta = tarjeta.getAttribute('data-categoria');
-              tarjeta.style.display = (catTarjeta === categoria) ? '' : 'none';
+              card.style.display = 'none';
             }
           });
         });
       });
 
-      /* -----------------------------------------------------------------------
-         4. VALIDACIÓN BÁSICA DEL FORMULARIO DE ADMISIONES
-         ----------------------------------------------------------------------- */
+      /* 4. Formulario de Admisiones */
       const formulario = document.getElementById('formulario-cupo');
-
       if (formulario) {
         formulario.addEventListener('submit', function (e) {
-          e.preventDefault(); // Prevenir envío real (sin backend aún)
-
+          e.preventDefault();
           let valido = true;
-          const camposRequeridos = formulario.querySelectorAll('[required]');
+          const reqs = formulario.querySelectorAll('[required]');
 
-          camposRequeridos.forEach(function (campo) {
+          reqs.forEach(function (campo) {
             if (!campo.value.trim()) {
               valido = false;
               campo.style.borderColor = '#e74c3c';
-              campo.style.backgroundColor = '#fff5f5';
             } else {
               campo.style.borderColor = '';
-              campo.style.backgroundColor = '';
             }
           });
 
           if (valido) {
-            // Mostrar mensaje de éxito (placeholder — en WordPress se conectará al backend)
-            const mensajeExito = document.getElementById('mensaje-exito');
-            if (mensajeExito) {
-              mensajeExito.style.display = 'block';
+            const msj = document.getElementById('mensaje-exito');
+            if (msj) {
+              msj.style.display = 'block';
               formulario.reset();
-              // Ocultar mensaje tras 5 segundos
               setTimeout(function () {
-                mensajeExito.style.display = 'none';
+                msj.style.display = 'none';
               }, 5000);
             }
           }
         });
-
-        // Limpiar errores al escribir
-        formulario.querySelectorAll('input, select, textarea').forEach(function (campo) {
-          campo.addEventListener('input', function () {
-            this.style.borderColor = '';
-            this.style.backgroundColor = '';
-          });
-        });
       }
-
-
 
     });
-
-
-    /* ── Slider de galería ── */
-    (function () {
-      var track = document.getElementById('sliderTrack');
-      var dotsBox = document.getElementById('sliderDots');
-      var btnPrev = document.getElementById('sliderPrev');
-      var btnNext = document.getElementById('sliderNext');
-      if (!track) return;
-      var slides = track.querySelectorAll('.slide');
-      var total = slides.length;
-      var actual = 0;
-      var timer = null;
-
-      slides.forEach(function (_, i) {
-        var d = document.createElement('button');
-        d.className = 'slider-dot' + (i === 0 ? ' activo' : '');
-        d.setAttribute('aria-label', 'Foto ' + (i + 1));
-        d.addEventListener('click', function () { irA(i); reset(); });
-        dotsBox.appendChild(d);
-      });
-
-      function irA(n) {
-        actual = (n + total) % total;
-        track.style.transform = 'translateX(-' + (actual * 100) + '%)';
-        dotsBox.querySelectorAll('.slider-dot').forEach(function (d, i) {
-          d.classList.toggle('activo', i === actual);
-        });
-      }
-      btnNext.addEventListener('click', function () { irA(actual + 1); reset(); });
-      btnPrev.addEventListener('click', function () { irA(actual - 1); reset(); });
-      function start() { timer = setInterval(function () { irA(actual + 1); }, 5000); }
-      function reset() { clearInterval(timer); start(); }
-      start();
-      /* Swipe táctil */
-      var sx = 0;
-      track.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; }, { passive: true });
-      track.addEventListener('touchend', function (e) {
-        var d = sx - e.changedTouches[0].clientX;
-        if (Math.abs(d) > 40) { d > 0 ? irA(actual + 1) : irA(actual - 1); reset(); }
-      }, { passive: true });
-    })();
-
   </script>
-
-  <!-- Estilo adicional responsivo para la página de admisiones en móvil -->
-  <style>
-    @media (max-width: 768px) {
-      #pagina-admisiones .contenedor>div[style*="grid"] {
-        display: flex !important;
-        flex-direction: column !important;
-      }
-    }
-  </style>
 
 </body>
 
