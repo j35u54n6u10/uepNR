@@ -30,25 +30,25 @@
       --verde-claro: #5c9663;
       --verde-menta: #eaf3e6;
       --verde-menta-borde: #d0e4c8;
-      
+
       /* Dorado / Acentos Ocre */
       --dorado: #caa156;
       --dorado-hover: #b58d44;
       --dorado-claro: #f4e8cb;
       --dorado-suave: #fcf8ee;
-      
+
       /* Fondos y Neutros */
       --fondo-crema: #f5efe6;
       --fondo-crema-alt: #ece5d8;
       --fondo-crema-claro: #faf7f2;
       --blanco: #ffffff;
-      
+
       /* Tipografía y Textos */
       --texto-oscuro: #1f2721;
       --texto-medio: #4d5750;
       --texto-suave: #738076;
       --borde-suave: #e2dbce;
-      
+
       /* Sombras y Radios */
       --radio-sm: 6px;
       --radio-md: 12px;
@@ -56,17 +56,19 @@
       --radio-pill: 50px;
       --sombra-card: 0 4px 20px rgba(22, 50, 28, 0.06);
       --sombra-hover: 0 12px 32px rgba(22, 50, 28, 0.12);
-      
+
       /* Tipografías */
       --fuente-serif: 'Lora', Georgia, 'Times New Roman', serif;
       --fuente-cuerpo: 'Lato', system-ui, -apple-system, sans-serif;
-      
+
       /* Transiciones */
       --transicion: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     /* ── Reset & Base ── */
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -98,7 +100,8 @@
       transition: var(--transicion);
     }
 
-    ul, ol {
+    ul,
+    ol {
       list-style: none;
     }
 
@@ -463,7 +466,7 @@
     .hero {
       position: relative;
       background-color: var(--verde-bosque-oscuro);
-      background-image: 
+      background-image:
         linear-gradient(100deg, rgba(16, 38, 20, 0.96) 0%, rgba(16, 38, 20, 0.88) 45%, rgba(22, 50, 28, 0.45) 85%, rgba(22, 50, 28, 0.3) 100%),
         url('img/jovenes_aula_01.jpeg');
       background-position: center right;
@@ -1492,10 +1495,439 @@
       height: 380px;
     }
 
-    .mapa-box iframe {
-      width: 100%;
+    /* ==========================================================================
+       PENSUM ACADÉMICO Y CURRÍCULO
+       ========================================================================== */
+    .pensum-nav {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .pensum-tab-btn {
+      padding: 0.75rem 1.6rem;
+      font-size: 0.95rem;
+      font-weight: 700;
+      border-radius: var(--radio-pill);
+      border: 1.5px solid var(--borde-suave);
+      background-color: var(--blanco);
+      color: var(--texto-medio);
+      cursor: pointer;
+      transition: var(--transicion);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .pensum-tab-btn:hover {
+      border-color: var(--verde-institucional);
+      color: var(--verde-bosque-oscuro);
+      transform: translateY(-2px);
+    }
+
+    .pensum-tab-btn.activo {
+      background-color: var(--verde-institucional);
+      border-color: var(--verde-institucional);
+      color: var(--blanco);
+      box-shadow: 0 4px 14px rgba(35, 75, 39, 0.25);
+    }
+
+    .pensum-panel {
+      display: none;
+    }
+
+    .pensum-panel.activo {
+      display: block;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    .pensum-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .pensum-card {
+      background-color: var(--blanco);
+      border-radius: var(--radio-md);
+      border: 1px solid var(--borde-suave);
+      box-shadow: var(--sombra-card);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transicion);
+    }
+
+    .pensum-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--sombra-hover);
+      border-color: var(--dorado-claro);
+    }
+
+    .pensum-card__header {
+      padding: 1.25rem 1.5rem;
+      background: linear-gradient(135deg, var(--verde-bosque-oscuro), var(--verde-institucional));
+      color: var(--blanco);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .pensum-card__header.dorado {
+      background: linear-gradient(135deg, #2b2416, #42351e);
+      border-bottom: 2px solid var(--dorado);
+    }
+
+    .pensum-card__titulo {
+      font-family: var(--fuente-serif);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--blanco);
+    }
+
+    .pensum-card__sub {
+      font-size: 0.75rem;
+      color: var(--dorado);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+    }
+
+    .pensum-card__cuerpo {
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .pensum-lista {
+      list-style: none;
+      margin-bottom: 1.25rem;
+    }
+
+    .pensum-lista li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+      color: var(--texto-medio);
+      margin-bottom: 0.65rem;
+      line-height: 1.4;
+    }
+
+    .pensum-lista li::before {
+      content: '✓';
+      color: var(--dorado);
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+
+    .pensum-card__pie {
+      margin-top: 1rem;
+      padding-top: 0.85rem;
+      border-top: 1px dashed var(--borde-suave);
+      font-size: 0.82rem;
+      color: var(--texto-suave);
+      font-style: italic;
+    }
+
+    /* ==========================================================================
+       ACTIVIDADES EXTRACURRICULARES
+       ========================================================================== */
+    .extracurriculares-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .extracurricular-card {
+      background-color: var(--blanco);
+      border-radius: var(--radio-md);
+      padding: 1.75rem 1.5rem;
+      border: 1px solid var(--borde-suave);
+      box-shadow: var(--sombra-card);
+      transition: var(--transicion);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .extracurricular-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--sombra-hover);
+      border-color: var(--dorado);
+    }
+
+    .extracurricular-icono-caja {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radio-md);
+      background-color: var(--verde-menta);
+      border: 1px solid var(--verde-menta-borde);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 1.25rem;
+      transition: var(--transicion);
+    }
+
+    .extracurricular-card:hover .extracurricular-icono-caja {
+      background-color: var(--dorado-claro);
+      border-color: var(--dorado);
+      transform: scale(1.08);
+    }
+
+    .extracurricular-titulo {
+      font-family: var(--fuente-serif);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--verde-bosque-oscuro);
+      margin-bottom: 0.6rem;
+    }
+
+    .extracurricular-desc {
+      font-size: 0.88rem;
+      color: var(--texto-medio);
+      line-height: 1.55;
+      margin-bottom: 1.25rem;
+      flex: 1;
+    }
+
+    .extracurricular-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .extracurricular-tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      background-color: var(--fondo-crema);
+      border-radius: var(--radio-pill);
+      color: var(--verde-bosque-oscuro);
+    }
+
+    /* ==========================================================================
+       PERFIL DEL EGRESADO
+       ========================================================================== */
+    .perfil-egresado-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .perfil-card {
+      background-color: var(--blanco);
+      border-radius: var(--radio-md);
+      padding: 1.75rem;
+      border: 1px solid var(--borde-suave);
+      box-shadow: var(--sombra-card);
+      position: relative;
+      overflow: hidden;
+      transition: var(--transicion);
+    }
+
+    .perfil-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
       height: 100%;
-      border: 0;
+      background: linear-gradient(to bottom, var(--dorado), var(--verde-institucional));
+    }
+
+    .perfil-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--sombra-hover);
+    }
+
+    .perfil-card__numero {
+      position: absolute;
+      top: 1rem;
+      right: 1.25rem;
+      font-family: var(--fuente-serif);
+      font-size: 2rem;
+      font-weight: 700;
+      color: rgba(202, 161, 86, 0.25);
+    }
+
+    .perfil-card__icono {
+      font-size: 1.75rem;
+      margin-bottom: 0.75rem;
+      display: inline-block;
+    }
+
+    .perfil-card__titulo {
+      font-family: var(--fuente-serif);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--verde-bosque-oscuro);
+      margin-bottom: 0.5rem;
+    }
+
+    .perfil-card__desc {
+      font-size: 0.88rem;
+      color: var(--texto-medio);
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       TESTIMONIOS DE LA COMUNIDAD (PADRES Y ESTUDIANTES)
+       ========================================================================== */
+    .testimonios-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .testimonio-tab-btn {
+      padding: 0.7rem 1.5rem;
+      font-size: 0.92rem;
+      font-weight: 700;
+      border-radius: var(--radio-pill);
+      border: 1.5px solid var(--borde-suave);
+      background-color: var(--blanco);
+      color: var(--texto-medio);
+      cursor: pointer;
+      transition: var(--transicion);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .testimonio-tab-btn:hover {
+      border-color: var(--dorado);
+      color: var(--verde-bosque-oscuro);
+    }
+
+    .testimonio-tab-btn.activo {
+      background-color: var(--dorado);
+      border-color: var(--dorado);
+      color: #172e19;
+      box-shadow: 0 4px 14px rgba(202, 161, 86, 0.3);
+    }
+
+    .testimonios-panel {
+      display: none;
+    }
+
+    .testimonios-panel.activo {
+      display: block;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    .testimonios-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .testimonio-card {
+      background-color: var(--blanco);
+      border-radius: var(--radio-md);
+      padding: 2rem 1.75rem;
+      border: 1px solid var(--borde-suave);
+      box-shadow: var(--sombra-card);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: var(--transicion);
+    }
+
+    .testimonio-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--sombra-hover);
+      border-color: var(--dorado-claro);
+    }
+
+    .testimonio-estrellas {
+      color: #f39c12;
+      font-size: 1rem;
+      margin-bottom: 0.85rem;
+      letter-spacing: 2px;
+    }
+
+    .testimonio-cita {
+      font-size: 0.95rem;
+      font-style: italic;
+      color: var(--texto-oscuro);
+      line-height: 1.65;
+      margin-bottom: 1.5rem;
+      flex: 1;
+      position: relative;
+    }
+
+    .testimonio-cita::before {
+      content: '“';
+      font-family: var(--fuente-serif);
+      font-size: 3rem;
+      position: absolute;
+      top: -1.2rem;
+      left: -0.6rem;
+      color: rgba(202, 161, 86, 0.18);
+      line-height: 1;
+      z-index: 0;
+    }
+
+    .testimonio-autor {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--fondo-crema);
+    }
+
+    .testimonio-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--verde-institucional), var(--verde-bosque-oscuro));
+      color: var(--blanco);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+      flex-shrink: 0;
+      border: 2px solid var(--dorado-claro);
+    }
+
+    .testimonio-avatar.estudiante {
+      background: linear-gradient(135deg, var(--dorado), var(--dorado-hover));
+      color: #172e19;
+    }
+
+    .testimonio-nombre {
+      font-family: var(--fuente-serif);
+      font-weight: 700;
+      font-size: 0.98rem;
+      color: var(--verde-bosque-oscuro);
+      line-height: 1.2;
+    }
+
+    .testimonio-rol {
+      font-size: 0.8rem;
+      color: var(--texto-suave);
+      margin-top: 0.2rem;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* Botón flotante WhatsApp */
@@ -1536,30 +1968,39 @@
       .acceso-rapido__grid {
         grid-template-columns: 1fr;
       }
+
       .oferta-academica-grid {
         grid-template-columns: 1fr;
       }
+
       .galeria-cuatro-cols {
         grid-template-columns: repeat(2, 1fr);
       }
+
       .footer__grid {
         grid-template-columns: 1fr 1fr;
       }
+
       .mvv__grid {
         grid-template-columns: 1fr;
       }
+
       .historia__contenido {
         grid-template-columns: 1fr;
       }
+
       .directivo__grid {
         grid-template-columns: repeat(2, 1fr);
       }
+
       .legal__grid {
         grid-template-columns: 1fr;
       }
+
       .contacto__grid {
         grid-template-columns: 1fr;
       }
+
       .cartelera__grid {
         grid-template-columns: 1fr;
       }
@@ -1707,7 +2148,8 @@
 
             <!-- Descripción institucional -->
             <p class="hero__descripcion">
-              Formamos ciudadanos con excelencia académica y valores, comprometidos con el desarrollo integral de cada estudiante desde la Educación Primaria hasta el Bachillerato.
+              Formamos ciudadanos con excelencia académica y valores, comprometidos con el desarrollo integral de cada
+              estudiante desde la Educación Primaria hasta el Bachillerato.
             </p>
 
             <!-- Acciones CTA -->
@@ -1769,7 +2211,8 @@
             </div>
 
             <!-- Tarjeta 3: Contacto Directo -->
-            <a class="tarjeta-acceso-renovada" href="https://wa.me/584226449365" target="_blank" rel="noopener noreferrer" role="listitem">
+            <a class="tarjeta-acceso-renovada" href="https://wa.me/584226449365" target="_blank"
+              rel="noopener noreferrer" role="listitem">
               <div class="tarjeta-acceso__icono-caja" aria-hidden="true">💬</div>
               <h3 class="tarjeta-acceso__titulo">Contacto Directo</h3>
               <p class="tarjeta-acceso__descripcion">
@@ -1802,7 +2245,8 @@
                 </div>
                 <h3 class="aviso-card__titulo">Proceso de Nuevo Ingreso 2026–2027</h3>
                 <p class="aviso-card__extracto">
-                  La UEP Nueva República informa que se encuentra formalmente abierto el proceso de solicitud de cupos y recepción de recaudos para estudiantes de nuevo ingreso.
+                  La UEP Nueva República informa que se encuentra formalmente abierto el proceso de solicitud de cupos y
+                  recepción de recaudos para estudiantes de nuevo ingreso.
                 </p>
                 <a href="aviso-nuevo-ingreso.html" class="enlace-flecha">Leer más →</a>
               </div>
@@ -1820,7 +2264,8 @@
                 </div>
                 <h3 class="aviso-card__titulo">Cierre del Año Escolar y Actos de Graduación</h3>
                 <p class="aviso-card__extracto">
-                  Se comunica a los representantes el cronograma de evaluaciones finales, entrega de boletines integrales y actos solemnes de promoción académica.
+                  Se comunica a los representantes el cronograma de evaluaciones finales, entrega de boletines
+                  integrales y actos solemnes de promoción académica.
                 </p>
                 <a href="articulo-experiencia-estudiantil.html" class="enlace-flecha">Leer más →</a>
               </div>
@@ -1834,7 +2279,8 @@
         <div class="contenedor">
           <div class="encabezado-bloque">
             <h2 class="titulo-con-barra" id="oferta-resumen-titulo">Nuestra Oferta Académica</h2>
-            <p class="subtitulo-bloque">Ofrecemos una educación integral adaptada a cada etapa de desarrollo, garantizando la excelencia.</p>
+            <p class="subtitulo-bloque">Ofrecemos una educación integral adaptada a cada etapa de desarrollo,
+              garantizando la excelencia.</p>
           </div>
 
           <div class="oferta-academica-grid">
@@ -1849,7 +2295,8 @@
               </div>
               <div class="tarjeta-oferta__cuerpo">
                 <p class="tarjeta-oferta__desc">
-                  Desde 1° hasta 6° grado, con enfoque en el desarrollo cognitivo, emocional y social del niño. Metodologías participativas para despertar la curiosidad y el pensamiento crítico.
+                  Desde 1° hasta 6° grado, con enfoque en el desarrollo cognitivo, emocional y social del niño.
+                  Metodologías participativas para despertar la curiosidad y el pensamiento crítico.
                 </p>
                 <ul class="tarjeta-oferta__lista">
                   <li class="tarjeta-oferta__item">
@@ -1882,7 +2329,8 @@
               </div>
               <div class="tarjeta-oferta__cuerpo">
                 <p class="tarjeta-oferta__desc">
-                  Bachillerato completo con formación científica, humanística y tecnológica. Preparamos a nuestros estudiantes para el éxito universitario y el liderazgo social.
+                  Bachillerato completo con formación científica, humanística y tecnológica. Preparamos a nuestros
+                  estudiantes para el éxito universitario y el liderazgo social.
                 </p>
                 <ul class="tarjeta-oferta__lista">
                   <li class="tarjeta-oferta__item">
@@ -1907,7 +2355,165 @@
         </div>
       </section>
 
-      <!-- ── 5. SECCIÓN: VIDA ESCOLAR (FONDO BOSQUE OSCURO) ── -->
+      <!-- ── 5. SECCIÓN: TESTIMONIOS DE NUESTRA COMUNIDAD ── -->
+      <section class="seccion seccion-blanca" aria-labelledby="testimonios-titulo">
+        <div class="contenedor">
+          <div class="encabezado-bloque"
+            style="text-align: center; max-width: 680px; margin-left: auto; margin-right: auto;">
+            <span class="badge-menta" style="margin-bottom: 0.5rem;">Voces que Inspiran</span>
+            <h2 class="titulo-con-barra" id="testimonios-titulo" style="display: block; padding-left: 0;">
+              Testimonios de Nuestra Comunidad
+            </h2>
+            <p class="subtitulo-bloque" style="padding-left: 0;">
+              Conoce las experiencias reales de las familias y estudiantes que forman parte de la familia UEP Nueva
+              República.
+            </p>
+          </div>
+
+          <!-- Selector de Pestañas (Padres vs Estudiantes) -->
+          <div class="testimonios-tabs" role="tablist" aria-label="Selector de Testimonios">
+            <button class="testimonio-tab-btn activo" data-testimonio="padres" role="tab" aria-selected="true"
+              aria-controls="panel-testimonios-padres">
+              👨‍👩‍👧 Padres y Representantes
+            </button>
+            <button class="testimonio-tab-btn" data-testimonio="estudiantes" role="tab" aria-selected="false"
+              aria-controls="panel-testimonios-estudiantes">
+              🎓 Estudiantes
+            </button>
+          </div>
+
+          <!-- Panel Padres y Representantes (3 Testimonios) -->
+          <div id="panel-testimonios-padres" class="testimonios-panel activo" role="tabpanel">
+            <div class="testimonios-grid">
+
+              <!-- Testimonio Padre 1 -->
+              <article class="testimonio-card">
+                <div>
+                  <div class="testimonio-estrellas" aria-label="Calificación 5 de 5 estrellas">★★★★★</div>
+                  <p class="testimonio-cita">
+                    "La calidad humana y el acompañamiento pedagógico personalizado que brindan los maestros de la UEP
+                    Nueva República no tienen comparación. Mi hija ha desarrollado un amor genuino por la lectura y la
+                    ciencia en un ambiente seguro y familiar."
+                  </p>
+                </div>
+                <div class="testimonio-autor">
+                  <div class="testimonio-avatar" aria-hidden="true">EM</div>
+                  <div>
+                    <h3 class="testimonio-nombre">Dra. Elena Mendoza</h3>
+                    <p class="testimonio-rol">Representante de 4° Grado de Primaria</p>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Testimonio Padre 2 -->
+              <article class="testimonio-card">
+                <div>
+                  <div class="testimonio-estrellas" aria-label="Calificación 5 de 5 estrellas">★★★★★</div>
+                  <p class="testimonio-cita">
+                    "El rigor académico y la preparación preuniversitaria en matemáticas y ciencias le permitieron a mi
+                    hijo ingresar con altos méritos a la universidad. Agradezco profundamente la disciplina y los
+                    valores que le inculcaron durante todo el bachillerato."
+                  </p>
+                </div>
+                <div class="testimonio-autor">
+                  <div class="testimonio-avatar" aria-hidden="true">CA</div>
+                  <div>
+                    <h3 class="testimonio-nombre">Ing. Carlos Alvarado</h3>
+                    <p class="testimonio-rol">Padre de Egresado en Ciencias</p>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Testimonio Padre 3 -->
+              <article class="testimonio-card">
+                <div>
+                  <div class="testimonio-estrellas" aria-label="Calificación 5 de 5 estrellas">★★★★★</div>
+                  <p class="testimonio-cita">
+                    "Llevamos más de 7 años en la institución y la comunicación con la directiva siempre es transparente
+                    y cercana. Es un colegio que verdaderamente forma ciudadanos honestos, solidarios y con una sólida
+                    vocación cívica."
+                  </p>
+                </div>
+                <div class="testimonio-autor">
+                  <div class="testimonio-avatar" aria-hidden="true">MM</div>
+                  <div>
+                    <h3 class="testimonio-nombre">Lic. Mariana Morales</h3>
+                    <p class="testimonio-rol">Madre de estudiantes en Primaria y Media</p>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <!-- Panel Estudiantes (3 Testimonios) -->
+          <div id="panel-testimonios-estudiantes" class="testimonios-panel" role="tabpanel">
+            <div class="testimonios-grid">
+
+              <!-- Testimonio Estudiante 1 -->
+              <article class="testimonio-card">
+                <div>
+                  <div class="testimonio-estrellas" aria-label="Calificación 5 de 5 estrellas">★★★★★</div>
+                  <p class="testimonio-cita">
+                    "Los laboratorios de ciencias, los proyectos de investigación de grado y la dedicación de nuestros
+                    profesores me dieron la seguridad y el método necesario para saber qué carrera universitaria
+                    estudiar con total confianza."
+                  </p>
+                </div>
+                <div class="testimonio-autor">
+                  <div class="testimonio-avatar estudiante" aria-hidden="true">CR</div>
+                  <div>
+                    <h3 class="testimonio-nombre">Camila Rodríguez</h3>
+                    <p class="testimonio-rol">5to Año de Bachillerato · Promoción 2026</p>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Testimonio Estudiante 2 -->
+              <article class="testimonio-card">
+                <div>
+                  <div class="testimonio-estrellas" aria-label="Calificación 5 de 5 estrellas">★★★★★</div>
+                  <p class="testimonio-cita">
+                    "Formar parte del club de robótica y competir en los torneos intercolegiales de fútbol sala me
+                    enseñó el valor de la constancia y el trabajo en equipo. En la Nueva República los profesores
+                    siempre te motivan a superarte."
+                  </p>
+                </div>
+                <div class="testimonio-autor">
+                  <div class="testimonio-avatar estudiante" aria-hidden="true">DM</div>
+                  <div>
+                    <h3 class="testimonio-nombre">Diego Mendoza</h3>
+                    <p class="testimonio-rol">3er Año de Media General</p>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Testimonio Estudiante 3 -->
+              <article class="testimonio-card">
+                <div>
+                  <div class="testimonio-estrellas" aria-label="Calificación 5 de 5 estrellas">★★★★★</div>
+                  <p class="testimonio-cita">
+                    "Me encantan las ferias científicas, los actos cívicos y cómo nuestras maestras nos enseñan a cuidar
+                    las plantas y el ambiente en la brigada ecológica. Me siento muy feliz de venir a clases todos los
+                    días."
+                  </p>
+                </div>
+                <div class="testimonio-autor">
+                  <div class="testimonio-avatar estudiante" aria-hidden="true">SV</div>
+                  <div>
+                    <h3 class="testimonio-nombre">Sofía Valenzuela</h3>
+                    <p class="testimonio-rol">6to Grado de Educación Primaria</p>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── 6. SECCIÓN: VIDA ESCOLAR (FONDO BOSQUE OSCURO) ── -->
       <section class="seccion seccion-verde" aria-labelledby="vida-escolar-titulo">
         <div class="contenedor">
           <div class="vida-escolar__cabecera-flex">
@@ -1923,7 +2529,8 @@
           <div class="galeria-cuatro-cols">
             <!-- Foto 1: Acto Patriótico -->
             <div class="galeria-card">
-              <img src="img/acto_historico_bolivar.jpeg" alt="Estudiantes en dramatización y acto cívico patriótico" loading="lazy">
+              <img src="img/acto_historico_bolivar.jpeg" alt="Estudiantes en dramatización y acto cívico patriótico"
+                loading="lazy">
               <div class="galeria-card__overlay">
                 <span class="galeria-card__texto">Identidad y Patria</span>
               </div>
@@ -1939,7 +2546,8 @@
 
             <!-- Foto 3: Deporte y Paseo -->
             <div class="galeria-card">
-              <img src="img/paseo_campo_carabobo_01.jpeg" alt="Visita pedagógica y actividades al aire libre" loading="lazy">
+              <img src="img/paseo_campo_carabobo_01.jpeg" alt="Visita pedagógica y actividades al aire libre"
+                loading="lazy">
               <div class="galeria-card__overlay">
                 <span class="galeria-card__texto">Experiencias y Deporte</span>
               </div>
@@ -1989,7 +2597,9 @@
               <div class="mvv-tarjeta__icono" aria-hidden="true">🎯</div>
               <h3 class="mvv-tarjeta__titulo">Misión</h3>
               <p>
-                Formar integralmente a nuestros estudiantes logrando un equilibrio perfecto entre lo pedagógico y lo social, inculcando valores esenciales como el respeto, la libertad y la solidaridad, conectando siempre el aprendizaje con el entorno y la realidad del país.
+                Formar integralmente a nuestros estudiantes logrando un equilibrio perfecto entre lo pedagógico y lo
+                social, inculcando valores esenciales como el respeto, la libertad y la solidaridad, conectando siempre
+                el aprendizaje con el entorno y la realidad del país.
               </p>
             </article>
 
@@ -1997,7 +2607,9 @@
               <div class="mvv-tarjeta__icono" aria-hidden="true">🔭</div>
               <h3 class="mvv-tarjeta__titulo">Visión</h3>
               <p>
-                Garantizar una educación de alta calidad fundamentada en valores, consolidando la formación de ciudadanos críticos, creativos y respetuosos, dotándolos de las herramientas necesarias para afrontar con éxito y liderazgo los retos del mañana.
+                Garantizar una educación de alta calidad fundamentada en valores, consolidando la formación de
+                ciudadanos críticos, creativos y respetuosos, dotándolos de las herramientas necesarias para afrontar
+                con éxito y liderazgo los retos del mañana.
               </p>
             </article>
 
@@ -2025,13 +2637,18 @@
           <div class="historia__contenido">
             <div class="historia__texto">
               <p>
-                La Unidad Educativa Privada Nueva República nació con el firme propósito de ofrecer a las familias venezolanas una propuesta educativa rigurosa, humana y contextualizada en los más altos valores ciudadanos.
+                La Unidad Educativa Privada Nueva República nació con el firme propósito de ofrecer a las familias
+                venezolanas una propuesta educativa rigurosa, humana y contextualizada en los más altos valores
+                ciudadanos.
               </p>
               <p>
-                A lo largo de nuestros años de trayectoria ininterrumpida, hemos formado promociones de egresados que hoy destacan en diversas ramas científicas, humanísticas y profesionales a nivel nacional e internacional.
+                A lo largo de nuestros años de trayectoria ininterrumpida, hemos formado promociones de egresados que
+                hoy destacan en diversas ramas científicas, humanísticas y profesionales a nivel nacional e
+                internacional.
               </p>
               <p>
-                Contamos con una infraestructura armónica y un cuerpo docente altamente capacitado que acompaña de forma cercana el desarrollo integral de cada niño y joven.
+                Contamos con una infraestructura armónica y un cuerpo docente altamente capacitado que acompaña de forma
+                cercana el desarrollo integral de cada niño y joven.
               </p>
             </div>
             <div class="historia__img-box">
@@ -2124,7 +2741,8 @@
       <div class="encabezado-interior">
         <div class="contenedor">
           <h1 class="encabezado-interior__titulo">Oferta Académica</h1>
-          <p class="encabezado-interior__subtitulo">Formación integral desde 1° Grado de Primaria hasta el Bachillerato</p>
+          <p class="encabezado-interior__subtitulo">Formación integral y de excelencia desde 1° Grado de Primaria hasta
+            el Bachillerato en Ciencias</p>
           <nav class="migas" aria-label="Ruta de navegación">
             <a data-ir-a="pagina-inicio" href="#inicio">Inicio</a>
             <span aria-hidden="true">›</span>
@@ -2133,78 +2751,419 @@
         </div>
       </div>
 
-      <!-- Detalle Primaria -->
+      <!-- Introducción a los Niveles Educativos -->
       <section class="seccion seccion-crema">
         <div class="contenedor">
           <div class="encabezado-bloque">
-            <span class="badge-menta" style="margin-bottom:0.5rem;">Nivel Primaria</span>
-            <h2 class="titulo-con-barra">Educación Primaria (1° a 6° Grado)</h2>
-            <p class="subtitulo-bloque">Bases sólidas para el desarrollo del pensamiento crítico y la creatividad.</p>
+            <h2 class="titulo-con-barra">Niveles Educativos y Enfoque Pedagógico</h2>
+            <p class="subtitulo-bloque">Un modelo centrado en el desarrollo humano, la curiosidad científica y los
+              valores cívicos.</p>
           </div>
 
-          <div class="historia__contenido">
+          <div class="historia__contenido" style="margin-bottom: 3.5rem;">
             <div class="historia__texto">
-              <p>
-                En el nivel de Educación Primaria fomentamos el amor por el aprendizaje mediante proyectos interactivos, lectura comprensiva, razonamiento lógico-matemático y expresión artística.
-              </p>
-              <p>
-                Nuestros maestros brindan una atención individualizada, promoviendo hábitos de estudio, autonomía y empatía en cada etapa escolar.
-              </p>
-              <h3 style="font-family:var(--fuente-serif); color:var(--verde-bosque-oscuro); margin: 1.5rem 0 0.5rem; font-size:1.15rem;">
-                Áreas de Aprendizaje:
+              <span class="badge-menta" style="margin-bottom: 0.75rem;">Nivel Primaria</span>
+              <h3
+                style="font-family: var(--fuente-serif); font-size: 1.4rem; color: var(--verde-bosque-oscuro); margin-bottom: 0.75rem;">
+                Educación Primaria (1° a 6° Grado)
               </h3>
-              <div class="plan-estudios__grid">
-                <div class="materia-chip">📖 Lengua y Comunicación</div>
-                <div class="materia-chip">🔢 Matemática Aplicada</div>
-                <div class="materia-chip">🌿 Ciencias Naturales</div>
-                <div class="materia-chip">🗺️ Ciencias Sociales</div>
-                <div class="materia-chip">🎨 Artes y Expresión</div>
-                <div class="materia-chip">⚽ Educación Física</div>
-                <div class="materia-chip">💻 Informática Básica</div>
-                <div class="materia-chip">🌐 Inglés Inicial</div>
-              </div>
+              <p>
+                En el nivel de Educación Primaria construimos los cimientos del aprendizaje significativo. Nuestro
+                programa combina el desarrollo de competencias comunicativas y lógico-matemáticas con el fomento de la
+                empatía, el trabajo en equipo y el amor por la naturaleza.
+              </p>
+              <p>
+                Cada aula cuenta con maestros especialistas y un ambiente estimulante donde los niños aprenden a
+                formular preguntas, resolver problemas de la vida cotidiana y expresarse con seguridad.
+              </p>
             </div>
             <div class="historia__img-box">
               <img src="img/jovenes_aula_01.jpeg" alt="Alumnos en clase de Educación Primaria">
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- Detalle Media General -->
-      <section class="seccion seccion-blanca">
-        <div class="contenedor">
-          <div class="encabezado-bloque">
-            <span class="badge-dorado" style="margin-bottom:0.5rem;">Nivel Secundario</span>
-            <h2 class="titulo-con-barra">Media General (Bachillerato)</h2>
-            <p class="subtitulo-bloque">Rigor científico, humanístico y preparación para los estudios superiores.</p>
-          </div>
 
           <div class="historia__contenido">
-            <div class="historia__texto">
-              <p>
-                El ciclo de Media General capacita a los jóvenes en el método científico, la oratoria, la investigación documental y el dominio de tecnologías para desenvolverse con éxito en el ámbito universitario.
-              </p>
-              <p>
-                Complementamos la formación con proyectos de servicio comunitario y actividades que fortalecen la identidad patria y la conciencia ecológica.
-              </p>
-              <h3 style="font-family:var(--fuente-serif); color:var(--verde-bosque-oscuro); margin: 1.5rem 0 0.5rem; font-size:1.15rem;">
-                Asignaturas del Plan de Estudio:
-              </h3>
-              <div class="plan-estudios__grid">
-                <div class="materia-chip">📚 Castellano y Literatura</div>
-                <div class="materia-chip">🔢 Matemáticas</div>
-                <div class="materia-chip">⚗️ Química</div>
-                <div class="materia-chip">🔬 Biología</div>
-                <div class="materia-chip">⚙️ Física</div>
-                <div class="materia-chip">🌍 Geografía e Historia</div>
-                <div class="materia-chip">🇬🇧 Inglés Avanzado</div>
-                <div class="materia-chip">💻 Tecnologías de Información</div>
-              </div>
-            </div>
             <div class="historia__img-box">
               <img src="img/jovenes_aula_02.jpeg" alt="Estudiantes de Bachillerato en el aula">
             </div>
+            <div class="historia__texto">
+              <span class="badge-dorado" style="margin-bottom: 0.75rem;">Nivel Secundario</span>
+              <h3
+                style="font-family: var(--fuente-serif); font-size: 1.4rem; color: var(--verde-bosque-oscuro); margin-bottom: 0.75rem;">
+                Media General (1° a 5° Año — Bachiller en Ciencias)
+              </h3>
+              <p>
+                El ciclo de Educación Media General profundiza en el pensamiento analítico, la experimentación
+                científica y la formación humanística. Preparamos a los jóvenes para afrontar con éxito las exigencias
+                de la educación universitaria nacional e internacional.
+              </p>
+              <p>
+                A través del método científico, proyectos de investigación comunitaria y debates guiados, consolidamos
+                líderes con criterio ético y compromiso patriótico.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SECCIÓN PENSUM ACADÉMICO SIMULADO ── -->
+      <section class="seccion seccion-blanca" aria-labelledby="pensum-titulo">
+        <div class="contenedor">
+          <div class="encabezado-bloque"
+            style="text-align: center; max-width: 720px; margin-left: auto; margin-right: auto;">
+            <span class="badge-dorado" style="margin-bottom: 0.5rem;">Malla Curricular</span>
+            <h2 class="titulo-con-barra" id="pensum-titulo" style="display: block; padding-left: 0;">
+              Pensum Académico y Plan de Estudios
+            </h2>
+            <p class="subtitulo-bloque" style="padding-left: 0;">
+              Estructura curricular diseñada en conformidad con los lineamientos del Ministerio de Educación y
+              enriquecida con asignaturas formativas institucionales.
+            </p>
+          </div>
+
+          <!-- Selector Interactivo de Nivel -->
+          <div class="pensum-nav" role="tablist" aria-label="Selector de Pensum">
+            <button class="pensum-tab-btn activo" data-pensum="primaria" role="tab" aria-selected="true"
+              aria-controls="panel-pensum-primaria">
+              🎒 Educación Primaria (1° a 6° Grado)
+            </button>
+            <button class="pensum-tab-btn" data-pensum="media" role="tab" aria-selected="false"
+              aria-controls="panel-pensum-media">
+              🎓 Media General (1° a 5° Año)
+            </button>
+          </div>
+
+          <!-- Panel 1: Primaria -->
+          <div id="panel-pensum-primaria" class="pensum-panel activo" role="tabpanel">
+            <div class="pensum-grid">
+
+              <!-- Primer Ciclo -->
+              <article class="pensum-card">
+                <div class="pensum-card__header">
+                  <div>
+                    <span class="pensum-card__sub">Fase de Iniciación</span>
+                    <h3 class="pensum-card__titulo">1° a 3° Grado</h3>
+                  </div>
+                  <span style="font-size: 1.5rem;" aria-hidden="true">🌱</span>
+                </div>
+                <div class="pensum-card__cuerpo">
+                  <div>
+                    <p style="font-size: 0.88rem; color: var(--texto-suave); margin-bottom: 1rem;">
+                      Enfoque en alfabetización integral, psicomotricidad fina y comprensión del entorno social:
+                    </p>
+                    <ul class="pensum-lista">
+                      <li><strong>Lengua y Comunicación:</strong> Lectoescritura guiada y ortografía básica</li>
+                      <li><strong>Matemática Lúdica:</strong> Aritmética elemental y nociones de geometría</li>
+                      <li><strong>Ciencias de la Naturaleza y Tecnología:</strong> Exploración del medio ambiente</li>
+                      <li><strong>Identidad, Ciudadanía y Sociedad:</strong> Valores y convivencia armónica</li>
+                      <li><strong>Educación Artística:</strong> Expresión plástica, música y manualidades</li>
+                      <li><strong>Educación Física y Recreación:</strong> Coordinación motriz y juegos cooperativos</li>
+                      <li><strong>Inglés Inicial:</strong> Vocabulario temático, cantos y comandos cotidianos</li>
+                    </ul>
+                  </div>
+                  <div class="pensum-card__pie">
+                    Modalidad: Aula integral con docente especialista + profesores de área.
+                  </div>
+                </div>
+              </article>
+
+              <!-- Segundo Ciclo -->
+              <article class="pensum-card">
+                <div class="pensum-card__header">
+                  <div>
+                    <span class="pensum-card__sub">Fase de Consolidación</span>
+                    <h3 class="pensum-card__titulo">4° a 6° Grado</h3>
+                  </div>
+                  <span style="font-size: 1.5rem;" aria-hidden="true">🌿</span>
+                </div>
+                <div class="pensum-card__cuerpo">
+                  <div>
+                    <p style="font-size: 0.88rem; color: var(--texto-suave); margin-bottom: 1rem;">
+                      Desarrollo del razonamiento abstracto, hábitos de investigación y proyectos grupales:
+                    </p>
+                    <ul class="pensum-lista">
+                      <li><strong>Lengua y Literatura:</strong> Análisis de textos, redacción y expresión oral</li>
+                      <li><strong>Matemática Aplicada:</strong> Fracciones, proporcionalidad y resolución de problemas
+                      </li>
+                      <li><strong>Ciencias Naturales y Salud:</strong> Anatomía humana, ecosistemas y método
+                        experimental</li>
+                      <li><strong>Geografía e Historia de Venezuela:</strong> Identidad patria y memoria histórica</li>
+                      <li><strong>Cultura y Tradición:</strong> Danzas venezolanas y artes visuales</li>
+                      <li><strong>Educación Física y Deportes:</strong> Fundamentos de disciplinas deportivas</li>
+                      <li><strong>Computación e Informática:</strong> Uso consciente de herramientas ofimáticas</li>
+                      <li><strong>Inglés Comunicativo:</strong> Estructuras gramaticales y diálogos básicos</li>
+                    </ul>
+                  </div>
+                  <div class="pensum-card__pie">
+                    Preparación integral y diagnóstica para la transición a la Educación Media General.
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <!-- Panel 2: Media General -->
+          <div id="panel-pensum-media" class="pensum-panel" role="tabpanel">
+            <div class="pensum-grid">
+
+              <!-- 1° y 2° Año -->
+              <article class="pensum-card">
+                <div class="pensum-card__header dorado">
+                  <div>
+                    <span class="pensum-card__sub">Ciclo Básico Exploratorio</span>
+                    <h3 class="pensum-card__titulo">1° y 2° Año</h3>
+                  </div>
+                  <span style="font-size: 1.5rem;" aria-hidden="true">📐</span>
+                </div>
+                <div class="pensum-card__cuerpo">
+                  <div>
+                    <p style="font-size: 0.88rem; color: var(--texto-suave); margin-bottom: 1rem;">
+                      Adaptación al sistema por materias y consolidación de bases científicas:
+                    </p>
+                    <ul class="pensum-lista">
+                      <li><strong>Castellano:</strong> Gramática, semántica y comprensión lectora crítica</li>
+                      <li><strong>Matemáticas I y II:</strong> Álgebra inicial, polinomios y geometría plana</li>
+                      <li><strong>Ciencias Naturales:</strong> Biología básica, introducción a la física y química</li>
+                      <li><strong>Geografía, Historia y Ciudadanía (GHC):</strong> Identidad y marco legal</li>
+                      <li><strong>Inglés I y II:</strong> Comprensión auditiva y producción de oraciones</li>
+                      <li><strong>Arte y Patrimonio:</strong> Historia del arte y manifestaciones culturales</li>
+                      <li><strong>Educación Física:</strong> Acondicionamiento físico y deportes colectivos</li>
+                      <li><strong>Orientación y Convivencia:</strong> Desarrollo socioemocional y valores</li>
+                    </ul>
+                  </div>
+                  <div class="pensum-card__pie">
+                    Desarrollo de autonomía académica y rigor metodológico.
+                  </div>
+                </div>
+              </article>
+
+              <!-- 3° Año -->
+              <article class="pensum-card">
+                <div class="pensum-card__header dorado">
+                  <div>
+                    <span class="pensum-card__sub">Transición Científica</span>
+                    <h3 class="pensum-card__titulo">3° Año</h3>
+                  </div>
+                  <span style="font-size: 1.5rem;" aria-hidden="true">⚗️</span>
+                </div>
+                <div class="pensum-card__cuerpo">
+                  <div>
+                    <p style="font-size: 0.88rem; color: var(--texto-suave); margin-bottom: 1rem;">
+                      Inmersión en disciplinas experimentales de laboratorio y formulación de proyectos:
+                    </p>
+                    <ul class="pensum-lista">
+                      <li><strong>Física Elemental:</strong> Mecánica clásica, cinemática y vectores</li>
+                      <li><strong>Química General:</strong> Tabla periódica, enlaces y reacciones</li>
+                      <li><strong>Biología:</strong> Citología, genética mendeliana y ecología</li>
+                      <li><strong>Matemáticas III:</strong> Funciones, trigonometría y estadística</li>
+                      <li><strong>Castellano III:</strong> Literatura clásica e hispanoamericana</li>
+                      <li><strong>Inglés III:</strong> Tiempos verbales complejos y redacción</li>
+                      <li><strong>Historia y Geografía:</strong> Geopolítica venezolana y soberanía</li>
+                      <li><strong>Formación para la Soberanía Nacional (FSN):</strong> Deberes patrios</li>
+                    </ul>
+                  </div>
+                  <div class="pensum-card__pie">
+                    Prácticas de laboratorio y primera aproximación a la investigación científica.
+                  </div>
+                </div>
+              </article>
+
+              <!-- 4° y 5° Año -->
+              <article class="pensum-card">
+                <div class="pensum-card__header dorado">
+                  <div>
+                    <span class="pensum-card__sub">Ciclo Diversificado en Ciencias</span>
+                    <h3 class="pensum-card__titulo">4° y 5° Año</h3>
+                  </div>
+                  <span style="font-size: 1.5rem;" aria-hidden="true">🔬</span>
+                </div>
+                <div class="pensum-card__cuerpo">
+                  <div>
+                    <p style="font-size: 0.88rem; color: var(--texto-suave); margin-bottom: 1rem;">
+                      Especialización preuniversitaria y defensa del Proyecto de Investigación de Grado:
+                    </p>
+                    <ul class="pensum-lista">
+                      <li><strong>Matemática Superior:</strong> Límites, derivadas y geometría analítica</li>
+                      <li><strong>Física Avanzada:</strong> Dinámica, electromagnetismo y óptica</li>
+                      <li><strong>Química Orgánica e Inorgánica:</strong> Estequiometría y soluciones</li>
+                      <li><strong>Biología Molecular y Genética:</strong> Biotecnología y evolución</li>
+                      <li><strong>Ciencias de la Tierra:</strong> Geología, astronomía y climatología</li>
+                      <li><strong>Metodología de la Investigación:</strong> Proyecto Científico/Social de Grado</li>
+                      <li><strong>Castellano y Literatura:</strong> Ensayística y literatura universal</li>
+                      <li><strong>Inglés Técnico y Conversacional:</strong> Lectura de textos científicos</li>
+                    </ul>
+                  </div>
+                  <div class="pensum-card__pie">
+                    Graduación: Título de Bachiller en Ciencias de la República Bolivariana de Venezuela.
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── SECCIÓN ACTIVIDADES EXTRACURRICULARES ── -->
+      <section class="seccion seccion-crema" aria-labelledby="extracurriculares-titulo">
+        <div class="contenedor">
+          <div class="encabezado-bloque">
+            <span class="badge-menta" style="margin-bottom: 0.5rem;">Desarrollo Integral</span>
+            <h2 class="titulo-con-barra" id="extracurriculares-titulo">Actividades Extracurriculares y Clubes</h2>
+            <p class="subtitulo-bloque">Espacios formativos para descubrir talentos, cultivar la disciplina y forjar
+              amistades duraderas.</p>
+          </div>
+
+          <div class="extracurriculares-grid">
+
+            <!-- Club 1: Deportes -->
+            <article class="extracurricular-card">
+              <div class="extracurricular-icono-caja" aria-hidden="true">⚽</div>
+              <h3 class="extracurricular-titulo">Deporte y Atletismo</h3>
+              <p class="extracurricular-desc">
+                Entrenamientos de Fútbol Sala, Baloncesto, Voleibol mixto y Club de Ajedrez escolar. Fomentamos la
+                disciplina deportiva, el trabajo en equipo y la sana competencia en ligas intercolegiales.
+              </p>
+              <div class="extracurricular-tags">
+                <span class="extracurricular-tag">Fútbol Sala</span>
+                <span class="extracurricular-tag">Baloncesto</span>
+                <span class="extracurricular-tag">Ajedrez</span>
+                <span class="extracurricular-tag">Intercolegiales</span>
+              </div>
+            </article>
+
+            <!-- Club 2: Arte y Cultura -->
+            <article class="extracurricular-card">
+              <div class="extracurricular-icono-caja" aria-hidden="true">🎭</div>
+              <h3 class="extracurricular-titulo">Arte, Danza y Música</h3>
+              <p class="extracurricular-desc">
+                Agrupación de Danzas Folclóricas Venezolanas, Ensamble Coral de la institución y taller de Teatro
+                escolar. Los estudiantes expresan su sensibilidad artística y participan en galas culturales.
+              </p>
+              <div class="extracurricular-tags">
+                <span class="extracurricular-tag">Danzas Típicas</span>
+                <span class="extracurricular-tag">Coral Escolar</span>
+                <span class="extracurricular-tag">Teatro</span>
+                <span class="extracurricular-tag">Galas Culturales</span>
+              </div>
+            </article>
+
+            <!-- Club 3: Ciencia y Tecnología -->
+            <article class="extracurricular-card">
+              <div class="extracurricular-icono-caja" aria-hidden="true">🤖</div>
+              <h3 class="extracurricular-titulo">Robótica y Ciencia</h3>
+              <p class="extracurricular-desc">
+                Iniciación a la robótica educativa, experimentos de física y química en laboratorio, y retos de lógica
+                algorítmica. Estimula la vocación STEAM y el pensamiento tecnológico en los jóvenes.
+              </p>
+              <div class="extracurricular-tags">
+                <span class="extracurricular-tag">Robótica Inicial</span>
+                <span class="extracurricular-tag">Laboratorios</span>
+                <span class="extracurricular-tag">Feria de Ciencias</span>
+                <span class="extracurricular-tag">STEAM</span>
+              </div>
+            </article>
+
+            <!-- Club 4: Liderazgo y Ecología -->
+            <article class="extracurricular-card">
+              <div class="extracurricular-icono-caja" aria-hidden="true">🌿</div>
+              <h3 class="extracurricular-titulo">Liderazgo y Ecología</h3>
+              <p class="extracurricular-desc">
+                Círculo de Oratoria y Debate, Brigada de Patrullaje Escolar y Brigada Ecológica de Huerto y Reciclaje.
+                Forjamos jóvenes empáticos con vocación de servicio ciudadano y conciencia ambiental.
+              </p>
+              <div class="extracurricular-tags">
+                <span class="extracurricular-tag">Oratoria y Debate</span>
+                <span class="extracurricular-tag">Brigada Verde</span>
+                <span class="extracurricular-tag">Huerto Escolar</span>
+                <span class="extracurricular-tag">Voluntariado</span>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SECCIÓN PERFIL DEL EGRESADO ── -->
+      <section class="seccion seccion-blanca" aria-labelledby="perfil-titulo">
+        <div class="contenedor">
+          <div class="encabezado-bloque">
+            <span class="badge-dorado" style="margin-bottom: 0.5rem;">Sello Republicano</span>
+            <h2 class="titulo-con-barra" id="perfil-titulo">Perfil del Egresado Republicano</h2>
+            <p class="subtitulo-bloque">Las competencias, valores y habilidades que distinguen a los graduados de la UEP
+              Nueva República.</p>
+          </div>
+
+          <div class="perfil-egresado-grid">
+
+            <!-- Pilar 1 -->
+            <article class="perfil-card">
+              <span class="perfil-card__numero">01</span>
+              <span class="perfil-card__icono" aria-hidden="true">🎯</span>
+              <h3 class="perfil-card__titulo">Excelencia y Rigor Científico</h3>
+              <p class="perfil-card__desc">
+                Domina los fundamentos matemáticos, físico-químicos y biológicos que le permiten ingresar y sobresalir
+                con alta solvencia en las facultades universitarias más exigentes.
+              </p>
+            </article>
+
+            <!-- Pilar 2 -->
+            <article class="perfil-card">
+              <span class="perfil-card__numero">02</span>
+              <span class="perfil-card__icono" aria-hidden="true">⚖️</span>
+              <h3 class="perfil-card__titulo">Ética y Convicción Ciudadana</h3>
+              <p class="perfil-card__desc">
+                Actúa con integridad moral, honestidad y apego al respeto de los derechos humanos, manifestando un
+                genuino sentido de patriotismo y responsabilidad cívica.
+              </p>
+            </article>
+
+            <!-- Pilar 3 -->
+            <article class="perfil-card">
+              <span class="perfil-card__numero">03</span>
+              <span class="perfil-card__icono" aria-hidden="true">💡</span>
+              <h3 class="perfil-card__titulo">Pensamiento Crítico e Investigativo</h3>
+              <p class="perfil-card__desc">
+                Aplica el método de investigación científica, cuestiona argumentos de forma reflexiva, analiza datos con
+                criterio objetivo y propone soluciones innovadoras a problemas reales.
+              </p>
+            </article>
+
+            <!-- Pilar 4 -->
+            <article class="perfil-card">
+              <span class="perfil-card__numero">04</span>
+              <span class="perfil-card__icono" aria-hidden="true">🤝</span>
+              <h3 class="perfil-card__titulo">Liderazgo y Servicio Social</h3>
+              <p class="perfil-card__desc">
+                Capaz de coordinar equipos con empatía y comunicación asertiva, impulsando proyectos comunitarios que
+                generan un impacto positivo y transformador en su entorno.
+              </p>
+            </article>
+
+            <!-- Pilar 5 -->
+            <article class="perfil-card">
+              <span class="perfil-card__numero">05</span>
+              <span class="perfil-card__icono" aria-hidden="true">💻</span>
+              <h3 class="perfil-card__titulo">Competencia Digital Consciente</h3>
+              <p class="perfil-card__desc">
+                Utiliza las tecnologías de la información y la comunicación con criterio ético, productividad académica
+                y capacidad de autoaprendizaje continuo frente al avance tecnológico.
+              </p>
+            </article>
+
+            <!-- Pilar 6 -->
+            <article class="perfil-card">
+              <span class="perfil-card__numero">06</span>
+              <span class="perfil-card__icono" aria-hidden="true">🌐</span>
+              <h3 class="perfil-card__titulo">Comunicación y Bilingüismo</h3>
+              <p class="perfil-card__desc">
+                Se expresa con elocuencia, claridad y corrección en español tanto en forma oral como escrita,
+                complementado con habilidades de lectura y conversación en idioma inglés.
+              </p>
+            </article>
+
           </div>
         </div>
       </section>
@@ -2281,8 +3240,10 @@
               </div>
 
               <!-- Recaudos -->
-              <div style="margin-top:2rem; padding:1.5rem; background:var(--blanco); border:1px solid var(--borde-suave); border-radius:var(--radio-md); border-left:4px solid var(--dorado);">
-                <h3 style="font-family:var(--fuente-serif); color:var(--verde-bosque-oscuro); margin-bottom:0.75rem; font-size:1.1rem;">
+              <div
+                style="margin-top:2rem; padding:1.5rem; background:var(--blanco); border:1px solid var(--borde-suave); border-radius:var(--radio-md); border-left:4px solid var(--dorado);">
+                <h3
+                  style="font-family:var(--fuente-serif); color:var(--verde-bosque-oscuro); margin-bottom:0.75rem; font-size:1.1rem;">
                   📎 Recaudos Principales
                 </h3>
                 <ul style="font-size:0.88rem; color:var(--texto-medio); line-height:1.7;">
@@ -2297,7 +3258,8 @@
 
             <!-- Formulario -->
             <div class="formulario-box">
-              <h2 style="font-family:var(--fuente-serif); font-size:1.35rem; color:var(--verde-bosque-oscuro); margin-bottom:0.5rem; font-weight:700;">
+              <h2
+                style="font-family:var(--fuente-serif); font-size:1.35rem; color:var(--verde-bosque-oscuro); margin-bottom:0.5rem; font-weight:700;">
                 📝 Solicitud de Cupo en Línea
               </h2>
               <p style="font-size:0.88rem; color:var(--texto-medio); margin-bottom:1.5rem;">
@@ -2357,7 +3319,8 @@
                   Enviar Solicitud de Cupo
                 </button>
 
-                <div id="mensaje-exito" style="display:none; margin-top:1rem; padding:0.85rem; background:#d4edda; color:#155724; border-radius:var(--radio-sm); font-size:0.88rem; border-left:4px solid #28a745;">
+                <div id="mensaje-exito"
+                  style="display:none; margin-top:1rem; padding:0.85rem; background:#d4edda; color:#155724; border-radius:var(--radio-sm); font-size:0.88rem; border-left:4px solid #28a745;">
                   ✅ <strong>¡Solicitud recibida con éxito!</strong> Nos pondremos en contacto vía WhatsApp o telefónica.
                 </div>
               </form>
@@ -2408,11 +3371,13 @@
               </div>
               <div class="entrada-tarjeta__cuerpo">
                 <span class="badge-menta" style="align-self:flex-start; margin-bottom:0.6rem;">Salida Pedagógica</span>
-                <h3 style="font-family:var(--fuente-serif); font-size:1.15rem; color:var(--verde-bosque-oscuro); margin-bottom:0.5rem; font-weight:700;">
+                <h3
+                  style="font-family:var(--fuente-serif); font-size:1.15rem; color:var(--verde-bosque-oscuro); margin-bottom:0.5rem; font-weight:700;">
                   Visita educativa al Campo de Carabobo
                 </h3>
                 <p style="font-size:0.88rem; color:var(--texto-medio); line-height:1.6; margin-bottom:1rem; flex:1;">
-                  Estudiantes de Media General vivieron una experiencia histórica en el monumento nacional donde se selló la independencia venezolana.
+                  Estudiantes de Media General vivieron una experiencia histórica en el monumento nacional donde se
+                  selló la independencia venezolana.
                 </p>
                 <a href="articulo-campo-carabobo.html" class="enlace-flecha">Leer artículo completo →</a>
               </div>
@@ -2425,11 +3390,13 @@
               </div>
               <div class="entrada-tarjeta__cuerpo">
                 <span class="badge-dorado" style="align-self:flex-start; margin-bottom:0.6rem;">Vida Estudiantil</span>
-                <h3 style="font-family:var(--fuente-serif); font-size:1.15rem; color:var(--verde-bosque-oscuro); margin-bottom:0.5rem; font-weight:700;">
+                <h3
+                  style="font-family:var(--fuente-serif); font-size:1.15rem; color:var(--verde-bosque-oscuro); margin-bottom:0.5rem; font-weight:700;">
                   Aprender y crecer dentro de nuestras aulas
                 </h3>
                 <p style="font-size:0.88rem; color:var(--texto-medio); line-height:1.6; margin-bottom:1rem; flex:1;">
-                  El espacio de clase como núcleo de descubrimiento de talentos, formación del carácter y proyectos de desarrollo personal.
+                  El espacio de clase como núcleo de descubrimiento de talentos, formación del carácter y proyectos de
+                  desarrollo personal.
                 </p>
                 <a href="articulo-experiencia-estudiantil.html" class="enlace-flecha">Leer artículo completo →</a>
               </div>
@@ -2438,8 +3405,8 @@
 
           <nav class="paginacion" aria-label="Paginación">
             <button class="pagina-btn activo">1</button>
-            <button class="pagina-btn">2</button>
-            <button class="pagina-btn">›</button>
+            <!-- <button class="pagina-btn">2</button>
+            <button class="pagina-btn">›</button> -->
           </nav>
         </div>
       </section>
@@ -2479,10 +3446,12 @@
                 <span class="contacto__icono" aria-hidden="true">📞</span>
                 <div>
                   <p class="contacto__dato-titulo">Teléfono Institucional</p>
-                  <p class="contacto__dato-valor" style="font-size:1.15rem; font-weight:700; color:var(--verde-institucional);">
+                  <p class="contacto__dato-valor"
+                    style="font-size:1.15rem; font-weight:700; color:var(--verde-institucional);">
                     +58 422-644-9365
                   </p>
-                  <a href="https://wa.me/584226449365" target="_blank" rel="noopener noreferrer" class="btn-dorado" style="margin-top:0.75rem; font-size:0.85rem; padding:0.5rem 1rem;">
+                  <a href="https://wa.me/584226449365" target="_blank" rel="noopener noreferrer" class="btn-dorado"
+                    style="margin-top:0.75rem; font-size:0.85rem; padding:0.5rem 1rem;">
                     💬 Chatear por WhatsApp
                   </a>
                 </div>
@@ -2530,7 +3499,8 @@
               <div class="mapa-box">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d981.6806510161366!2d-67.57420707152674!3d10.203167319263498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDEyJzExLjQiTiA2N8KwMzQnMjQuOCJX!5e0!3m2!1ses!2sve!4v1782867899981!5m2!1ses!2sve"
-                  allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Ubicación UEP Nueva República"></iframe>
+                  allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+                  title="Ubicación UEP Nueva República"></iframe>
               </div>
             </div>
 
@@ -2587,7 +3557,8 @@
             <li><a class="footer__enlace-item" data-ir-a="pagina-institucion" href="#institucion">Institución</a></li>
             <li><a class="footer__enlace-item" data-ir-a="pagina-oferta" href="#oferta">Oferta Académica</a></li>
             <li><a class="footer__enlace-item" data-ir-a="pagina-admisiones" href="#admisiones">Admisiones</a></li>
-            <li><a class="footer__enlace-item" data-ir-a="pagina-cartelera" href="#cartelera">Cartelera Informativa</a></li>
+            <li><a class="footer__enlace-item" data-ir-a="pagina-cartelera" href="#cartelera">Cartelera Informativa</a>
+            </li>
             <li><a class="footer__enlace-item" data-ir-a="pagina-contacto" href="#contacto">Contacto</a></li>
           </ul>
         </nav>
@@ -2596,10 +3567,14 @@
         <div>
           <h3 class="footer__col-titulo">Niveles Educativos</h3>
           <ul class="footer__enlaces-lista">
-            <li><a class="footer__enlace-item" data-ir-a="pagina-oferta" href="#oferta">Educación Primaria (1° a 6°)</a></li>
-            <li><a class="footer__enlace-item" data-ir-a="pagina-oferta" href="#oferta">Media General (Bachillerato)</a></li>
-            <li><a class="footer__enlace-item" data-ir-a="pagina-admisiones" href="#admisiones">Proceso de Admisión</a></li>
-            <li><a class="footer__enlace-item" data-ir-a="pagina-admisiones" href="#admisiones">Programas de Formación</a></li>
+            <li><a class="footer__enlace-item" data-ir-a="pagina-oferta" href="#oferta">Educación Primaria (1° a 6°)</a>
+            </li>
+            <li><a class="footer__enlace-item" data-ir-a="pagina-oferta" href="#oferta">Media General (Bachillerato)</a>
+            </li>
+            <li><a class="footer__enlace-item" data-ir-a="pagina-admisiones" href="#admisiones">Proceso de Admisión</a>
+            </li>
+            <li><a class="footer__enlace-item" data-ir-a="pagina-admisiones" href="#admisiones">Programas de
+                Formación</a></li>
             <li><a class="footer__enlace-item" data-ir-a="pagina-cartelera" href="#cartelera">Deporte y Artes</a></li>
           </ul>
         </div>
@@ -2621,8 +3596,10 @@
        ====================================================================== -->
   <a href="https://wa.me/584226449365" class="whatsapp-flotante" target="_blank" rel="noopener noreferrer"
     aria-label="Contactar a UEP Nueva República por WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="30" height="30" fill="currentColor" aria-hidden="true">
-      <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="30" height="30" fill="currentColor"
+      aria-hidden="true">
+      <path
+        d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
     </svg>
   </a>
 
@@ -2753,11 +3730,59 @@
         });
       }
 
+      /* 5. Selector de Pensum Académico (Primaria vs Media) */
+      const pensumBtns = document.querySelectorAll('.pensum-tab-btn');
+      const pensumPanels = document.querySelectorAll('.pensum-panel');
+
+      pensumBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          pensumBtns.forEach(function (b) {
+            b.classList.remove('activo');
+            b.setAttribute('aria-selected', 'false');
+          });
+          this.classList.add('activo');
+          this.setAttribute('aria-selected', 'true');
+
+          const targetId = 'panel-pensum-' + this.getAttribute('data-pensum');
+          pensumPanels.forEach(function (panel) {
+            if (panel.id === targetId) {
+              panel.classList.add('activo');
+            } else {
+              panel.classList.remove('activo');
+            }
+          });
+        });
+      });
+
+      /* 6. Selector de Testimonios (Padres vs Estudiantes) */
+      const testimonioBtns = document.querySelectorAll('.testimonio-tab-btn');
+      const testimonioPanels = document.querySelectorAll('.testimonios-panel');
+
+      testimonioBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          testimonioBtns.forEach(function (b) {
+            b.classList.remove('activo');
+            b.setAttribute('aria-selected', 'false');
+          });
+          this.classList.add('activo');
+          this.setAttribute('aria-selected', 'true');
+
+          const targetId = 'panel-testimonios-' + this.getAttribute('data-testimonio');
+          testimonioPanels.forEach(function (panel) {
+            if (panel.id === targetId) {
+              panel.classList.add('activo');
+            } else {
+              panel.classList.remove('activo');
+            }
+          });
+        });
+      });
+
     });
   </script>
 
   <script>
-  (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="VERN_Zf5vGxAp3W9P3Rum";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    (function () { if (!window.chatbase || window.chatbase("getState") !== "initialized") { window.chatbase = (...arguments) => { if (!window.chatbase.q) { window.chatbase.q = [] } window.chatbase.q.push(arguments) }; window.chatbase = new Proxy(window.chatbase, { get(target, prop) { if (prop === "q") { return target.q } return (...args) => target(prop, ...args) } }) } const onLoad = function () { const script = document.createElement("script"); script.src = "https://www.chatbase.co/embed.min.js"; script.id = "VERN_Zf5vGxAp3W9P3Rum"; script.domain = "www.chatbase.co"; document.body.appendChild(script) }; if (document.readyState === "complete") { onLoad() } else { window.addEventListener("load", onLoad) } })();
   </script>
 
 </body>
