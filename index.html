@@ -141,6 +141,28 @@
       margin-bottom: 2.5rem;
     }
 
+    .encabezado-bloque > .badge-menta,
+    .encabezado-bloque > .badge-dorado,
+    .encabezado-bloque > [class*="badge-"] {
+      display: inline-block;
+      margin-left: 1rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .encabezado-bloque[style*="text-align: center"] > .badge-menta,
+    .encabezado-bloque[style*="text-align: center"] > .badge-dorado,
+    .encabezado-bloque[style*="text-align: center"] > [class*="badge-"],
+    .encabezado-bloque.centrado > .badge-menta,
+    .encabezado-bloque.centrado > .badge-dorado,
+    .encabezado-bloque.centrado > [class*="badge-"] {
+      margin-left: 0;
+    }
+
+    .encabezado-bloque[style*="text-align: center"] .titulo-con-barra::before,
+    .encabezado-bloque.centrado .titulo-con-barra::before {
+      display: none;
+    }
+
     .titulo-con-barra {
       display: inline-flex;
       align-items: center;
@@ -4422,72 +4444,73 @@
                   <span class="ficha-pill">📰 Comunicación Social</span>
                 </div>
               </div>
-
-              <!-- Columna Derecha: Metadatos y Credenciales Académicas -->
-              <div class="ficha-autor__detalles">
-                <h4 class="ficha-detalles__titulo">Credenciales del Trabajo de Investigación</h4>
-
-                <div class="ficha-detalles__grid">
-
-                  <div class="ficha-dato-item">
-                    <div class="ficha-dato-icono" aria-hidden="true">🏛️</div>
-                    <div class="ficha-dato-cuerpo">
-                      <span class="ficha-dato-label">Casa de Estudios</span>
-                      <strong class="ficha-dato-valor">Universidad Central de Venezuela (UCV)</strong>
-                      <span class="ficha-dato-sub">Facultad de Humanidades y Educación</span>
-                    </div>
-                  </div>
-
-                  <div class="ficha-dato-item">
-                    <div class="ficha-dato-icono" aria-hidden="true">🎓</div>
-                    <div class="ficha-dato-cuerpo">
-                      <span class="ficha-dato-label">Escuela & Departamento</span>
-                      <strong class="ficha-dato-valor">Escuela de Comunicación Social</strong>
-                      <span class="ficha-dato-sub">Departamento de Métodos</span>
-                    </div>
-                  </div>
-
-                  <div class="ficha-dato-item">
-                    <div class="ficha-dato-icono" aria-hidden="true">💻</div>
-                    <div class="ficha-dato-cuerpo">
-                      <span class="ficha-dato-label">Cátedra & Asignatura</span>
-                      <strong class="ficha-dato-valor">Cátedra de Informática — Sección A</strong>
-                      <span class="ficha-dato-sub">Desarrollo Web & Tecnologías de la Información</span>
-                    </div>
-                  </div>
-
-                  <div class="ficha-dato-item">
-                    <div class="ficha-dato-icono" aria-hidden="true">👨‍🏫</div>
-                    <div class="ficha-dato-cuerpo">
-                      <span class="ficha-dato-label">Tutoría Académica</span>
-                      <strong class="ficha-dato-valor">Prof. Oscar Nieto</strong>
-                      <span class="ficha-dato-sub">Docente Tutor · Cátedra de Informática</span>
-                    </div>
-                  </div>
-
-                  <div class="ficha-dato-item">
-                    <div class="ficha-dato-icono" aria-hidden="true">🏫</div>
-                    <div class="ficha-dato-cuerpo">
-                      <span class="ficha-dato-label">Institución Beneficiaria</span>
-                      <strong class="ficha-dato-valor">U.E.P. Nueva República</strong>
-                      <span class="ficha-dato-sub">Dir. Julio Tellez · Coord. Ninoska Díaz & Mirtha Goncalves</span>
-                    </div>
-                  </div>
-
-                  <div class="ficha-dato-item">
-                    <div class="ficha-dato-icono" aria-hidden="true">📅</div>
-                    <div class="ficha-dato-cuerpo">
-                      <span class="ficha-dato-label">Período & Entregable</span>
-                      <strong class="ficha-dato-valor">Caracas, Mayo 2026</strong>
-                      <span class="ficha-dato-sub">Fase 1: Levantamiento de Requerimientos y MVP</span>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
             </div>
+
+            <!-- Columna Derecha: Metadatos y Credenciales Académicas -->
+            <div class="ficha-autor__detalles">
+              <h4 class="ficha-detalles__titulo">Credenciales del Trabajo de Investigación</h4>
+
+              <div class="ficha-detalles__grid">
+
+                <div class="ficha-dato-item">
+                  <div class="ficha-dato-icono" aria-hidden="true">🏛️</div>
+                  <div class="ficha-dato-cuerpo">
+                    <span class="ficha-dato-label">Casa de Estudios</span>
+                    <strong class="ficha-dato-valor">Universidad Central de Venezuela (UCV)</strong>
+                    <span class="ficha-dato-sub">Facultad de Humanidades y Educación</span>
+                  </div>
+                </div>
+
+                <div class="ficha-dato-item">
+                  <div class="ficha-dato-icono" aria-hidden="true">🎓</div>
+                  <div class="ficha-dato-cuerpo">
+                    <span class="ficha-dato-label">Escuela & Departamento</span>
+                    <strong class="ficha-dato-valor">Escuela de Comunicación Social</strong>
+                    <span class="ficha-dato-sub">Departamento de Métodos</span>
+                  </div>
+                </div>
+
+                <div class="ficha-dato-item">
+                  <div class="ficha-dato-icono" aria-hidden="true">💻</div>
+                  <div class="ficha-dato-cuerpo">
+                    <span class="ficha-dato-label">Cátedra & Asignatura</span>
+                    <strong class="ficha-dato-valor">Cátedra de Informática — Sección A</strong>
+                    <span class="ficha-dato-sub">Desarrollo Web & Tecnologías de la Información</span>
+                  </div>
+                </div>
+
+                <div class="ficha-dato-item">
+                  <div class="ficha-dato-icono" aria-hidden="true">👨‍🏫</div>
+                  <div class="ficha-dato-cuerpo">
+                    <span class="ficha-dato-label">Tutoría Académica</span>
+                    <strong class="ficha-dato-valor">Prof. Oscar Nieto</strong>
+                    <span class="ficha-dato-sub">Docente Tutor · Cátedra de Informática</span>
+                  </div>
+                </div>
+
+                <div class="ficha-dato-item">
+                  <div class="ficha-dato-icono" aria-hidden="true">🏫</div>
+                  <div class="ficha-dato-cuerpo">
+                    <span class="ficha-dato-label">Institución Beneficiaria</span>
+                    <strong class="ficha-dato-valor">U.E.P. Nueva República</strong>
+                    <span class="ficha-dato-sub">Dir. Julio Tellez · Coord. Ninoska Díaz & Mirtha Goncalves</span>
+                  </div>
+                </div>
+
+                <div class="ficha-dato-item">
+                  <div class="ficha-dato-icono" aria-hidden="true">📅</div>
+                  <div class="ficha-dato-cuerpo">
+                    <span class="ficha-dato-label">Período & Entregable</span>
+                    <strong class="ficha-dato-valor">Caracas, Mayo 2026</strong>
+                    <span class="ficha-dato-sub">Fase 1: Levantamiento de Requerimientos y MVP</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
           </div>
+        </div>
       </section>
 
       <!-- ── 2. DIAGNÓSTICO Y CONTEXTO DEL TRABAJO ── -->
