@@ -1712,6 +1712,179 @@
     }
 
     /* ==========================================================================
+       PASEOS PEDAGÓGICOS (ACTIVIDADES EXTRACURRICULARES)
+       ========================================================================== */
+    .paseos-seccion-bloque {
+      margin-top: 3.5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--borde-suave);
+    }
+
+    .paseos-banner-info {
+      background: linear-gradient(135deg, var(--blanco) 0%, var(--verde-menta) 100%);
+      border: 1px solid var(--verde-menta-borde);
+      border-left: 4px solid var(--verde-institucional);
+      border-radius: var(--radio-md);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      box-shadow: var(--sombra-card);
+    }
+
+    .paseos-banner-icono {
+      font-size: 1.75rem;
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+    }
+
+    .paseos-banner-texto {
+      font-size: 0.92rem;
+      color: var(--texto-oscuro);
+      line-height: 1.55;
+    }
+
+    .paseos-banner-texto strong {
+      color: var(--verde-bosque-oscuro);
+    }
+
+    .paseos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .paseo-card {
+      background-color: var(--blanco);
+      border-radius: var(--radio-md);
+      border: 1px solid var(--borde-suave);
+      box-shadow: var(--sombra-card);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transicion);
+    }
+
+    .paseo-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--sombra-hover);
+      border-color: var(--dorado);
+    }
+
+    .paseo-card__img-box {
+      position: relative;
+      width: 100%;
+      height: 190px;
+      overflow: hidden;
+      background-color: #e5ece6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .paseo-card__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .paseo-card:hover .paseo-card__img {
+      transform: scale(1.06);
+    }
+
+    .paseo-card__badge {
+      position: absolute;
+      top: 0.75rem;
+      left: 0.75rem;
+      background-color: rgba(22, 50, 28, 0.85);
+      backdrop-filter: blur(4px);
+      color: var(--blanco);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--radio-pill);
+      border: 1px solid rgba(202, 161, 86, 0.4);
+      letter-spacing: 0.03em;
+    }
+
+    .paseo-card__cuerpo {
+      padding: 1.4rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .paseo-card__numero {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--dorado-hover);
+      margin-bottom: 0.35rem;
+    }
+
+    .paseo-card__titulo {
+      font-family: var(--fuente-serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--verde-bosque-oscuro);
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+
+    .paseo-card__desc {
+      font-size: 0.88rem;
+      color: var(--texto-medio);
+      line-height: 1.55;
+      margin-bottom: 1.15rem;
+    }
+
+    .paseo-card__actividad {
+      background-color: var(--fondo-crema-claro);
+      border: 1px dashed var(--verde-menta-borde);
+      border-radius: var(--radio-sm);
+      padding: 0.65rem 0.8rem;
+      font-size: 0.8rem;
+      color: var(--verde-institucional);
+      margin-bottom: 1.15rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.45rem;
+      line-height: 1.4;
+    }
+
+    .paseo-card__actividad-icono {
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 0.05rem;
+    }
+
+    .paseo-card__actividad strong {
+      color: var(--verde-bosque-oscuro);
+    }
+
+    .paseo-card__tags {
+      margin-top: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .paseo-card__tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      background-color: var(--fondo-crema);
+      border-radius: var(--radio-pill);
+      color: var(--verde-bosque-oscuro);
+    }
+
+    /* ==========================================================================
        PERFIL DEL EGRESADO
        ========================================================================== */
     .perfil-egresado-grid {
@@ -1962,6 +2135,296 @@
     }
 
     /* ==========================================================================
+       SECCIÓN: SOBRE EL PROYECTO ACADÉMICO (UCV)
+       ========================================================================== */
+    .proyecto-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .proyecto-meta-card {
+      background-color: var(--blanco);
+      border-radius: var(--radio-md);
+      border: 1px solid var(--borde-suave);
+      padding: 1.5rem;
+      box-shadow: var(--sombra-card);
+      border-top: 3px solid var(--verde-institucional);
+      transition: var(--transicion);
+    }
+
+    .proyecto-meta-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--sombra-hover);
+      border-top-color: var(--dorado);
+    }
+
+    .proyecto-meta-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--dorado-hover);
+      margin-bottom: 0.35rem;
+    }
+
+    .proyecto-meta-valor {
+      font-family: var(--fuente-serif);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--verde-bosque-oscuro);
+      line-height: 1.3;
+    }
+
+    .proyecto-meta-sub {
+      font-size: 0.82rem;
+      color: var(--texto-suave);
+      margin-top: 0.25rem;
+    }
+
+    .proyecto-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .proyecto-stat-box {
+      background: linear-gradient(135deg, var(--verde-bosque-oscuro), var(--verde-institucional));
+      color: var(--blanco);
+      border-radius: var(--radio-md);
+      padding: 1.75rem;
+      border: 1px solid rgba(202, 161, 86, 0.3);
+      box-shadow: var(--sombra-card);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .proyecto-stat-box::after {
+      content: '';
+      position: absolute;
+      right: -20px;
+      bottom: -20px;
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle, rgba(202, 161, 86, 0.2) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .proyecto-stat-num {
+      font-family: var(--fuente-serif);
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--dorado);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .proyecto-stat-titulo {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+    }
+
+    .proyecto-stat-desc {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.5;
+    }
+
+    .dimensiones-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .dimension-card {
+      background-color: var(--blanco);
+      border-radius: var(--radio-md);
+      border: 1px solid var(--borde-suave);
+      padding: 1.75rem;
+      box-shadow: var(--sombra-card);
+      transition: var(--transicion);
+    }
+
+    .dimension-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--sombra-hover);
+      border-color: var(--dorado);
+    }
+
+    .dimension-icono {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+      display: inline-block;
+    }
+
+    .dimension-titulo {
+      font-family: var(--fuente-serif);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--verde-bosque-oscuro);
+      margin-bottom: 0.5rem;
+    }
+
+    .dimension-desc {
+      font-size: 0.88rem;
+      color: var(--texto-medio);
+      line-height: 1.6;
+    }
+
+    .fases-desarrollo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+
+    .fase-box {
+      background-color: var(--blanco);
+      border-radius: var(--radio-md);
+      padding: 2rem;
+      border: 1px solid var(--borde-suave);
+      box-shadow: var(--sombra-card);
+      position: relative;
+    }
+
+    .fase-box.activa {
+      border-left: 5px solid var(--verde-institucional);
+    }
+
+    .fase-box.futura {
+      border-left: 5px solid var(--dorado);
+    }
+
+    .fase-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radio-pill);
+      margin-bottom: 0.75rem;
+    }
+
+    .fase-badge.activa {
+      background-color: var(--verde-menta);
+      color: var(--verde-bosque-oscuro);
+      border: 1px solid var(--verde-menta-borde);
+    }
+
+    .fase-badge.futura {
+      background-color: var(--dorado-claro);
+      color: #3b2c12;
+      border: 1px solid var(--dorado);
+    }
+
+    .fase-titulo {
+      font-family: var(--fuente-serif);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--verde-bosque-oscuro);
+      margin-bottom: 0.75rem;
+    }
+
+    .fase-lista {
+      list-style: none;
+    }
+
+    .fase-lista li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 0.88rem;
+      color: var(--texto-medio);
+      margin-bottom: 0.6rem;
+      line-height: 1.45;
+    }
+
+    .fase-lista li::before {
+      content: '✓';
+      color: var(--verde-institucional);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .fase-box.futura .fase-lista li::before {
+      content: '➔';
+      color: var(--dorado-hover);
+    }
+
+    /* Footer Créditos Académicos */
+    .footer-autoria-box {
+      background: linear-gradient(135deg, rgba(15, 34, 18, 0.98), rgba(22, 50, 28, 0.95));
+      border: 1px solid rgba(202, 161, 86, 0.4);
+      border-radius: var(--radio-md);
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 2.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .footer-autoria-info {
+      display: flex;
+      align-items: center;
+      gap: 1.15rem;
+    }
+
+    .footer-autoria-icono {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--dorado), var(--dorado-hover));
+      color: #172e19;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      box-shadow: 0 2px 10px rgba(202, 161, 86, 0.35);
+    }
+
+    .footer-autoria-textos {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .footer-autoria-etiqueta {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--dorado);
+    }
+
+    .footer-autoria-titulo {
+      font-family: var(--fuente-serif);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--blanco);
+      line-height: 1.3;
+    }
+
+    .footer-autoria-sub {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.4;
+    }
+
+    .footer-autoria-sub strong {
+      color: var(--dorado-claro);
+    }
+
+    /* ==========================================================================
        RESPONSIVE DESIGN (TABLET Y MÓVIL)
        ========================================================================== */
     @media (max-width: 960px) {
@@ -2112,6 +2575,7 @@
           <li><a class="nav__enlace" data-pagina="pagina-admisiones" href="#admisiones">Admisiones</a></li>
           <li><a class="nav__enlace" data-pagina="pagina-cartelera" href="#cartelera">Cartelera</a></li>
           <li><a class="nav__enlace" data-pagina="pagina-contacto" href="#contacto">Contacto</a></li>
+          <li><a class="nav__enlace" data-pagina="pagina-proyecto" href="#proyecto">Sobre el Proyecto</a></li>
         </ul>
       </nav>
 
@@ -3083,6 +3547,123 @@
             </article>
 
           </div>
+
+          <!-- ── SUBSECCIÓN PASEOS PEDAGÓGICOS ── -->
+          <div class="paseos-seccion-bloque">
+            <div class="encabezado-bloque" style="margin-bottom: 1.5rem;">
+              <span class="badge-dorado" style="margin-bottom: 0.5rem;">Aprendizaje Vivencial y en Terreno</span>
+              <h3 class="titulo-con-barra" style="font-size: 1.6rem;">Paseos Pedagógicos</h3>
+              <p class="subtitulo-bloque">Salidas formativas fuera del aula donde el conocimiento se vive en contacto directo con la naturaleza, la historia y la ciencia.</p>
+            </div>
+
+            <!-- Banner Explicativo de la Metodología y Actividad Teórico-Práctica -->
+            <div class="paseos-banner-info">
+              <div class="paseos-banner-icono" aria-hidden="true">🧭</div>
+              <div class="paseos-banner-texto">
+                <strong>Metodología de Evaluación y Consolidación:</strong> Una vez logrado y concluido el paseo extracurricular, los alumnos desarrollan y entregan <strong>informes académicos</strong> detallados o realizan una <strong>actividad teórico/práctica</strong> directamente relacionada con la experiencia del paseo, integrando los conocimientos observados con el currículo escolar.
+              </div>
+            </div>
+
+            <div class="paseos-grid">
+
+              <!-- Paseo 1: El Ávila -->
+              <article class="paseo-card">
+                <div class="paseo-card__img-box">
+                  <img src="img/avila.jpg" alt="Paseo Pedagógico El Ávila - Parque Nacional Waraira Repano" class="paseo-card__img" loading="lazy">
+                  <span class="paseo-card__badge">Ecología & Geografía</span>
+                </div>
+                <div class="paseo-card__cuerpo">
+                  <span class="paseo-card__numero">Paseo Pedagógico 01</span>
+                  <h4 class="paseo-card__titulo">El Ávila</h4>
+                  <p class="paseo-card__desc">
+                    Jornada de senderismo y exploración ecológica en el Parque Nacional Waraira Repano. Los estudiantes estudian los pisos bioclimáticos, la biodiversidad de flora y fauna, y la importancia hídrica de la cordillera costera.
+                  </p>
+                  <div class="paseo-card__actividad">
+                    <span class="paseo-card__actividad-icono">📝</span>
+                    <div><strong>Actividad posterior:</strong> Entrega de informe botánico, análisis del relieve y evaluación ecológica de campo.</div>
+                  </div>
+                  <div class="paseo-card__tags">
+                    <span class="paseo-card__tag">Senderismo Ecológico</span>
+                    <span class="paseo-card__tag">Botánica y Clima</span>
+                    <span class="paseo-card__tag">Informe de Campo</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Paseo 2: Parque Carabobo (Campo de Carabobo) -->
+              <article class="paseo-card">
+                <div class="paseo-card__img-box">
+                  <img src="img/paseo_campo_carabobo.JPG" alt="Paseo Pedagógico Parque y Campo de Carabobo" class="paseo-card__img" loading="lazy">
+                  <span class="paseo-card__badge">Historia & Identidad</span>
+                </div>
+                <div class="paseo-card__cuerpo">
+                  <span class="paseo-card__numero">Paseo Pedagógico 02</span>
+                  <h4 class="paseo-card__titulo">Parque Carabobo</h4>
+                  <p class="paseo-card__desc">
+                    Recorrido cívico-histórico por el Campo de Carabobo y sus monumentos patrios. Una vivencia para profundizar en la gesta independentista, la estrategia militar de los próceres y afianzar los valores republicanos.
+                  </p>
+                  <div class="paseo-card__actividad">
+                    <span class="paseo-card__actividad-icono">🏛️</span>
+                    <div><strong>Actividad posterior:</strong> Redacción de informe histórico, recreación cartográfica y debate cívico institucional.</div>
+                  </div>
+                  <div class="paseo-card__tags">
+                    <span class="paseo-card__tag">Historia Patria</span>
+                    <span class="paseo-card__tag">Valores Republicanos</span>
+                    <span class="paseo-card__tag">Actividad Cívica</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Paseo 3: Acuario de Valencia -->
+              <article class="paseo-card">
+                <div class="paseo-card__img-box">
+                  <img src="img/acuario_valencia.jpg" alt="Paseo Pedagógico Acuario de Valencia" class="paseo-card__img" loading="lazy">
+                  <span class="paseo-card__badge">Biología & Conservación</span>
+                </div>
+                <div class="paseo-card__cuerpo">
+                  <span class="paseo-card__numero">Paseo Pedagógico 03</span>
+                  <h4 class="paseo-card__titulo">Acuario de Valencia</h4>
+                  <p class="paseo-card__desc">
+                    Visita pedagógica a los acuarios y áreas zoológicas especializadas. Los alumnos observan la biodiversidad acuática y de agua dulce autóctona de Venezuela, aprendiendo sobre programas de preservación de especies.
+                  </p>
+                  <div class="paseo-card__actividad">
+                    <span class="paseo-card__actividad-icono">🔬</span>
+                    <div><strong>Actividad posterior:</strong> Ficha de clasificación taxonómica, entrega de informe zoológico y taller práctico.</div>
+                  </div>
+                  <div class="paseo-card__tags">
+                    <span class="paseo-card__tag">Ciencias Biológicas</span>
+                    <span class="paseo-card__tag">Preservación Faunística</span>
+                    <span class="paseo-card__tag">Evaluación Práctica</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Paseo 4: Viajes a la Playa -->
+              <article class="paseo-card">
+                <div class="paseo-card__img-box">
+                  <img src="img/playa.jpg" alt="Paseo Pedagógico Viajes a la Playa y Ecosistemas Costeros" class="paseo-card__img" loading="lazy">
+                  <span class="paseo-card__badge">Ciencias Naturales & Mar</span>
+                </div>
+                <div class="paseo-card__cuerpo">
+                  <span class="paseo-card__numero">Paseo Pedagógico 04</span>
+                  <h4 class="paseo-card__titulo">Viajes a la Playa</h4>
+                  <p class="paseo-card__desc">
+                    Salida de campo al litoral marino orientada a la investigación de dinámicas costeras, fauna marina intermareal y ecología de playas, integrando el aprendizaje científico con la convivencia y el trabajo en equipo.
+                  </p>
+                  <div class="paseo-card__actividad">
+                    <span class="paseo-card__actividad-icono">🌊</span>
+                    <div><strong>Actividad posterior:</strong> Toma y análisis de muestras, informe de dinámica marina y presentación teórico-práctica.</div>
+                  </div>
+                  <div class="paseo-card__tags">
+                    <span class="paseo-card__tag">Ecosistema Marino</span>
+                    <span class="paseo-card__tag">Dinámica Litoral</span>
+                    <span class="paseo-card__tag">Trabajo de Campo</span>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
         </div>
       </section>
 
@@ -3510,14 +4091,244 @@
 
     </main>
 
+    <!-- ==================================================================
+         PÁGINA 7: SOBRE EL PROYECTO (CONTEXTO ACADÉMICO UCV)
+         ================================================================== -->
+    <main id="pagina-proyecto" class="pagina" role="main" aria-label="Sobre el Proyecto Académico">
+
+      <!-- Encabezado de página interior -->
+      <div class="encabezado-interior">
+        <div class="contenedor">
+          <span class="badge-dorado" style="margin-bottom: 0.75rem;">Universidad Central de Venezuela · Cátedra de Informática</span>
+          <h1 class="encabezado-interior__titulo">Sobre el Proyecto</h1>
+          <p class="encabezado-interior__subtitulo">Levantamiento de Necesidades de Información y Desarrollo del Sitio Web Institucional</p>
+          <nav class="migas" aria-label="Ruta de navegación">
+            <a href="#inicio" data-ir-a="pagina-inicio">Inicio</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">Sobre el Proyecto</span>
+          </nav>
+        </div>
+      </div>
+
+      <!-- ── 1. FICHA TÉCNICA Y AUTORÍA ACADÉMICA ── -->
+      <section class="seccion seccion-blanca" aria-labelledby="autoria-titulo">
+        <div class="contenedor">
+          <div class="encabezado-bloque">
+            <span class="badge-menta" style="margin-bottom: 0.5rem;">Transparencia & Autoría</span>
+            <h2 class="titulo-con-barra" id="autoria-titulo">Ficha Técnica Académica</h2>
+            <p class="subtitulo-bloque">Datos institucionales y de autoría del proyecto universitario conforme a los estándares de la Escuela de Comunicación Social.</p>
+          </div>
+
+          <div class="proyecto-meta-grid">
+            <div class="proyecto-meta-card">
+              <div class="proyecto-meta-label">Desarrolladora / Autora</div>
+              <div class="proyecto-meta-valor">Emily Ramos</div>
+              <div class="proyecto-meta-sub">C.I. V-28.219.503</div>
+            </div>
+
+            <div class="proyecto-meta-card">
+              <div class="proyecto-meta-label">Casa de Estudios</div>
+              <div class="proyecto-meta-valor">Universidad Central de Venezuela</div>
+              <div class="proyecto-meta-sub">Facultad de Humanidades y Educación</div>
+            </div>
+
+            <div class="proyecto-meta-card">
+              <div class="proyecto-meta-label">Escuela & Cátedra</div>
+              <div class="proyecto-meta-valor">Escuela de Comunicación Social</div>
+              <div class="proyecto-meta-sub">Dpto. de Métodos · Cátedra de Informática (Sección A)</div>
+            </div>
+
+            <div class="proyecto-meta-card">
+              <div class="proyecto-meta-label">Tutor Académico</div>
+              <div class="proyecto-meta-valor">Prof. Oscar Nieto</div>
+              <div class="proyecto-meta-sub">Cátedra de Informática</div>
+            </div>
+
+            <div class="proyecto-meta-card">
+              <div class="proyecto-meta-label">Institución Beneficiaria</div>
+              <div class="proyecto-meta-valor">U.E.P. Nueva República</div>
+              <div class="proyecto-meta-sub">Director: Julio Tellez · Coord.: Ninoska Díaz / Mirtha Goncalves</div>
+            </div>
+
+            <div class="proyecto-meta-card">
+              <div class="proyecto-meta-label">Período de Ejecución</div>
+              <div class="proyecto-meta-valor">Caracas, Mayo 2026</div>
+              <div class="proyecto-meta-sub">Fase 1: Levantamiento y Desarrollo Web</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 2. DIAGNÓSTICO Y CONTEXTO DEL TRABAJO ── -->
+      <section class="seccion seccion-crema" aria-labelledby="diagnostico-titulo">
+        <div class="contenedor">
+          <div class="encabezado-bloque">
+            <span class="badge-dorado" style="margin-bottom: 0.5rem;">Investigación de Campo & Diagnóstico</span>
+            <h2 class="titulo-con-barra" id="diagnostico-titulo">Contexto y Justificación del Proyecto</h2>
+            <p class="subtitulo-bloque">Problemática detectada en la institución y evidencia recopilada durante el estudio de campo.</p>
+          </div>
+
+          <div style="background-color: var(--blanco); border-radius: var(--radio-md); padding: 2rem; border: 1px solid var(--borde-suave); box-shadow: var(--sombra-card); margin-bottom: 2rem;">
+            <h3 style="font-family: var(--fuente-serif); color: var(--verde-bosque-oscuro); font-size: 1.3rem; margin-bottom: 0.75rem;">El Reto Comunicacional Institucional</h3>
+            <p style="font-size: 0.95rem; color: var(--texto-medio); line-height: 1.7; margin-bottom: 1rem;">
+              La investigación inicial y las entrevistas con el equipo directivo (Director Julio Tellez y Coordinadora Ninoska Díaz) revelaron que la <strong>U.E.P. Nueva República</strong> enfrentaba una severa problemática de discontinuidad informativa. El uso exclusivo de canales informales (grupos de WhatsApp saturados, publicaciones efímeras en Instagram y papelógrafos físicos) generaba pérdida constante de datos clave, desinformación en los procesos de inscripción y sobrecarga administrativa en las secretarías.
+            </p>
+            <p style="font-size: 0.95rem; color: var(--texto-medio); line-height: 1.7;">
+              Este proyecto universitario surge para dotar al plantel de un <strong>centro operativo digital formal, centralizado y soberano</strong>, diseñado para transformar la comunicación escolar, automatizar la captación de matrícula y brindar atención inmediata y organizada a toda la comunidad educativa.
+            </p>
+          </div>
+
+          <!-- Métricas del Estudio de Campo -->
+          <div class="proyecto-stats-grid">
+            <div class="proyecto-stat-box">
+              <div class="proyecto-stat-num">82%</div>
+              <div class="proyecto-stat-titulo">Comunidad Móvil (Mobile-First)</div>
+              <div class="proyecto-stat-desc">
+                El 82% de los representantes consulta la información escolar a través de sus teléfonos inteligentes, haciendo indispensable una arquitectura web ultra ligera y 100% adaptable.
+              </div>
+            </div>
+
+            <div class="proyecto-stat-box">
+              <div class="proyecto-stat-num">90%</div>
+              <div class="proyecto-stat-titulo">Fricción en Canales Informales</div>
+              <div class="proyecto-stat-desc">
+                El 90% de la comunidad experimentaba dificultades severas o moderadas para localizar circulares, normativas, costos y requisitos dentro de chats masivos y redes sociales.
+              </div>
+            </div>
+
+            <div class="proyecto-stat-box">
+              <div class="proyecto-stat-num">&lt; 3 Clics</div>
+              <div class="proyecto-stat-titulo">Eficiencia de Navegación</div>
+              <div class="proyecto-stat-desc">
+                Diseño optimizado para que cualquier representante o adulto mayor pueda consultar recaudos, solicitar cupos o descargar circulares oficiales en un máximo de tres interacciones.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 3. DIMENSIONES DEL LEVANTAMIENTO ── -->
+      <section class="seccion seccion-blanca" aria-labelledby="dimensiones-titulo">
+        <div class="contenedor">
+          <div class="encabezado-bloque">
+            <span class="badge-menta" style="margin-bottom: 0.5rem;">Pilares del Levantamiento</span>
+            <h2 class="titulo-con-barra" id="dimensiones-titulo">Dimensiones y Requerimientos del Sistema</h2>
+            <p class="subtitulo-bloque">Ejes estratégicos abordados en el desarrollo de la plataforma web institucional.</p>
+          </div>
+
+          <div class="dimensiones-grid">
+            <!-- Dimensión 1 -->
+            <article class="dimension-card">
+              <span class="dimension-icono" aria-hidden="true">🏛️</span>
+              <h3 class="dimension-titulo">Dimensión Informativa</h3>
+              <p class="dimension-desc">
+                Despliegue transparente de la identidad institucional, misión, visión, historia y equipo directivo, consolidando la reputación y confianza de la U.E.P. Nueva República.
+              </p>
+            </article>
+
+            <!-- Dimensión 2 -->
+            <article class="dimension-card">
+              <span class="dimension-icono" aria-hidden="true">📝</span>
+              <h3 class="dimension-titulo">Dimensión Administrativa</h3>
+              <p class="dimension-desc">
+                Digitalización del embudo de admisión mediante formularios dinámicos de solicitud de cupos y descarga organizada de planillas de recaudos en PDF, descongestionando las oficinas.
+              </p>
+            </article>
+
+            <!-- Dimensión 3 -->
+            <article class="dimension-card">
+              <span class="dimension-icono" aria-hidden="true">🤖</span>
+              <h3 class="dimension-titulo">Dimensión Comunicacional</h3>
+              <p class="dimension-desc">
+                Integración de un chatbot interactivo para preguntas frecuentes y un botón flotante inteligente con enlace directo al WhatsApp institucional de secretaría para atención en tiempo real.
+              </p>
+            </article>
+
+            <!-- Dimensión 4 -->
+            <article class="dimension-card">
+              <span class="dimension-icono" aria-hidden="true">🛡️</span>
+              <h3 class="dimension-titulo">Seguridad & LOPNNA</h3>
+              <p class="dimension-desc">
+                Estricto cumplimiento de normativas del MPPE y resguardo de la identidad e imagen de niños, niñas y adolescentes según la LOPNNA en todos los módulos y formularios.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 4. ESTRATEGIA DE DESARROLLO POR FASES ── -->
+      <section class="seccion seccion-crema" aria-labelledby="fases-titulo">
+        <div class="contenedor">
+          <div class="encabezado-bloque">
+            <span class="badge-dorado" style="margin-bottom: 0.5rem;">Hoja de Ruta Tecnológica</span>
+            <h2 class="titulo-con-barra" id="fases-titulo">Estrategia Metodológica por Fases</h2>
+            <p class="subtitulo-bloque">Priorización del Producto Mínimo Viable (MVP) para 2026 e innovaciones proyectadas.</p>
+          </div>
+
+          <div class="fases-desarrollo-grid">
+            <!-- Fase 1: MVP -->
+            <div class="fase-box activa">
+              <span class="fase-badge activa">Fase 1 · Producto Mínimo Viable (Implementada)</span>
+              <h3 class="fase-titulo">Infraestructura Matriz y Captación</h3>
+              <ul class="fase-lista">
+                <li>Despliegue de la página web institucional con arquitectura responsive Mobile-First.</li>
+                <li>Módulo interactivo de Admisiones con formulario automatizado de solicitud de cupo.</li>
+                <li>Desglose curricular completo (Educación Primaria y Media General) con catálogo de Paseos Pedagógicos.</li>
+                <li>Integración del widget chatbot y botón flotante de WhatsApp hacia secretaría.</li>
+                <li>Sección de Cartelera Informativa y canales unificados de contacto institucional.</li>
+              </ul>
+            </div>
+
+            <!-- Fase 2: Expansión -->
+            <div class="fase-box futura">
+              <span class="fase-badge futura">Fase 2 · Expansión e Innovación Futura</span>
+              <h3 class="fase-titulo">Automatización Avanzada y Autogestión</h3>
+              <ul class="fase-lista">
+                <li>Cartelera informativa autogestionable con módulo de publicación masiva de circulares en PDF.</li>
+                <li>Asistente conversacional con Inteligencia Artificial para filtrado inteligente de consultas normativas.</li>
+                <li>Optimización avanzada SEO local para posicionamiento en motores de búsqueda.</li>
+                <li>Portal de autogestión de calificaciones y constancias de estudio digitales.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Llamado a la acción de retorno -->
+          <div style="text-align: center; margin-top: 3rem;">
+            <button class="btn-dorado" data-ir-a="pagina-inicio">
+              ← Volver a la Página Principal
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
   </div><!-- /contenido-principal -->
 
 
   <!-- ======================================================================
-       FOOTER INSTITUCIONAL
+       FOOTER INSTITUCIONAL CON CRÉDITOS ACADÉMICOS UCV
        ====================================================================== -->
   <footer class="footer" role="contentinfo">
     <div class="contenedor">
+
+      <!-- Banner de Autoría y Contexto Académico UCV -->
+      <div class="footer-autoria-box">
+        <div class="footer-autoria-info">
+          <div class="footer-autoria-icono" aria-hidden="true">🎓</div>
+          <div class="footer-autoria-textos">
+            <span class="footer-autoria-etiqueta">Proyecto Académico Universitario</span>
+            <span class="footer-autoria-titulo">Proyecto desarrollado por Emily Ramos (C.I. V-28.219.503)</span>
+            <span class="footer-autoria-sub">
+              Cátedra de Informática · Escuela de Comunicación Social · <strong>Universidad Central de Venezuela (UCV)</strong> · Tutor: Prof. Oscar Nieto
+            </span>
+          </div>
+        </div>
+        <button class="btn-dorado" data-ir-a="pagina-proyecto" style="padding: 0.6rem 1.3rem; font-size: 0.88rem;">
+          Conoce más del Proyecto →
+        </button>
+      </div>
+
       <div class="footer__grid">
 
         <!-- Columna 1: Marca y Contacto -->
@@ -3557,9 +4368,9 @@
             <li><a class="footer__enlace-item" data-ir-a="pagina-institucion" href="#institucion">Institución</a></li>
             <li><a class="footer__enlace-item" data-ir-a="pagina-oferta" href="#oferta">Oferta Académica</a></li>
             <li><a class="footer__enlace-item" data-ir-a="pagina-admisiones" href="#admisiones">Admisiones</a></li>
-            <li><a class="footer__enlace-item" data-ir-a="pagina-cartelera" href="#cartelera">Cartelera Informativa</a>
-            </li>
+            <li><a class="footer__enlace-item" data-ir-a="pagina-cartelera" href="#cartelera">Cartelera Informativa</a></li>
             <li><a class="footer__enlace-item" data-ir-a="pagina-contacto" href="#contacto">Contacto</a></li>
+            <li><a class="footer__enlace-item" data-ir-a="pagina-proyecto" href="#proyecto" style="color: var(--dorado); font-weight: 700;">Sobre el Proyecto (UCV)</a></li>
           </ul>
         </nav>
 
@@ -3567,14 +4378,10 @@
         <div>
           <h3 class="footer__col-titulo">Niveles Educativos</h3>
           <ul class="footer__enlaces-lista">
-            <li><a class="footer__enlace-item" data-ir-a="pagina-oferta" href="#oferta">Educación Primaria (1° a 6°)</a>
-            </li>
-            <li><a class="footer__enlace-item" data-ir-a="pagina-oferta" href="#oferta">Media General (Bachillerato)</a>
-            </li>
-            <li><a class="footer__enlace-item" data-ir-a="pagina-admisiones" href="#admisiones">Proceso de Admisión</a>
-            </li>
-            <li><a class="footer__enlace-item" data-ir-a="pagina-admisiones" href="#admisiones">Programas de
-                Formación</a></li>
+            <li><a class="footer__enlace-item" data-ir-a="pagina-oferta" href="#oferta">Educación Primaria (1° a 6°)</a></li>
+            <li><a class="footer__enlace-item" data-ir-a="pagina-oferta" href="#oferta">Media General (Bachillerato)</a></li>
+            <li><a class="footer__enlace-item" data-ir-a="pagina-admisiones" href="#admisiones">Proceso de Admisión</a></li>
+            <li><a class="footer__enlace-item" data-ir-a="pagina-admisiones" href="#admisiones">Paseos Pedagógicos</a></li>
             <li><a class="footer__enlace-item" data-ir-a="pagina-cartelera" href="#cartelera">Deporte y Artes</a></li>
           </ul>
         </div>
@@ -3582,11 +4389,11 @@
       </div>
     </div>
 
-    <!-- Barra de copyright inferior -->
+    <!-- Barra de copyright y autoría inferior -->
     <div class="footer__barra-inferior">
       <div class="contenedor">
         <div>© 2026 UEP Nueva República. Todos los derechos reservados.</div>
-        <div>Diseño institucional educativo</div>
+        <div>Proyecto académico desarrollado por <strong>Emily Ramos (C.I. 28.219.503)</strong> — Cátedra de Informática — <strong>Universidad Central de Venezuela (UCV)</strong></div>
       </div>
     </div>
   </footer>
